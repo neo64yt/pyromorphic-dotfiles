@@ -1,0 +1,4 @@
+#!/bin/sh
+# This script ejects iOS devices from $IOS_MOUNTPOINT
+
+fusermount -u $IOS_MOUNTPOINT && rm -rf $IOS_MOUNTPOINT && notify-send -u low -i phone "iOS Mounter" "Your iOS device has been successfully ejected from $IOS_MOUNTPOINT" || notify-send -u critical -i phone "iOS Mounter" "There is no device mounted at $IOS_MOUNTPOINT"

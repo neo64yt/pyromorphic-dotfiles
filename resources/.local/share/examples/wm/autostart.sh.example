@@ -1,0 +1,27 @@
+#!/bin/sh
+# This is only used as a template. Please make sure you change these according to your preferences
+# Autostart for fooWM
+
+# Config directory
+export WM_CONFIG_DIR="$XDG_CONFIG_HOME/foowm"
+wmbar="foobar"
+
+# Session killer
+export SESSION_KILLER="$WM_CONFIG_DIR/session-killer"
+
+# Autostart file
+export WM_AUTOSTART="$WM_CONFIG_DIR/autostart.sh"
+
+# Keybindings configuration
+export WM_KEYBIND="$WM_CONFIG_DIR/edit-keybinds"
+
+# Autostart applications
+
+# This file contains the WM-independent autostart applications
+sh $AUTOSTART &
+
+# WM-specific autostart applications
+hsetroot -center $XDG_DATA_HOME/backgrounds/neointhevoid.png &
+$wmbar &
+
+## EOF ##

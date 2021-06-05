@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# Set environment variables to default when they are not set
+[ -z "$DOTS_DIR" ] && DOTS_DIR="$HOME/git-src/glorious-dotfiles"
+
+# Command: $ dotsmgr push
+#push() {
+#}
+
+# Command: $ dotsmgr advice
+advice() {
+	cat << EOF
+When using this script, remember to never:
+	1. give this script up
+	2. let this script down
+	3. run around and desert this script
+	4. make this script cry
+	5. say goodbye
+	6. Tell a lie and hurt this script
+
+Oh, don't forget that this script is free software.
+EOF
+}
+
+# Command: $ dotsmgr help
+help() {
+	cat << EOF
+dotsmgr v0.1
+
+Never run this script as root!
+
+Usage: 
+	dotsmgr [COMMAND]
+	[ENVIRONMENT VARIABLES..] dotsmgr [COMMAND]
+
+Commands:
+	advice:		Shows an advice for user (hehehe)
+	help: 		Shows usage, commands and environment variables
+	about:		Shows information about this script 
+
+Environment variables:
+	DOTS_DIR (string):		The directory where all dotfiles are stored. Useful when you store the dotfiles in a custom directory
+		Default: $HOME/git-src/glorious-dotfiles
+EOF
+}
+
+# Command: $ dotsmgr about
+about() {
+	cat << EOF
+About dotsmgr v0.1:
+	Author: Neo64YT (https://github.com/neo64yt)
+	Git repository: https://github.com/neo64yt/glorious-dotfiles
+	Description: A script for managing dotfiles, included in glorious-dotfiles. Mainly using stow to have a neat and clean dotfiles management
+EOF
+}
+
+# Read functions as commands. Function "help" executed when there is no command / the command used is not supported
+[ -n "$1" ] && $1 || help
+

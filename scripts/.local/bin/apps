@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# This script is used for showing programs with desktop entries
+
+# Defaults
+lines=12
+border=3
+height=35
+prompt="󰀻 Applications:"
+
+# Command
+j4-dmenu-desktop --dmenu="dmenu -l $lines -bw $border -h $height -p '$prompt' -c" --term="$TERMINAL"

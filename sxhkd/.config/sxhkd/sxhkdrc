@@ -1,0 +1,53 @@
+#
+# wm independent hotkeys
+#
+
+# terminal emulator
+super + shift + Return
+	$TERMINAL
+
+# program launcher
+super + r
+	apps
+
+# quick menu
+super + space
+	$QUICKMENU
+
+# run prompt
+super + p
+	runner
+
+# settings
+super + shift + s
+	$SETTINGS_MGR
+
+# screenshooter
+shift + Print
+	$SCREENSHOOTER
+
+# timed screenshooter (5 seconds)
+ctrl + shift + Print
+	sleep 5s && $SCREENSHOOTER
+
+# power menu
+XF86PowerOff
+	$SESSION_MGR
+
+# Emojis
+super + e
+	$EMOJI_PICKER
+
+# Preferred apps launcher
+super + shift + r
+	prefapps
+
+# Web browser
+super + w
+	$BROWSER
+
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+
+

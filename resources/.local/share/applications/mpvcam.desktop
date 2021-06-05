@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=mpvCam
+Comment=Simple script to use mpv as webcam app
+Exec=mpvcam
+Icon=camera
+Terminal=false
+Categories=Graphics;

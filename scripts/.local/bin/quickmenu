@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Defaults
+lines=10
+border=3
+height=35
+prompt="󱍕 Quick access:"
+
+choice=$(printf "󰀻 Applications\n󰆍 Run\n󰐦 System\n󰱨 Emojis\n󰢻 Settings\n󰄠 iOS Mounter\n" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )
+
+case "$choice" in
+  "󰀻 Applications") apps ;;
+  "󰆍 Run") runner ;;
+  "󰐦 System") sessionmgr ;;
+  "󰱨 Emojis") dmenuemoji ;;
+  "󰢻 Settings") set-mgr ;;
+  "󰄠 iOS Mounter") imountmgr ;;
+esac

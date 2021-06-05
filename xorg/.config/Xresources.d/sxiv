@@ -1,0 +1,12 @@
+/* sxiv configuration */
+
+! Background color
+Sxiv.background: #272a34
+
+! Foreground color
+Sxiv.foreground: #12846e
+
+! Font
+Sxiv.font: JetBrains Mono:size=12
+
+/* EOF */

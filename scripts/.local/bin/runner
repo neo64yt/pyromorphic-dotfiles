@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# This script is used for executing a command
+
+# Defaults
+lines=12
+border=3
+height=35
+prompt="󰆍 Run:"
+
+# Command
+dmenu_run -l $lines -bw $border -h $height -p "$prompt" -c

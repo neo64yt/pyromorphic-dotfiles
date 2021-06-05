@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Defaults
+lines=2
+border=3
+height=35
+prompt="󰄠 iOS Mounter:"
+
+# Command
+choice=$(printf "󰄟 Mount\n󰮑 Eject\n" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )
+
+case "$choice" in
+  "󰄟 Mount") ios-mount ;;
+  "󰮑 Eject") ios-unmount ;;
+esac

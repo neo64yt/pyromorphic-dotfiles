@@ -1,0 +1,3 @@
+#!/bin/sh
+
+notify-send -u low NOTE: "$(cat $WM_CONFIG_DIR/keybinds)"

@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# The famous "get a menu of emojis to copy" script.
+# Extracted and forked from Luke Smith's voidrice (https://github.com/LukeSmithxyz/voidrice)
+
+# Defaults
+lines=12
+border=3
+height=35
+prompt="󰱨 Emojis:"
+
+# Get user selection via dmenu from emoji file.
+chosen=$(cut -d ';' -f1 $XDG_DATA_HOME/assets/emoji | dmenu -l $lines -bw $border -h $height -p "$prompt" -c | sed "s/ .*//")
+
+# Exit if none chosen.
+[ -z "$chosen" ] && exit
+
+# If you run this command with an argument, it will automatically insert the
+# character. Otherwise, show a message that the emoji has been copied.
+if [ -n "$1" ]; then
+	xdotool type "$chosen"
+else
+	printf "$chosen\n" | tr -d '\n' | xclip -selection clipboard
+	notify-send -i $XDG_DATA_HOME/assets/dunst/icons/face-smile-big.svg -u low Emojis "Successfully copied '$chosen' to clipboard!" &
+fi
+

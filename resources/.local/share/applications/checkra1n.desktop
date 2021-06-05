@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Checkra1n
+Comment=Launches Checkra1n jaibreaking tool
+Icon=phone
+Terminal=true
+Exec=sudo checkra1n
+Categories=System

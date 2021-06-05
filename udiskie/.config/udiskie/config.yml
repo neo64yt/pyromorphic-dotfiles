@@ -1,0 +1,9 @@
+program_options:
+        tray: true
+        menu: flat
+        automount: true
+        notify: true
+        file_manager: pcmanfm
+        terminal: 'alacritty --working-directory'
+
+quickmenu_actions: all

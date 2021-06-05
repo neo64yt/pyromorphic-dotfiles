@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Scripts directory
+
+# Defaults
+lines=4
+border=3
+height=35
+prompt="Somthing random:"
+
+# Command
+choice=$(echo "Just\n󰜉 as\nan\nexample" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )
+
+case "$choice" in
+  "Just") ok ;;
+  "as") ok ;;
+  "an") OK ;;
+  "example") OK ;;
+esac

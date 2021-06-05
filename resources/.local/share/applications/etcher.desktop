@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Etcher
+Comment=A fast, Electron-based image flasher
+Exec=balenaEtcher-1.5.112-x64.AppImage
+Icon=etcher
+Terminal=false
+Categories=System;

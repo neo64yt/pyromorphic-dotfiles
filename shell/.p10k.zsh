@@ -1,0 +1,1 @@
+.config/shell/p10k.zsh

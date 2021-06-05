@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# NOTE: Please change according to your init system
+# systemd: systemctl
+# other init with elogind: loginctl
+
+# Just a simple script for notifying that the system will be suspended
+notify-send -i "$XDG_DATA_HOME/assets/dunst/icons/suspend.png" -u low "System" "The system will be suspended in 5 seconds"
+sleep 5s
+loginctl suspend
+

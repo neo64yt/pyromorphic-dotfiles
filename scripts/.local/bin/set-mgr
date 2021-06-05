@@ -1,0 +1,34 @@
+#!/bin/sh
+
+# Settings manager
+
+# Defaults
+lines=10
+border=3
+height=35
+prompt="󰢻 Settings for $(whoami):"
+
+# For settings that need config file editing
+config_edit="$TERMINAL -e $EDITOR"
+
+# Command
+choice=$(printf "󰸌 Appearance\n󰿻 Account\n󰍁 Lock screen\n󰍂 Login screen\n󰍹 Display\n󰂏 Power management\n󰲝 Network\n󰂳 Bluetooth\n󰧺 Input devices\n󰕾 Audio\n󰏗 Package manager\n󰜇 Printer\n󰌧 Autostart\n󰌧 WM autostart\n󰧺 Keybindings\n󰧺 WM keybindings\n" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )
+
+case "$choice" in
+  "󰸌 Appearance") $STYLE ;;
+  "󰿻 Account") $USER_INFO ;;
+  "󰍁 Lock screen") $config_edit $HOME/.xprofile ;;
+  "󰍂 Login screen") pkexec $LOGIN ;;
+  "󰍹 Display") $RANDR ;;
+  "󰂏 Power management") $POWER_MGR ;;
+  "󰲝 Network") $NM_EDITOR ;;
+  "󰂳 Bluetooth") $BLUETOOTH ;;
+  "󰧺 Input devices") $INPUT ;;
+  "󰕾 Audio") $AUDIO ;;
+  "󰏗 Package manager") $GUI_PACK ;;
+  "󰜇 Printer") $PRINT ;;
+  "󰌧 Autostart") $config_edit $AUTOSTART ;;
+  "󰌧 WM autostart") $config_edit $WM_AUTOSTART ;;
+  "󰧺 Keybindings") $config_edit $KEYBIND ;;
+  "󰧺 WM keybindings") $WM_KEYBIND ;;
+esac

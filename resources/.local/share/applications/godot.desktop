@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Godot Engine 3.2.3
+Comment=Open source game engine
+Exec=Godot_v3.2.3-stable_x11.64
+Icon=godot
+Terminal=false
+Categories=Development;
