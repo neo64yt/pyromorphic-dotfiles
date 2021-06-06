@@ -2,5 +2,5 @@
 # This script mounts iOS devices to $IOS_MOUNTPOINT
 
 mkdir -p $IOS_MOUNTPOINT
-ifuse $IOS_MOUNTPOINT && notify-send -u low -i phone "iOS Mounter" "Your iOS device has been successfully mounted to $IOS_MOUNTPOINT" || notify-send -u critical -i phone "iOS Mounter" "Failed to mount your device. Make sure it is connected properly"
+ifuse $IOS_MOUNTPOINT && notify-send -u low -i phone "iOS Mounter" "Your iOS device has been successfully mounted to $IOS_MOUNTPOINT" || rm -rf $IOS_MOUNTPOINT && notify-send -u critical -i phone "iOS Mounter" "Failed to mount your device. Make sure it is connected properly"
 

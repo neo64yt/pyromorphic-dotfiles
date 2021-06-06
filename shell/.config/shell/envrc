@@ -13,7 +13,7 @@ export MANPAGER="nvim -c 'set ft=man'" # Use Neovim as manpager
 export IOS_MOUNTPOINT="$HOME/iOS" # iOS mountpoint (needed by iOS Mounter)
 
 ## GENERIC PROGRAM ##
-export STARTMENU="apps"
+export STARTMENU="jgmenu_run"
 export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"
