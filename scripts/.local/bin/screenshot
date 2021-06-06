@@ -3,8 +3,8 @@
 # Screenshot
 mkdir -p $HOME/Pictures/Screenshots
 
-shotgun "$HOME/Pictures/Screenshots/screenshot-of-$(date +%Y-%m-%d_%H.%M.%S).png" 
+scrot -d 5 "$HOME/Pictures/Screenshots/screenshot-of-$(date +%Y-%m-%d_%H.%M.%S).png" 
 
-pgrep -x dunst >/dev/null && notify-send -u low -i camera Screenshooter "The screenshot has been saved into the Screenshots folder"
+pgrep -x dunst > /dev/null && notify-send -u low -i camera Screenshooter "The screenshot has been saved into the Screenshots folder"
 
 paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga

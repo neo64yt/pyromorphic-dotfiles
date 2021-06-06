@@ -26,10 +26,6 @@ super + shift + s
 shift + Print
 	$SCREENSHOOTER
 
-# timed screenshooter (5 seconds)
-ctrl + shift + Print
-	sleep 5s && $SCREENSHOOTER
-
 # power menu
 XF86PowerOff
 	$SESSION_MGR
