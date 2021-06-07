@@ -40,7 +40,6 @@ export NM_EDITOR="nm-connection-editor" # Network
 export BLUETOOTH="blueman-manager" # Bluetooth 
 export INPUT="lxinput" # Input devices
 export AUDIO="pavucontrol" # Audio
-export GUI_PACK="pamac-manager" # Package manager
 export PRINT="system-config-printer" # Printer
 
 ## XSECURELOCK SETTINGS ##
