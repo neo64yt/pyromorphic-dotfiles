@@ -53,7 +53,7 @@ export XSECURELOCK_SHOW_HOSTNAME="2"
 export XSECURELOCK_AUTH_CURSOR_BLINK="1"
 export XSECURELOCK_AUTH_SOUNDS="1"
 
-## RUNIT USER SERVICES ##
-export SVDIR="$XDG_CONFIG_HOME/runit/runsvdir"
+## ANBOX RUNTIME ##
+export $(dbus-launch)
 
 ## EOF ##
