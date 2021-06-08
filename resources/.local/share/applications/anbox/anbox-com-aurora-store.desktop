@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Aurora Store
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.aurora.store --component=com.aurora.store.view.ui.onboarding.OnboardingActivity 
-Terminal=false
-Categories=Anbox;
-Icon=/home/neo64yt/.local/share/applications/anbox/anbox-com-aurora-store.png

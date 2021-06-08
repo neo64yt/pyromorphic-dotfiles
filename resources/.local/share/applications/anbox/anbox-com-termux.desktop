@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Termux
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=com.termux --component=com.termux.app.TermuxActivity 
-Terminal=false
-Categories=Anbox;
-Icon=/home/neo64yt/.local/share/applications/anbox/anbox-com-termux.png

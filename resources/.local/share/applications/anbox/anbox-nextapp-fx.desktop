@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=FX
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=nextapp.fx --component=nextapp.fx.ui.ExplorerActivity 
-Terminal=false
-Categories=Anbox;
-Icon=/home/neo64yt/.local/share/applications/anbox/anbox-nextapp-fx.png

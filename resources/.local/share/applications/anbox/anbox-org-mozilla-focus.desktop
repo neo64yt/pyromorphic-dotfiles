@@ -1,7 +1,0 @@
-[Desktop Entry]
-Type=Application
-Name=Firefox Focus
-Exec=/usr/bin/anbox launch --action=android.intent.action.MAIN --package=org.mozilla.focus --component=org.mozilla.focus.activity.MainActivity 
-Terminal=false
-Categories=Anbox;
-Icon=/home/neo64yt/.local/share/applications/anbox/anbox-org-mozilla-focus.png
