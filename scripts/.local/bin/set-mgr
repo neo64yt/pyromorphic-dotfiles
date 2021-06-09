@@ -18,7 +18,7 @@ case "$choice" in
   "󰸌 Appearance") $STYLE ;;
   "󰿻 Account") $USER_INFO ;;
   "󰍁 Lock screen") $config_edit $HOME/.xprofile ;;
-  "󰍂 Login screen") pkexec $LOGIN ;;
+  "󰍂 Login screen") $config_edit $LOGIN ;;
   "󰍹 Display") $RANDR ;;
   "󰂏 Power management") $POWER_MGR ;;
   "󰲝 Network") $NM_EDITOR ;;

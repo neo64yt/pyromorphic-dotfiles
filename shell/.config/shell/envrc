@@ -33,7 +33,7 @@ export VISUAL="nvim"
 ## DMENU SETTINGS MANAGER ##
 export STYLE="lxappearance" # Appearance
 export USER_INFO="mugshot" # Account
-export LOGIN="lightdm-settings" # Login screen
+export LOGIN="$XDG_CONFIG_HOME/tbsm/tbsm.conf" # Login screen
 export RANDR="lxrandr" # Display
 export POWER_MGR="mate-power-preferences" # Power manager
 export NM_EDITOR="nm-connection-editor" # Network
@@ -45,14 +45,15 @@ export PRINT="system-config-printer" # Printer
 ## XSECURELOCK SETTINGS ##
 export XSECURELOCK_PASSWORD_PROMPT="asterisks"
 export XSECURELOCK_FONT="JetBrains Mono:size=15"
-export XSECURELOCK_SWITCH_USER_COMMAND="dm-tool switch-to-greeter"
 export XSECURELOCK_COMPOSITE_OBSCURER="0"
 export XSECURELOCK_SHOW_DATETIME="1"
 export XSECURELOCK_SHOW_HOSTNAME="2"
 export XSECURELOCK_AUTH_CURSOR_BLINK="1"
 export XSECURELOCK_AUTH_SOUNDS="1"
 
-## ANBOX RUNTIME ##
+## DBUS-LAUNCH ##
 export $(dbus-launch)
+
+[ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ] && run-tbsm
 
 ## EOF ##
