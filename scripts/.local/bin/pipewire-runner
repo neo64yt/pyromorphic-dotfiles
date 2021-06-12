@@ -2,4 +2,4 @@
 # Used on non-systemd Linux systems only
 pipewire &
 pipewire-pulse &
-pipewire-media-session 
+pipewire-media-session || pipewire-media-session & 
