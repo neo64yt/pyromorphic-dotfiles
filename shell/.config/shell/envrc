@@ -1,6 +1,10 @@
 #!/bin/sh
 
 # This file stores environment variables 
+## GTK3-NOCSD ##
+export GTK_CSD="0"
+export LD_PRELOAD="/usr/\${LIB}/libgtk3-nocsd.so.0${LD_PRELOAD:+:$LD_PRELOAD}"
+
 ## GENERIC CONFIGURATION ##
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH" # Binaries path
 export XDG_CONFIG_HOME="$HOME/.config" # XDG configuration directory
@@ -33,7 +37,7 @@ export VISUAL="nvim"
 ## DMENU SETTINGS MANAGER ##
 export STYLE="lxappearance" # Appearance
 export USER_INFO="mugshot" # Account
-export LOGIN="$XDG_CONFIG_HOME/tbsm/tbsm.conf" # Login screen
+export LOGIN="lightdm-gtk-greeter-settings" # Login screen
 export RANDR="lxrandr" # Display
 export POWER_MGR="mate-power-preferences" # Power manager
 export NM_EDITOR="nm-connection-editor" # Network
@@ -53,7 +57,5 @@ export XSECURELOCK_AUTH_SOUNDS="1"
 
 ## DBUS-LAUNCH ##
 export $(dbus-launch)
-
-[ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 2 ] && run-tbsm
 
 ## EOF ##
