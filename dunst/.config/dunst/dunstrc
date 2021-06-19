@@ -153,7 +153,7 @@ max_icon_size = 48
 
 # Paths to default icons.
 icon_path = /usr/share/icons/Flat-Remix-Teal-Dark/actions/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/animations/:/usr/share/icons/Flat-Remix-Teal-Dark/apps/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/categories/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/devices/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/emblems/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/mimetypes/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/panel/:/usr/share/icons/Flat-Remix-Teal-Dark/places/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/status/scalable/
-frame_width = 3
+frame_width = 8
 frame_color = "#8EC07C"
 
 [shortcuts]
