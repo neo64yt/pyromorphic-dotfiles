@@ -10,6 +10,7 @@ let g:airline#extensions#tabline#enabled = 1
 nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '󰦿'
 let g:NERDTreeDirArrowCollapsible = '󰧃'
+let g:vaxe_enable_airline_defaults = 0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " nerdtree
@@ -27,6 +28,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " vim-sxhkdrc
 Plug 'baskerville/vim-sxhkdrc'
+
+" Vaxe
+Plug 'jdonaldson/vaxe'
 
 " Initialize plugin system
 call plug#end()
