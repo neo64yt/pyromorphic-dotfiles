@@ -1,9 +1,6 @@
 #!/bin/sh
 
 # This file stores environment variables 
-## GTK3-NOCSD ##
-export GTK_CSD="0"
-export LD_PRELOAD="/usr/\${LIB}/libgtk3-nocsd.so.0${LD_PRELOAD:+:$LD_PRELOAD}"
 
 ## GENERIC CONFIGURATION ##
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH" # Binaries path
