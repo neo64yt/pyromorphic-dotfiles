@@ -3,9 +3,9 @@
 # Settings manager
 
 # Defaults
-lines=10
-border=3
-height=35
+lines="$DMENU_LINES"
+border="$DMENU_BORDER"
+height="$DMENU_HEIGHT"
 prompt="󰢻 Settings for $(whoami):"
 
 # For settings that need config file editing

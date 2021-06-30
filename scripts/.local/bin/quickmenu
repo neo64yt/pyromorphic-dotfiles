@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Defaults
-lines=10
-border=3
-height=35
+lines="$DMENU_LINES"
+border="$DMENU_BORDER"
+height="$DMENU_HEIGHT"
 prompt="󱍕 Quick access:"
 
 choice=$(printf "󰀻 Applications\n󰆍 Run\n󰐦 System\n󰱨 Emojis\n󰢻 Settings\n󰄠 iOS Mounter\n" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )

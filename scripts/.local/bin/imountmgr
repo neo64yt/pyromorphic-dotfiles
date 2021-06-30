@@ -2,8 +2,8 @@
 
 # Defaults
 lines=2
-border=3
-height=35
+border="$DMENU_BORDER"
+height="$DMENU_HEIGHT"
 prompt="󰄠 iOS Mounter:"
 
 # Command

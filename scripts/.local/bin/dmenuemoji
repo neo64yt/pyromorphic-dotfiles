@@ -4,9 +4,9 @@
 # Extracted and forked from Luke Smith's voidrice (https://github.com/LukeSmithxyz/voidrice)
 
 # Defaults
-lines=12
-border=3
-height=35
+lines="$DMENU_LINES"
+border="$DMENU_BORDER"
+height="$DMENU_HEIGHT"
 prompt="󰱨 Emojis:"
 
 # Get user selection via dmenu from emoji file.

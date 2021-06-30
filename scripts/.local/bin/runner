@@ -3,9 +3,9 @@
 # This script is used for executing a command
 
 # Defaults
-lines=12
-border=3
-height=35
+lines="$DMENU_LINES"
+border="$DMENU_BORDER"
+height="$DMENU_HEIGHT"
 prompt="󰆍 Run:"
 
 # Command

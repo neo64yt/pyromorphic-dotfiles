@@ -8,8 +8,8 @@
 
 # Defaults
 lines=5
-border=3
-height=35
+border="$DMENU_BORDER"
+height="$DMENU_HEIGHT"
 prompt="󰐦 System ($(uptime -p)):"
 
 # Command

@@ -3,9 +3,9 @@
 # This script is used for showing programs with desktop entries
 
 # Defaults
-lines=12
-border=3
-height=35
+lines="$DMENU_LINES"
+border="$DMENU_BORDER"
+height="$DMENU_HEIGHT"
 prompt="󰀻 Applications:"
 
 # Command
