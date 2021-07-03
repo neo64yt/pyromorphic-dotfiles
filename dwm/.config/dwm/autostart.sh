@@ -19,7 +19,7 @@ export WM_KEYBIND="$WM_CONFIG_DIR/NOTE"
 sh $AUTOSTART &
 
 # WM-specific autostart applications
-hsetroot -full $XDG_DATA_HOME/backgrounds/weirdly-pepper.png &
+hsetroot -full $XDG_DATA_HOME/backgrounds/keyboard.png &
 $wmbar &
 
 ## EOF ##

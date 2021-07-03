@@ -8,5 +8,8 @@ border="$DMENU_BORDER"
 height="$DMENU_HEIGHT"
 prompt="󰀻 Applications:"
 
+# dmenu command
+DMENU="dmenu -l $lines -bw $border -h $height -p '$prompt' -c -n"
+
 # Command
-j4-dmenu-desktop --dmenu="dmenu -l $lines -bw $border -h $height -p '$prompt' -c" --term="$TERMINAL"
+j4-dmenu-desktop --dmenu="$DMENU" --term="$TERMINAL"

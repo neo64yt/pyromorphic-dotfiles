@@ -24,7 +24,7 @@ fi
 pfetch
 
 # Hello message
-hello | cowsay | lolcat
+hello | cowsay -f tux | lolcat
 
 # Alises
 source $XDG_CONFIG_HOME/shell/aliasrc # Sourced from $XDG_CONFIG_HOME/shell/aliasrc

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Qawl
+Comment=Quran app for desktop
+Exec=Qawl-0.0.8.AppImage
+Icon=reader
+Terminal=false
+Categories=Education;
