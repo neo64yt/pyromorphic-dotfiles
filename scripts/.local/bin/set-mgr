@@ -11,8 +11,34 @@ prompt="󰢻 Settings for $(whoami):"
 # For settings that need config file editing
 config_edit="$TERMINAL -e $EDITOR"
 
+# List of choices (function)
+list_choices(){
+	cat << EOF
+󰸌 Appearance
+󰿻 Account
+󰍁 Lock screen
+󰍂 Login screen
+󰍹 Display
+󰂏 Power management
+󰲝 Network
+󰂳 Bluetooth
+󰧺 Input devices
+󰕾 Audio
+󰜇 Printer
+󰌧 Autostart
+󰌧 WM autostart
+󰧺 Keybindings
+󰧺 WM keybindings
+EOF
+}
+
+# dmenu command
+dmenu_cmd(){
+	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt"
+}
+
 # Command
-choice=$(printf "󰸌 Appearance\n󰿻 Account\n󰍁 Lock screen\n󰍂 Login screen\n󰍹 Display\n󰂏 Power management\n󰲝 Network\n󰂳 Bluetooth\n󰧺 Input devices\n󰕾 Audio\n󰜇 Printer\n󰌧 Autostart\n󰌧 WM autostart\n󰧺 Keybindings\n󰧺 WM keybindings\n" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )
+choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
   "󰸌 Appearance") $STYLE ;;

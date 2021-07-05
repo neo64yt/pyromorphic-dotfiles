@@ -15,9 +15,10 @@ udiskie &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
 xclickroot -r $STARTMENU &
+geary --gapplication-service &
 
 # Systray
-# Bluetooth disabled due to vunerabilities
+# Bluetooth is disabled due to vulnerabilities
 (sleep 3s && nm-applet) & 
 #(sleep 3s && blueman-applet) &
 (sleep 3s && mate-power-manager) &

@@ -6,8 +6,21 @@ border="$DMENU_BORDER"
 height="$DMENU_HEIGHT"
 prompt="󰄠 iOS Mounter:"
 
-# Command
-choice=$(printf "󰄟 Mount\n󰮑 Eject\n" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )
+
+# List of choices 
+list_choices(){
+	cat << EOF
+󰄟 Mount
+󰮑 Eject
+EOF
+}
+
+# dmenu command
+dmenu_cmd(){
+	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt"
+}
+
+choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
   "󰄟 Mount") ios-mount ;;

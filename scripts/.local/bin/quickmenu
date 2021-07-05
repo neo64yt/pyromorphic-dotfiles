@@ -6,7 +6,24 @@ border="$DMENU_BORDER"
 height="$DMENU_HEIGHT"
 prompt="󱍕 Quick access:"
 
-choice=$(printf "󰀻 Applications\n󰆍 Run\n󰐦 System\n󰱨 Emojis\n󰢻 Settings\n󰄠 iOS Mounter\n" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )
+# List of choices (function)
+list_choices(){
+	cat << EOF
+󰀻 Applications
+󰆍 Run
+󰐦 System
+󰱨 Emojis
+󰢻 Settings
+󰄠 iOS Mounter
+EOF
+}
+
+# dmenu command
+dmenu_cmd(){
+	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt"
+}
+
+choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
   "󰀻 Applications") apps ;;

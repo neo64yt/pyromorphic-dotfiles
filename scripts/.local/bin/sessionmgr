@@ -12,8 +12,24 @@ border="$DMENU_BORDER"
 height="$DMENU_HEIGHT"
 prompt="󰐦 System ($(uptime -p)):"
 
+# List of choices
+list_choices(){
+	cat << EOF
+󰐥 Shutdown
+󰜉 Restart
+󰽥 Suspend
+󰍁 Lock
+󰍃 Log out
+EOF
+}
+
+# dmenu command
+dmenu_cmd(){
+	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt" 
+}
+
 # Command
-choice=$(printf "󰐥 Shutdown\n󰜉 Restart\n󰽥 Suspend\n󰍁 Lock\n󰍃 Log out\n" | dmenu -l $lines -bw $border -h $height -p "$prompt" -c )
+choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
   "󰐥 Shutdown") loginctl poweroff ;;

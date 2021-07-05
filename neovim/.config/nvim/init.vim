@@ -29,8 +29,5 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " vim-sxhkdrc
 Plug 'baskerville/vim-sxhkdrc'
 
-" Vaxe
-Plug 'jdonaldson/vaxe'
-
 " Initialize plugin system
 call plug#end()

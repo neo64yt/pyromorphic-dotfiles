@@ -9,4 +9,4 @@ height="$DMENU_HEIGHT"
 prompt="󰆍 Run:"
 
 # Command
-dmenu_run -l $lines -bw $border -h $height -p "$prompt" -c
+dmenu_run -c -n -l $lines -bw $border -h $height -p "$prompt" 

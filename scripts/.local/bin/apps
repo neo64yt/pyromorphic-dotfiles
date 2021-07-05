@@ -9,7 +9,7 @@ height="$DMENU_HEIGHT"
 prompt="󰀻 Applications:"
 
 # dmenu command
-DMENU="dmenu -l $lines -bw $border -h $height -p '$prompt' -c -n"
+DMENU="dmenu -c -n -l $lines -bw $border -h $height -p \"$prompt\""
 
 # Command
 j4-dmenu-desktop --dmenu="$DMENU" --term="$TERMINAL"
