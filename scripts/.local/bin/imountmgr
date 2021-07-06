@@ -6,7 +6,6 @@ border="$DMENU_BORDER"
 height="$DMENU_HEIGHT"
 prompt="󰄠 iOS Mounter:"
 
-
 # List of choices 
 list_choices(){
 	cat << EOF

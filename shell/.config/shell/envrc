@@ -50,6 +50,8 @@ export BLUETOOTH="blueman-manager" # Bluetooth
 export INPUT="lxinput" # Input devices
 export AUDIO="pavucontrol" # Audio
 export PRINT="system-config-printer" # Printer
+export BACKUP_UTIL="timeshift-launcher" # Backup & restore utility
+export FIREWALL="gufw" # Firewall
 
 ## XSECURELOCK SETTINGS ##
 export XSECURELOCK_PASSWORD_PROMPT="asterisks"

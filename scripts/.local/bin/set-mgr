@@ -29,6 +29,8 @@ list_choices(){
 󰌧 WM autostart
 󰧺 Keybindings
 󰧺 WM keybindings
+󰓦 Backup utility
+󰒄 Firewall
 EOF
 }
 
@@ -56,6 +58,8 @@ case "$choice" in
   "󰌧 WM autostart") $config_edit $WM_AUTOSTART ;;
   "󰧺 Keybindings") $config_edit $KEYBIND ;;
   "󰧺 WM keybindings") $WM_KEYBIND ;;
+  "󰓦 Backup utility") pkexec $BACKUP_UTIL ;;
+  "󰒄 Firewall") pkexec $FIREWALL ;;
 esac
 
 
