@@ -26,3 +26,7 @@ case "$choice" in
   "󰄟 Mount") ios-mount ;;
   "󰮑 Eject") ios-unmount ;;
 esac
+
+
+
+# vim: ft=sh

@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Set defaults if variables are not set yet
+[ -z "$SCREENREC_RES" ] && SCREENREC_RES="1280x720"
+[ -z "$SCREENREC_AUDIO" ] && SCREENREC_AUDIO="alsa"
+[ -z "$SCREENREC_VCODEC" ] && SCREENREC_VCODEC="libx264"
+[ -z "$SCREENREC_PRESET" ] && SCREENREC_PRESET="superfast"
+[ -z "$SCREENREC_ACODEC" ] && SCREENREC_ACODEC="aac"
+
+# Create "Recordings" folder
+mkdir -p $HOME/Videos/Recordings
+
+ffmpeg -vaapi_device /dev/dri/renderD128 -f x11grab \
+	-video_size $SCREENREC_RES -framerate 30 -i $DISPLAY \
+	-f $SCREENREC_AUDIO -i default \
+	-c:v $SCREENREC_VCODEC -preset $SCREENREC_PRESET -c:a $SCREENREC_ACODEC \
+	$HOME/Videos/Recordings/recording-of-$(date +%Y-%m-%d_%H.%M.%S).mp4
+
+
+
+# vim: ft=sh

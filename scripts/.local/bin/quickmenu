@@ -33,3 +33,7 @@ case "$choice" in
   "󰢻 Settings") set-mgr ;;
   "󰄠 iOS Mounter") imountmgr ;;
 esac
+
+
+
+# vim: ft=sh

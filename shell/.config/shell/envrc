@@ -16,6 +16,7 @@ export MANPAGER="nvim -c 'set ft=man'" # Use Neovim as manpager
 export IOS_MOUNTPOINT="$HOME/iOS" # iOS mountpoint (needed by iOS Mounter)
 export GNUPGHOME="$XDG_DATA_HOME/gnupg" # GnuPG directory
 export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc" # GTK2 configuration
+export EDITOR="nvim"
 
 ## SOME PROGRAMS ##
 export STARTMENU="jgmenu_run"
@@ -37,8 +38,6 @@ export SCREENSHOOTER="screenshot"
 ## DEFAULT APPS ##
 export TERMINAL="alacritty"
 export BROWSER="firefox"
-export EDITOR="nvim"
-export VISUAL="nvim"
 
 ## SETTINGS MANAGER ##
 export STYLE="lxappearance" # Appearance
@@ -61,7 +60,16 @@ export XSECURELOCK_SHOW_HOSTNAME="2"
 export XSECURELOCK_AUTH_CURSOR_BLINK="1"
 export XSECURELOCK_AUTH_SOUNDS="1"
 
+## SCREENREC SETTINGS ##
+export SCREENREC_RES="1366x768"
+export SCREENREC_AUDIO="pulse"
+export SCREENREC_VCODEC="libx264"
+export SCREENREC_PRESET="ultrafast"
+export SCREENREC_ACODEC="aac"
+
 ## DBUS-LAUNCH ##
 export $(dbus-launch)
 
-## EOF ##
+
+
+# vim: ft=zsh

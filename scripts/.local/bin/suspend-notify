@@ -9,3 +9,6 @@ notify-send -i "$XDG_DATA_HOME/assets/dunst/icons/suspend.png" -u low "System" "
 sleep 5s
 loginctl suspend
 
+
+
+# vim: ft=sh

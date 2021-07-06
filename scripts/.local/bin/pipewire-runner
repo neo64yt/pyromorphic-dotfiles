@@ -3,3 +3,7 @@
 pipewire &
 pipewire-pulse &
 pipewire-media-session || pipewire-media-session & 
+
+
+
+# vim: ft=sh

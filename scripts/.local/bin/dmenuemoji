@@ -29,3 +29,6 @@ else
 	notify-send -i $XDG_DATA_HOME/assets/dunst/icons/face-smile-big.svg -u low Emojis "Successfully copied '$chosen' to clipboard!" &
 fi
 
+
+
+# vim: ft=sh

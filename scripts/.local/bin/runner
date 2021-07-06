@@ -10,3 +10,7 @@ prompt="󰆍 Run:"
 
 # Command
 dmenu_run -c -n -l $lines -bw $border -h $height -p "$prompt" 
+
+
+
+# vim: ft=sh

@@ -38,3 +38,7 @@ case "$choice" in
   "󰍁 Lock") $LOCKER ;;
   "󰍃 Log out") sh $SESSION_KILLER ;;
 esac
+
+
+
+# vim: ft=sh

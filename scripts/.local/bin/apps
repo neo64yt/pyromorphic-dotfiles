@@ -13,3 +13,7 @@ DMENU="dmenu -c -n -l $lines -bw $border -h $height -p \"$prompt\""
 
 # Command
 j4-dmenu-desktop --dmenu="$DMENU" --term="$TERMINAL"
+
+
+
+# vim: ft=sh

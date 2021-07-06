@@ -57,3 +57,7 @@ case "$choice" in
   "󰧺 Keybindings") $config_edit $KEYBIND ;;
   "󰧺 WM keybindings") $WM_KEYBIND ;;
 esac
+
+
+
+# vim: ft=sh
