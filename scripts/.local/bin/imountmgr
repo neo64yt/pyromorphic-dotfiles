@@ -16,7 +16,7 @@ EOF
 
 # dmenu command
 dmenu_cmd(){
-	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt"
+	dmenu -c -n -l "$lines" -bw "$border" -h "$height" -p "$prompt"
 }
 
 choice=$(list_choices | dmenu_cmd)

@@ -12,6 +12,7 @@ let g:NERDTreeDirArrowExpandable = '󰦿'
 let g:NERDTreeDirArrowCollapsible = '󰧃'
 let g:vaxe_enable_airline_defaults = 0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 
 " nerdtree
 Plug 'preservim/nerdtree'

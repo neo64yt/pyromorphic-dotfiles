@@ -1,236 +1,3 @@
-: 1625264835:0;sudoedit /boot/efi/EFI/refind/refind.conf
-: 1625270304:0;pacman -Q | grep keyring
-: 1625270511:0;pkill gtk3-nocsd
-: 1625270522:0;unset GTK_CSD
-: 1625270643:0;nvim  .config/gtk-3.0
-: 1625271227:0;gnome-keyring --help
-: 1625271365:0;sdfghgfdsxcvbghuyt4rwdascdvcbfnhjyrt54rewasxzcvbnhjygutr5e4wqAXCDVGHTRFDBZXCH BZKIXCVIZXCBSAZXCBXKZXCVNFDEUAYSDCFHDSHXC
-: 1625271439:0;p -R gtk3-nocsd-git
-: 1625271667:0;ls .local/share/keyrings
-: 1625271937:0;p -S seahorse
-: 1625281386:0;sudo grep ativ9-lite /
-: 1625281400:0;sudo grep -r ativ9-lite /
-: 1625281508:0;cat /etc/hosts
-: 1625281744:0;sv status hostname
-: 1625281789:0;cat /etc/systemd/system/iwd.service.d/90-networkmanager.conf 
-: 1625282508:0;grep -r ativ9-lite .
-: 1625282554:0;cat .local/share/gnupg/.#lk0x0000560176977cc0.ativ9-lite.1905
-: 1625282566:0;cat .local/share/gnupg/.\#lk0x0000560176977cc0.ativ9-lite.1905
-: 1625282732:0;grep $HOSTNAME
-: 1625282738:0;echo $HOSTNAME
-: 1625282777:0;cat << EOF && hello\
-\
-give
-: 1625282795:0;cat << EOF \
-hell\
-EOF
-: 1625282829:0;cat << EOF && hello\
-give\
-EOF
-: 1625282863:0;cat << EOF | dmenu\
-hello\
-EOF
-: 1625284703:0;paru -Ss piper
-: 1625285578:0;cd git-src/Bento
-: 1625285583:0;nvim css/style.css
-: 1625291692:0;pacman -Ss teams
-: 1625291706:0;paru -Ss teams
-: 1625294001:0;pacman -Q | grep vnc
-: 1625294464:0;virt-viewer --help
-: 1625294480:0;virt-viewer --help-gtk-vnc
-: 1625294570:0;virt-viewer --connect=77.64.170.104:5940
-: 1625294682:0;virt-viewer --connect=http://77.64.170.104:5954
-: 1625294824:0;pacman -Si tigervnc
-: 1625294861:0;pacman -Si vnc
-: 1625294869:0;pacman -Ssi vnc
-: 1625294873:0;pacman -Ss vnc
-: 1625298665:0;cp IMG_1478.JPG ~/Pictures/keyboard.png
-: 1625298806:0;hsetroot -scale Pictures/keyboard.png
-: 1625298821:0;hsetroot -fill Pictures/keyboard.png
-: 1625299527:0;hsetroot -full Pictures/keyboard.png
-: 1625299592:0;mv Pictures/keyboard.png .local/share/backgrounds
-: 1625299601:0;nvim $WM_AUTOSTART
-: 1625299699:0;gpg --delete-secret-keys 598AA3D3BCAD50311C0CB1C30D65D30BECA7E116
-: 1625299716:0;gpg --delete-keys 598AA3D3BCAD50311C0CB1C30D65D30BECA7E116
-: 1625299733:0;gpg --list-keys
-: 1625299756:0;sudo nvim /etc/hostname
-: 1625299767:0;sudoedit /etc/hostname
-: 1625299838:0;sudoedit /etc/hosts
-: 1625299877:0;loginctl reboot
-: 1625299966:0;sudo visudo
-: 1625300033:0;gpg --full-generate-key
-: 1625300100:0;gpg --list-secret-keys
-: 1625313938:0;cp IMG_1478.JPG ~/.local/share/backgrounds/keyboard.png
-: 1625313964:0;hsetroot -full ~/.local/share/backgrounds/keyboard.png
-: 1625315466:0;echo $HOST
-: 1625315609:0;env | grep DMENU
-: 1625315627:0;shellcheck apps
-: 1625315767:0;man dmenu
-: 1625316655:0;cat shell/.config/shell/zshrc
-: 1625316682:0;commit -m "New wallpaper"
-: 1625316807:0;clear
-: 1625316910:0;cowsay -f ren "WOW"
-: 1625316918:0;cowsay -f dragon "WOW"
-: 1625316937:0;cowsay -f dragon-and-cow "$(hello)"
-: 1625319154:0;cat /etc/issue
-: 1625319199:0;paru -S aur/pamac-aur
-: 1625319395:0;rm -rf Qawl-0.0.8.AppImage
-: 1625319403:0;cd .local/share/applications
-: 1625319407:0;rm -rf qawl.desktop
-: 1625319430:0;rm -rf qawl
-: 1625320093:0;pamac-daemon --help
-: 1625320106:0;whatis pamac-daemon
-: 1625320109:0;whatis pamac
-: 1625320113:0;whatis dwm
-: 1625320118:0;whatis geary
-: 1625320124:0;whatis cowsay
-: 1625320129:0;whatis lolcat
-: 1625320137:0;whatis dmenu
-: 1625320143:0;whatis zsh
-: 1625320148:0;whatis dash
-: 1625320154:0;whatis shellcheck
-: 1625320163:0;whatis picom
-: 1625320167:0;whatis picom-trans
-: 1625320179:0;whatis pipewire
-: 1625320242:0;pacman -Qi pamac-aur
-: 1625320933:0;paru -S pfetch-git
-: 1625321000:0;p -R pamac-aur
-: 1625321036:0;rm -rf .config/pamac
-: 1625321049:0;sudo rm -rf /etc/pamac.conf.pacsave
-: 1625321054:0;sudo rm -rf /etc/pamac.conf
-: 1625321060:0;sudo rm -rf /etc/pamac.conf.pacsave.6
-: 1625321063:0;sudo rm -rf /etc/pamac.conf.pacsave.8
-: 1625321565:0;ls .config/lxsession
-: 1625321568:0;ls .config/lxsession/dwm
-: 1625321577:0;cat .config/lxsession/dwm/desktop.conf
-: 1625321599:0;p -S lxsession
-: 1625321748:0;ls .config/autostart
-: 1625321805:0;pkill lxsession
-: 1625321809:0;p -R lxsession
-: 1625321842:0;rm -rf .config/lxsession
-: 1625321864:0;ls .local/share
-: 1625321936:0;sudo find / -name "*lxsession*"
-: 1625321954:0;sudo find / -name "*lxpolkit*"
-: 1625322036:0;pacman -Syu
-: 1625322040:0;pacman -Sy
-: 1625322077:0;p -S luakit
-: 1625322149:0;ls .config
-: 1625322165:0;cat .config/autostart/geary-autostart.desktop
-: 1625322177:0;nvim $AUTOSTART
-: 1625322244:0;cat .config/autostart/LXinput-setup.desktop
-: 1625354420:0;pacman -Qi blueman
-: 1625354446:0;pacman -Qi libnm
-: 1625354457:0;pacman -Qi networkmanager
-: 1625355414:0;wget https://raw.githubusercontent.com/LukeSmithxyz/voidrice/master/.local/share/larbs/emoji
-: 1625355471:0;mv emoji .local/share/assets/emoji
-: 1625355540:0;paru -Ss emoji
-: 1625355587:0;p -S ttf-joypixels
-: 1625355614:0;p -R ttf-noto-color-emojis
-: 1625355637:0;p -R noto-fonts-emoji
-: 1625355804:0;commit -m "Using JoyPixels for emojis"
-: 1625355966:0;grep -r symbola git-src
-: 1625356400:0;pacman -Ss unicode
-: 1625356639:0;pacman -Si unicode-emoji
-: 1625356658:0;p -S unicode-emoji
-: 1625356710:0;grep smiling .local/share/assets/emoji
-: 1625356747:0;p -R unicode-emoji
-: 1625356771:0;p -S ufw-runit gufw
-: 1625356793:0;sudo ln -s /etc/runit/sv/ufw /etc/runit/runsvdir/default
-: 1625356800:0;sudo sv start ufw
-: 1625357609:0;paru -Ss twemoji
-: 1625358068:0;nvim .config/alacritty/alacritty.yml
-: 1625358207:0;p -S ttf-symbola
-: 1625358242:0;git clone https://git.suckless.org/st
-: 1625359543:0;patch < ~/Downloads/st-font2.diff
-: 1625359550:0;nvim x.c.rej
-: 1625359874:0;patch < ~/Downloads/st-boxdraw.diff
-: 1625359924:0;patch < ~/Downloads/st-alpha.diff
-: 1625359933:0;nvim st.h.rej
-: 1625360071:0;patch < ~/Downloads/st-ligatures-boxdraw.diff
-: 1625360084:0;nvim config.mk.rej
-: 1625360359:0;echo =>
-: 1625360364:0;echo "=>"
-: 1625360404:0;ðƒ¿ƒ¸€ðƒ¿ƒ¸€ðƒ¿ƒ¸€ðƒ¿ƒ¸€
-: 1625361376:0;git clone https://git.suckless.org/scroll
-: 1625361620:0;cp ../dwm-neo64/cleandir.sh .
-: 1625361628:0;cp ../dwm-neo64/install.sh .
-: 1625362293:0;cd st
-: 1625362296:0;cd git-src/st
-: 1625362435:0;patch < ~/Downloads/st-scrollback.diff
-: 1625362606:0;patch < ~/Downloads/st-scrollback-mouse.diff
-: 1625364003:0;patch -R < ~/Downloads/st-scrollback-mouse.diff
-: 1625364019:0;patch -R < ~/Downloads/st-scrollback.diff
-: 1625364024:0;nvim st.c.rej
-: 1625364243:0;patch < ~/Downloads/st-universcroll.diff
-: 1625364342:0;patch -R < ~/Downloads/st-universcroll.diff
-: 1625364721:0;ðƒ¿ƒ¸€ðƒ¿ƒ¸€
-: 1625364729:0;echo "ðƒ¿ƒ¸€"
-: 1625364760:0;echo ""ðƒ¿ƒ§²ðƒ¿ƒ§¾"
-: 1625364793:0;cd scroll
-: 1625364821:0;grep smiling ~/.local/share/assets/emoji
-: 1625364849:0;p -R ttf-symbola
-: 1625364878:0;paru -S ttf-twemoji-color
-: 1625364998:0;p -R ttf-joypixels
-: 1625365107:0;sudo rm -rf ~/.config/fontconfig/conf.d/56-ttf-twemoji-color.conf
-: 1625365126:0;sudo find / -name "*56-ttf-twemoji-color.conf*"
-: 1625365136:0;sudo find / -name "*ttf-twemoji-color.conf*"
-: 1625365150:0;p -S noto-color-emojis
-: 1625365155:0;p -S noto-color-emoji
-: 1625365166:0;pacman -Ss emoji
-: 1625365181:0;p -S noto-fonts-emoji
-: 1625365202:0;nvim config.def.h
-: 1625365222:0;./install.sh
-: 1625365289:0;p -R ttf-twemoji-color
-: 1625365314:0;rm -rf st
-: 1625365318:0;rm -rf scroll
-: 1625365322:0;cd dmenu-neo64
-: 1625365326:0;./cleandir.sh
-: 1625365349:0;commit -m "Using Noto for emojis"
-: 1625365360:0;cat .local/share/assets/emoji
-: 1625365424:0;pacman -Qi noto-fonts-emoji
-: 1625365444:0;pacman -Qi emoji-font
-: 1625365655:0;echo "ðƒ¿ƒ¬¶ï¸ƒ¯"
-: 1625365657:0;echo "ðƒ¿ƒ¬¶"
-: 1625365764:0;echo "ðƒ¿ƒ§²ðƒ¿ƒ§¾"
-: 1625365864:0;pacman -Qi virt-manager
-: 1625365877:0;pacman -Qi qemu
-: 1625365900:0;p -S --asdeps qemu
-: 1625365972:0;pacman -Qi ghostscript
-: 1625365987:0;p -S --asdeps ghostscript
-: 1625366009:0;pacman -Qe
-: 1625366080:0;pacman -Qi xss-lock
-: 1625366088:0;pacman -Qi xautolock
-: 1625366105:0;pacman -Qi xdotool
-: 1625366118:0;p -S --asdeps xdotool
-: 1625366193:0;pacman -Qi exfatutils
-: 1625366195:0;pacman -Qi exfatutil
-: 1625366201:0;pacman -Qi exfat-utils
-: 1625366215:0;p -S --asdeps exfat-utils
-: 1625366231:0;p -S --asdeps exfatprogs
-: 1625366278:0;haxelib remove openfl
-: 1625366286:0;cd haxelib
-: 1625366294:0;openfl
-: 1625366308:0;ls /usr/local/bin/openfl
-: 1625366314:0;ls -l /usr/local/bin/openfl
-: 1625366326:0;sudo haxelib remove openfl
-: 1625366403:0;haxelib remove hxcpp
-: 1625366418:0;haxelib remove lime lime-samples openfl-samples
-: 1625366425:0;haxelib remove lime
-: 1625366431:0;haxelib remove lime-samples
-: 1625366455:0;haxelib remove openfl-samples
-: 1625366470:0;haxelib remove actuate
-: 1625366483:0;haxelib list
-: 1625366491:0;haxelib remove box2d
-: 1625366498:0;haxelib remove layout
-: 1625366532:0;sudo find / -name "*lime*"
-: 1625366554:0;sudo rm -rf /usr/local/bin/lime
-: 1625366561:0;sudo rm -rf /usr/local/bin/openfl
-: 1625366579:0;pacman -Ql haxe
-: 1625366592:0;pacman -Ql haxe | grep local
-: 1625366598:0;p -R haxe
-: 1625366630:0;cd .local/share/nvim/plugged/
-: 1625366637:0;rm -rf vaxe
-: 1625366647:0;nvim .config/nvim/init.vim
 : 1625366707:0;find . -name "*.hx*"
 : 1625366718:0;find ~ -name "*.hx*"
 : 1625366725:0;sudo find / -name "*.hx*"
@@ -239,7 +6,6 @@ EOF
 : 1625366905:0;cat << ==>\
 hehe\
 ==>
-: 1625367091:0;cd git-src
 : 1625367132:0;git clone https://git.suckless.org/svkbd
 : 1625367420:0;svkbd-mobile-intl
 : 1625367443:0;cd svkbd
@@ -293,7 +59,6 @@ hehe\
 : 1625399764:0;source --help
 : 1625399771:0;man source
 : 1625399826:0;which source
-: 1625399834:0;sh
 : 1625399970:0;rm -rf .config/dmenu
 : 1625399991:0;cd .config/shell
 : 1625399997:0;nvim aliasrc
@@ -369,7 +134,6 @@ hehe\
 : 1625448217:0;paru -Ss ideviceinstaller
 : 1625448236:0;paru -S ideviceinstaller
 : 1625448337:0;p -R $
-: 1625448465:0;p -R $(pacman -Qtdq)
 : 1625448480:0;ideviceinfo
 : 1625448488:0;ideviceinstaller --help
 : 1625448512:0;ideviceinstaller -l
@@ -389,7 +153,6 @@ EOF
 : 1625454591:0;nvim .local/bin/imountmgr
 : 1625454679:0;nvim dmenu_cmd
 : 1625454783:0;chmod +x dmenu_cmd
-: 1625454806:0;imountmgr
 : 1625454834:0;cat << EOF | dmenu_cmd\
 hekl\
 hello\
@@ -467,7 +230,6 @@ EOF
 : 1625541680:0;ffmpeg -f x11grab -video_size 1366x768 -framerate 30 -i $DISPLAY -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac screen.mp4
 : 1625542004:0;cat dotsmgr
 : 1625543509:0;env | grep screenre 
-: 1625543520:0;env | grep screenrec
 : 1625543602:0;mpv screen.mp4
 : 1625543619:0;rm -rf screen.mp4
 : 1625549941:0;vainfo
@@ -484,12 +246,8 @@ EOF
 : 1625551044:0;grep zsh *
 : 1625551110:0;echo "# vim: ft=sh" >> *
 : 1625551395:0;nvim apps
-: 1625551456:0;nvim ios-mount
-: 1625551470:0;nvim ios-unmount
-: 1625551488:0;nvim lock
 : 1625551512:0;nvim mpvcam
 : 1625551541:0;nvim pipewire-runner
-: 1625551573:0;nvim runner
 : 1625551591:0;nvim screenshot
 : 1625551667:0;nvim suspend-notify
 : 1625551700:0;cd hello-collection
@@ -584,18 +342,11 @@ EOF
 : 1625566129:0;ls shell/.local
 : 1625566133:0;ls shell/.local/state
 : 1625566136:0;ls shell/.local/state/shell
-: 1625566160:0;nvim .zshrc
 : 1625566254:0;nvim .local/state/shell/zsh_history
-: 1625566315:0;clean-cache
-: 1625566348:0;commit
 : 1625566369:0;ls shell/.local/state/shell/zsh_history
-: 1625566386:0;git add .
-: 1625566390:0;cat ../git-token
 : 1625566412:0;commit -m "Updated screenrec"
-: 1625566420:0;push
 : 1625566455:0;ls -l .local/state/
 : 1625566487:0;cd .local/state
-: 1625566492:0;cd shell
 : 1625566500:0;nvim zsh_history
 : 1625566684:0;cd .local/state/shell/zsh_history
 : 1625566711:0;mv zsh_history ~/git-src/glorious-dotfiles/shell/.local/state/shell/zsh_history
@@ -607,7 +358,6 @@ EOF
 : 1625566870:0;ls -l 
 : 1625566880:0;ls -l .local/state/shell/
 : 1625566885:0;ls -l .local/
-: 1625566918:0;cd git-src/glorious-dotfiles
 : 1625566931:0;ls -l ~/.config
 : 1625566944:0;ls -l ~/.config/alacritty
 : 1625566960:0;ls -l ~/.config/autostart-cmds
@@ -620,15 +370,11 @@ EOF
 : 1625567003:0;ls -l ~/.config/nvim
 : 1625567016:0;ls -l ~/.config/picom
 : 1625567056:0;cd .config
-: 1625567116:0;paru
 : 1625567134:0;cowsay -f dragon "Nothing to see here, I'm just dev_sda2's dragon" | lolcat
 : 1625567558:0;paru -Ss timeshift
 : 1625567586:0;paru -S timeshift-autosnap
 : 1625567631:0;paru -Ss refind
 : 1625567666:0;p -S refind-btrfs
-: 1625567741:0;pacman -Ss libsystemd
-: 1625567750:0;pacman -Ss systemd
-: 1625567771:0;p -Scc
 : 1625568289:0;ls /timeshift-btrfs
 : 1625568303:0;ls /timeshift-btrfs/snapshots
 : 1625568313:0;sudo mount /dev/sda2 -o subvolid=5 /mnt
@@ -658,7 +404,6 @@ EOF
 : 1625575648:0;cd Documents
 : 1625575654:0;rm -rf encryption
 : 1625575667:0;rm -rf KLGT*
-: 1625575799:0;htop
 : 1625575820:0;kill -2 ffmpeg
 : 1625575856:0;killall -s SIGINIT ffmpeg
 : 1625575866:0;killall -l
@@ -669,10 +414,8 @@ EOF
 : 1625576017:0;killall -s SIGINT ffmpeg
 : 1625576038:0;mpv recording-of-2021-07-06_20.53.14.mp4
 : 1625576332:0;pkill -INT ffmpeg
-: 1625576340:0;cd Videos/Recordings
 : 1625576349:0;mpv recording-of-2021-07-06_20.58.24.mp4
 : 1625576392:0;rm -rf *
-: 1625576662:0;cd .local/bin
 : 1625576688:0;touch screenrecmenu
 : 1625576713:0;nvim -c 'set ft=sh' screenrecmenu
 : 1625576762:0;ls ..
@@ -682,46 +425,168 @@ EOF
 : 1625576811:0;ls shell
 : 1625576845:0;ls xorg
 : 1625576864:0;../bin
-: 1625576866:0;ls
 : 1625576879:0;../share
-: 1625576882:0;..
 : 1625576891:0;cd bin
 : 1625577250:0;cp ~/.local/share/examples/dmenu/script screenrecmenu
 : 1625577258:0;nvim set-mgr
 : 1625577269:0;nvim sessionmgr
-: 1625577281:0;nvim dmenuemoji
 : 1625577289:0;nvim screenrec
 : 1625577758:0;chmod +x screenrecmenu
-: 1625577766:0;nvim imountmgr
 : 1625577786:0;nvim ~/.local/share/examples/dmenu/script 
-: 1625577846:0;nvim quickmenu
 : 1625577854:0;nvim screenrecmenu
-: 1625577869:0;cd
 : 1625577872:0;screenrec
-: 1625577909:0;nvim .zprofile
-: 1625577926:0;source .zprofile
-: 1625577928:0;exit
-: 1625577932:0;source .zprofile
 : 1625577936:0;env | grep screenrec
 : 1625577946:0;screenrecmenu
 : 1625577997:0;cd Videos/Recordings
-: 1625577998:0;ls
 : 1625578009:0;mpv recording-of-2021-07-06_21.25.48.mp4
 : 1625578135:0;gufw
 : 1625578144:0;timeshift
-: 1625578180:0;cat /usr/share/applications/timeshift-gtk.desktop
 : 1625578191:0;timeshift-launcher
 : 1625578197:0;gparted
 : 1625578217:0;lightdm-gtk3-greeter-settings
-: 1625578232:0;cd
 : 1625578239:0;cat .local/bin/set-mgr
 : 1625578250:0;env | grep LOGIN
 : 1625578263:0;lightdm-gtk-greeter-settings
 : 1625578279:0;cat /usr/share/applications/timeshift-gtk.desktop
-: 1625578304:0;nvim .zprofile
-: 1625578478:0;nvim $(which set-mgr)
-: 1625578841:0;cd
-: 1625578844:0;cd git-src/glorious-dotfiles
 : 1625578847:0;cat ../git-token
 : 1625578852:0;commit
 : 1625578861:0;git add .
+: 1625578871:0;commit -m "Added screenrecmenu"
+: 1625578873:0;push
+: 1625610409:0;sh
+: 1625610428:0;bash
+: 1625610452:0;cat .gtkrc-2.0
+: 1625610477:0;cat .config/gtk-2.0/gtkrc
+: 1625610577:0;pkill -INT dwm
+: 1625610626:0;nvim .config/dwm/session-killer
+: 1625610664:0;cat /usr/local/bin/dwm-session
+: 1625610691:0;cat /usr/local/bin/dmenu_path 
+: 1625610799:0;shellcheck apps
+: 1625610971:0;foo=bruh
+: 1625610980:0;printf '..%s..' "$foo"
+: 1625610998:0;printf '..%s..\n' "$foo"
+: 1625611007:0;printf '..%s..' "$foo\n"
+: 1625611023:0;printf '%s\n' "$foo"
+: 1625611044:0;nvim dmenuemoji
+: 1625611099:0;ðƒ¿¤§
+: 1625611103:0;shellcheck dmenuemoji
+: 1625611120:0;nvim imountmgr
+: 1625611143:0;imountmgr
+: 1625611147:0;shellcheck imountmgr
+: 1625611149:0;paru
+: 1625611269:0;htop
+: 1625611387:0;nvim $(which set-mgr)
+: 1625611414:0;source
+: 1625611419:0;source .zprofile
+: 1625611423:0;set-mgr
+: 1625611861:0;p -S yad
+: 1625612235:0;cd .local/bin
+: 1625612602:0;nvim ios-mount
+: 1625612617:0;shellcheck ios-mount
+: 1625612644:0;nvim ios-unmount
+: 1625612673:0;shellcheck ios-unmount
+: 1625612867:0;nvim lock
+: 1625612887:0;"$LOCKER"
+: 1625612910:0;shellcheck lock
+: 1625612932:0;shellcheck mpvcam
+: 1625612944:0;shellcheck pipewire-runner
+: 1625612959:0;nvim quickmenu
+: 1625612983:0;shellcheck quickmenu
+: 1625613055:0;shellcheck runner
+: 1625613074:0;shellcheck screenrec
+: 1625613332:0;paru -Ss mksh
+: 1625613350:0;nvim runner
+: 1625613502:0;l
+: 1625613521:0;pacman -Qs systemd
+: 1625613531:0;pacman -Qs libsystemd
+: 1625613807:0;paru -Ss libsystemd
+: 1625613994:0;pacman -Ss libsystemd
+: 1625614002:0;pacman -Ss systemd
+: 1625614049:0;pacman -Ql artix-archlinux-support
+: 1625614062:0;cat /etc/arch-release
+: 1625614084:0;ls /usr/bin/systemd-sysusers
+: 1625614696:0;pacman -Ss libelogind
+: 1625614703:0;pacman -Ss libeudev
+: 1625614722:0;pacman -Ss libudev
+: 1625614768:0;pacman -Si libudev0-shim
+: 1625614785:0;pacman -Si libeudev
+: 1625614803:0;pacman -Si libelogind
+: 1625614818:0;pacman -Si systemd
+: 1625614923:0;p -S anbox-support
+: 1625614960:0;p -S anbox-support anbox-git
+: 1625617030:0;nvim .config/nvim/init.vim
+: 1625617282:0;paru -Ss systemd-libs
+: 1625617500:0;paru -S anbox-git
+: 1625617527:0;p -S anbox-git
+: 1625618262:0;paru -S aur/anbox-git
+: 1625618405:0;cd git-src
+: 1625618425:0;git clone https://aur.archlinux.org/anbox-git.git
+: 1625618431:0;cd anbox-git
+: 1625618440:0;nvim PKGBUILD
+: 1625618548:0;pacman -Si anbox-support
+: 1625618582:0;pacman -Ss android-tools
+: 1625618614:0;pacman -Qi systemd-libs
+: 1625618817:0;pacman -Ss lxc-anbox
+: 1625618825:0;pacman -Ss lxc-git
+: 1625618847:0;p -S --asdeps lxc-git 
+: 1625618862:0;makepkg -si
+: 1625618985:0;paru -Ss sdbus-cpp
+: 1625619004:0;pacman -Si anbox-git
+: 1625619048:0;..
+: 1625619055:0;rm -rf anbox-git
+: 1625619079:0;p -Sw anbox-git
+: 1625619233:0;paru -Ss repkg
+: 1625619309:0;paru -S repkg
+: 1625619437:0;pacman -Ss jsoncpp-1.9.4-1  rhash-1.4.1-1  boost-1.76.0-1  cmake-3.20.5-1  glm-0.9.9.8-1  gtest-1.11.0-1  properties-cpp-0.0.2-1
+: 1625619448:0;pacman -Ss jsoncpp
+: 1625619463:0;pacman -Ss rhash
+: 1625619478:0;pacman -Ss boost
+: 1625619494:0;pacman -Ss cmake
+: 1625619508:0;pacman -Ss glm
+: 1625619525:0;pacman -Ss gtest
+: 1625619540:0;pacman -Ss properties-cpp
+: 1625619600:0;p -R qt5-tools
+: 1625619609:0;p -R $(pacman -Qtdq)
+: 1625619668:0;sudoedit /etc/pacman.d/chaotic-mirrorlist
+: 1625619681:0;paru -Syyyu
+: 1625619740:0;p -Ss libdbusmenu-glib
+: 1625619747:0;p -Qi libdbusmenu-glib
+: 1625619758:0;p -Qi libdbusmenu-gtk3
+: 1625619767:0;p -Qi xapp
+: 1625619787:0;p -S --asdeps timehsift-autosnap
+: 1625619794:0;p -S --asdeps timeshift-autosnap
+: 1625619821:0;p -Si yad
+: 1625619846:0;p -Scc
+: 1625619851:0;clean-cache
+: 1625619989:0;cat .zcompdump
+: 1625620128:0;cd git-src/glorious-dotfiles
+: 1625620132:0;cd shell
+: 1625620133:0;ls
+: 1625620143:0;cd
+: 1625620236:0;rm -rf .local/share/shell/zcompdump
+: 1625620242:0;rm -rf .local/share/shell
+: 1625620413:0;ls .zcompdump
+: 1625620428:0;ls /etc/zshrc
+: 1625620445:0;ls /etc/zsh/zshrc
+: 1625620449:0;cat /etc/zsh/zshrc
+: 1625620470:0;cat /etc/zsh/zprofile
+: 1625620795:0;grep compinit /etc/zsh/zshrc
+: 1625620818:0;grep COMPDUMPFILE /etc/zsh/zshrc
+: 1625620841:0;env | grep compdumpfile
+: 1625620865:0;nvim .zprofile
+: 1625620914:0;nvim .zshrc
+: 1625620963:0;rm -rf .zcompdump
+: 1625620978:0;exit
+: 1625621097:0;cd $COMDUMPFILE
+: 1625621102:0;cd $COMPDUMPFILE
+: 1625621104:0;ls
+: 1625621116:0;cd
+: 1625621118:0;clean-cache
+: 1625621131:0;ls .cache/zsh
+: 1625621154:0;nvim .zprofile
+: 1625621171:0;clean-cache
+: 1625621179:0;ls .cache/zsh
+: 1625621194:0;cd git-src/glorious-dotfiles
+: 1625621198:0;commit
+: 1625621212:0;cat ../git-token
+: 1625621221:0;git add .

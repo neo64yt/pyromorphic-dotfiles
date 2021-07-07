@@ -58,8 +58,8 @@ case "$choice" in
   "󰌧 WM autostart") $config_edit $WM_AUTOSTART ;;
   "󰧺 Keybindings") $config_edit $KEYBIND ;;
   "󰧺 WM keybindings") $WM_KEYBIND ;;
-  "󰓦 Backup utility") pkexec $BACKUP_UTIL ;;
-  "󰒄 Firewall") pkexec $FIREWALL ;;
+  "󰓦 Backup utility") $BACKUP_UTIL ;;
+  "󰒄 Firewall") $FIREWALL ;;
 esac
 
 
