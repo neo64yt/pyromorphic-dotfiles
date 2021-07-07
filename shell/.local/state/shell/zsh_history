@@ -48,7 +48,6 @@ hehe\
 : 1625397000:0;cd iOS/DCIM/101APPLE
 : 1625397050:0;sxiv IMG_147*
 : 1625397077:0;cp IMG_1473.PNG ~/Pictures
-: 1625397083:0;cd 
 : 1625397096:0;cd Pictures
 : 1625397111:0;mv IMG_1473.PNG freedo.png
 : 1625397115:0;sxiv freedo.png
@@ -102,15 +101,10 @@ hehe\
 : 1625444104:0;ls /usr/share/sounds/freedesktop/
 : 1625444108:0;ls /usr/share/sounds/freedesktop/stereo/
 : 1625444136:0;paplay /usr/share/sounds/freedesktop/stereo/dialog-error.oga
-: 1625444147:0;paplay /usr/share/sounds/freedesktop/stereo/message.oga
 : 1625444156:0;paplay /usr/share/sounds/freedesktop/stereo/power-plug.oga
 : 1625444164:0;paplay /usr/share/sounds/freedesktop/stereo/power-unplug.oga
 : 1625444173:0;paplay /usr/share/sounds/freedesktop/stereo/window-attention.oga
 : 1625444179:0;paplay /usr/share/sounds/freedesktop/stereo/window-question.oga
-: 1625444189:0;paplay /usr/share/sounds/freedesktop/stereo/service-login.oga
-: 1625444198:0;paplay /usr/share/sounds/freedesktop/stereo/service-logout.oga
-: 1625444207:0;paplay /usr/share/sounds/freedesktop/stereo/bell.oga
-: 1625444221:0;paplay /usr/share/sounds/freedesktop/stereo/complete.oga
 : 1625444234:0;ls /usr/share/sounds/
 : 1625444238:0;ls /usr/share/sounds/alsa
 : 1625444257:0;paplay /usr/share/sounds/alsa/Rear_Center.wav
@@ -118,7 +112,6 @@ hehe\
 : 1625445746:0;ls /usr/share/sounds/freedesktop/stereo
 : 1625445775:0;paplay /usr/share/sounds/freedesktop/stereo/device-added.oga
 : 1625445784:0;paplay /usr/share/sounds/freedesktop/stereo/device-removed.oga
-: 1625445805:0;paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
 : 1625445833:0;alsamixer
 : 1625445849:0;pacman -Ss pulseaudio-alsa
 : 1625447959:0;man ifuse
@@ -140,7 +133,6 @@ hehe\
 : 1625448811:0;sudo checkra1n
 : 1625448926:0;ideviceinstaller -i unc0ver_Release_6.1.2.ipa
 : 1625450542:0;xprop | grep WM_CLASS
-: 1625451424:0;nvim .config/picom/picom.conf
 : 1625453536:0;export DMENU="dmenu -c -n -l $lines -h $height -bw $border"
 : 1625453547:0;lines=3
 : 1625453559:0;height=35
@@ -214,7 +206,6 @@ EOF
 : 1625536068:0;rm -rf artix-xfce-runit-20210101-x86_64.iso
 : 1625536425:0;ls Downloads
 : 1625536443:0;rm -rf dwm*
-: 1625536451:0;cd Downloads
 : 1625536454:0;rm -rf dwm-*
 : 1625536460:0;rm -rf st-*
 : 1625536473:0;sxiv icon.svg
@@ -230,8 +221,6 @@ EOF
 : 1625541680:0;ffmpeg -f x11grab -video_size 1366x768 -framerate 30 -i $DISPLAY -f alsa -i default -c:v libx264 -preset ultrafast -c:a aac screen.mp4
 : 1625542004:0;cat dotsmgr
 : 1625543509:0;env | grep screenre 
-: 1625543602:0;mpv screen.mp4
-: 1625543619:0;rm -rf screen.mp4
 : 1625549941:0;vainfo
 : 1625549991:0;cat $(which screenrec)
 : 1625550000:0;ls /dev/dri
@@ -270,7 +259,6 @@ EOF
 : 1625553647:0;commit -m "Added screenrec"
 : 1625553881:0;mpv recording-of-2021-07-06_14.44.12.mp4
 : 1625553900:0;rm -rf recording-of-2021-07-06_14.44.12.mp4
-: 1625553906:0;nvim $(which screenrec)
 : 1625558302:0;p -S timeshift
 : 1625558600:0;sudo btrfs sub create /mnt/@
 : 1625558604:0;sudo btrfs sub create /mnt/@home
@@ -278,7 +266,6 @@ EOF
 : 1625558696:0;sudo mkdir /mnt/home
 : 1625558710:0;ls /@
 : 1625558747:0;cd /
-: 1625558772:0;sudoedit /etc/fstab
 : 1625559563:0;sudo btrfs snap / /mnt/@
 : 1625559585:0;sudo btrfs snap / /mnt/
 : 1625559595:0;sudo btrfs sub snap / /mnt/
@@ -307,7 +294,6 @@ EOF
 : 1625565466:0;findmnt /
 : 1625565471:0;ls /
 : 1625565500:0;ls /mnt
-: 1625565509:0;cd /mnt
 : 1625565519:0;sudo rm -rf .config
 : 1625565526:0;sudo rm -rf bin
 : 1625565539:0;sudo rm -rf boot
@@ -332,7 +318,6 @@ EOF
 : 1625565713:0;sudo rm -rf tmp
 : 1625565717:0;sudo rm -rf usr
 : 1625565765:0;sudo rm -rf var
-: 1625565797:0;sudo umount /mnt
 : 1625565967:0;ls 
 : 1625566009:0;rm -rf .bmks
 : 1625566034:0;cat zsh_history
@@ -377,7 +362,6 @@ EOF
 : 1625567666:0;p -S refind-btrfs
 : 1625568289:0;ls /timeshift-btrfs
 : 1625568303:0;ls /timeshift-btrfs/snapshots
-: 1625568313:0;sudo mount /dev/sda2 -o subvolid=5 /mnt
 : 1625568330:0;ls /mnt/timeshift-btrfs/snapshots
 : 1625568377:0;paru -Ss
 : 1625568398:0;pacman -Qq
@@ -407,7 +391,6 @@ EOF
 : 1625575820:0;kill -2 ffmpeg
 : 1625575856:0;killall -s SIGINIT ffmpeg
 : 1625575866:0;killall -l
-: 1625575888:0;cd Videos
 : 1625575893:0;cd Recordings
 : 1625575899:0;mpv recording-of-2021-07-06_20.49.45.mp4
 : 1625575968:0;rm -rf recording-of-2021-07-06_20.49.45.mp4
@@ -430,14 +413,10 @@ EOF
 : 1625577250:0;cp ~/.local/share/examples/dmenu/script screenrecmenu
 : 1625577258:0;nvim set-mgr
 : 1625577269:0;nvim sessionmgr
-: 1625577289:0;nvim screenrec
 : 1625577758:0;chmod +x screenrecmenu
 : 1625577786:0;nvim ~/.local/share/examples/dmenu/script 
-: 1625577854:0;nvim screenrecmenu
-: 1625577872:0;screenrec
 : 1625577936:0;env | grep screenrec
 : 1625577946:0;screenrecmenu
-: 1625577997:0;cd Videos/Recordings
 : 1625578009:0;mpv recording-of-2021-07-06_21.25.48.mp4
 : 1625578135:0;gufw
 : 1625578144:0;timeshift
@@ -448,12 +427,7 @@ EOF
 : 1625578250:0;env | grep LOGIN
 : 1625578263:0;lightdm-gtk-greeter-settings
 : 1625578279:0;cat /usr/share/applications/timeshift-gtk.desktop
-: 1625578847:0;cat ../git-token
-: 1625578852:0;commit
-: 1625578861:0;git add .
 : 1625578871:0;commit -m "Added screenrecmenu"
-: 1625578873:0;push
-: 1625610409:0;sh
 : 1625610428:0;bash
 : 1625610452:0;cat .gtkrc-2.0
 : 1625610477:0;cat .config/gtk-2.0/gtkrc
@@ -477,10 +451,8 @@ EOF
 : 1625611269:0;htop
 : 1625611387:0;nvim $(which set-mgr)
 : 1625611414:0;source
-: 1625611419:0;source .zprofile
 : 1625611423:0;set-mgr
 : 1625611861:0;p -S yad
-: 1625612235:0;cd .local/bin
 : 1625612602:0;nvim ios-mount
 : 1625612617:0;shellcheck ios-mount
 : 1625612644:0;nvim ios-unmount
@@ -512,7 +484,6 @@ EOF
 : 1625614785:0;pacman -Si libeudev
 : 1625614803:0;pacman -Si libelogind
 : 1625614818:0;pacman -Si systemd
-: 1625614923:0;p -S anbox-support
 : 1625614960:0;p -S anbox-support anbox-git
 : 1625617030:0;nvim .config/nvim/init.vim
 : 1625617282:0;paru -Ss systemd-libs
@@ -546,7 +517,6 @@ EOF
 : 1625619525:0;pacman -Ss gtest
 : 1625619540:0;pacman -Ss properties-cpp
 : 1625619600:0;p -R qt5-tools
-: 1625619609:0;p -R $(pacman -Qtdq)
 : 1625619668:0;sudoedit /etc/pacman.d/chaotic-mirrorlist
 : 1625619681:0;paru -Syyyu
 : 1625619740:0;p -Ss libdbusmenu-glib
@@ -556,13 +526,8 @@ EOF
 : 1625619787:0;p -S --asdeps timehsift-autosnap
 : 1625619794:0;p -S --asdeps timeshift-autosnap
 : 1625619821:0;p -Si yad
-: 1625619846:0;p -Scc
-: 1625619851:0;clean-cache
 : 1625619989:0;cat .zcompdump
-: 1625620128:0;cd git-src/glorious-dotfiles
 : 1625620132:0;cd shell
-: 1625620133:0;ls
-: 1625620143:0;cd
 : 1625620236:0;rm -rf .local/share/shell/zcompdump
 : 1625620242:0;rm -rf .local/share/shell
 : 1625620413:0;ls .zcompdump
@@ -573,20 +538,158 @@ EOF
 : 1625620795:0;grep compinit /etc/zsh/zshrc
 : 1625620818:0;grep COMPDUMPFILE /etc/zsh/zshrc
 : 1625620841:0;env | grep compdumpfile
-: 1625620865:0;nvim .zprofile
-: 1625620914:0;nvim .zshrc
 : 1625620963:0;rm -rf .zcompdump
-: 1625620978:0;exit
 : 1625621097:0;cd $COMDUMPFILE
 : 1625621102:0;cd $COMPDUMPFILE
-: 1625621104:0;ls
-: 1625621116:0;cd
-: 1625621118:0;clean-cache
-: 1625621131:0;ls .cache/zsh
-: 1625621154:0;nvim .zprofile
-: 1625621171:0;clean-cache
-: 1625621179:0;ls .cache/zsh
 : 1625621194:0;cd git-src/glorious-dotfiles
 : 1625621198:0;commit
 : 1625621212:0;cat ../git-token
 : 1625621221:0;git add .
+: 1625621261:0;commit -m "Scripts following shellcheck \(Batch 1\)"
+: 1625621267:0;push
+: 1625621493:0;cat /etc/pacman.d/chaotic-mirrorlist
+: 1625621607:0;p -Sdd --asdeps anbox-git
+: 1625621640:0;p -S --asdeps anbox-image
+: 1625621782:0;pacman -Qi anbox-git
+: 1625621809:0;p -S --asdeps lxc-git  sdl2_image  protobuf boost-libs
+: 1625621853:0;p -S anbox-support
+: 1625621935:0;pacman -Ql anbox-support
+: 1625621948:0;cat /usr/lib/modules-load.d/anbox.conf
+: 1625622003:0;p -S --asexplicit timeshift-autosnap 
+: 1625622154:0;cat /usr/lib/tmpfiles.d/anbox.conf
+: 1625622175:0;cat /usr/lib/systemd/system/anbox-container-manager.service
+: 1625622192:0;cd /etc/runit/sv
+: 1625622211:0;sudo mkdir -p anbox-container-manager
+: 1625622218:0;cd anbox-container-manager
+: 1625622227:0;sudo touch run
+: 1625622232:0;sudoedit run
+: 1625622298:0;sudo ln -s /etc/runit/sv/anbox-container-manager /etc/runit/runsvdir/default
+: 1625622326:0;sudo chmod +x run
+: 1625622330:0;sudo sv start anbox-container-manager
+: 1625622406:0;ls .cache/zsh
+: 1625622722:0;adb devices
+: 1625622727:0;adb push AuroraStore_4.0.7.apk
+: 1625622737:0;adb install AuroraStore_4.0.7.apk
+: 1625622938:0;nmcli con add type bridge ifname anbox0 -- connection.id anbox-net ipv4.method shared ipv4.addresses 192.168.250.1/24
+: 1625622981:0;cat /usr/lib/systemd/user/anbox-session-manager.service
+: 1625623253:0;nvim .zshrc
+: 1625624266:0;nvim bruh
+: 1625624308:0;chmod +x bruh
+: 1625624316:0;source bruh
+: 1625624333:0;sh
+: 1625624438:0;p -S mksh
+: 1625624458:0;pacman -Ss mksh
+: 1625624497:0;paru -Ss mksh 
+: 1625624506:0;paru -Ss ksh 
+: 1625624776:0;man .
+: 1625624782:0;.
+: 1625624787:0;. --help
+: 1625624982:0;bruhify
+: 1625624997:0;. bruh
+: 1625625003:0;. ~/bruh
+: 1625625009:0;bruhify | lolcat
+: 1625625090:0;rm -rf bruh
+: 1625626880:0;cd .local/bin
+: 1625626887:0;nvim screenrecmenu
+: 1625626928:0;nvim screenrec
+: 1625627297:0;cd 
+: 1625627302:0;nvim .zprofile
+: 1625627363:0;source .zprofile
+: 1625627398:0;cd Downloads
+: 1625627409:0;cd Videos/Recordings
+: 1625627416:0;mpv recording-of-2021-07-07_11.09.33.mp4
+: 1625627658:0;screenrec screen.mp4
+: 1625627679:0;mpv screen.mp4
+: 1625627711:0;rm -rf Videos/Recordings/*
+: 1625627717:0;rm -rf screen.mp4
+: 1625628095:0;paplay /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+: 1625628108:0;paplay /usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga
+: 1625628125:0;paplay /usr/share/sounds/freedesktop/stereo/audio-test-signal.oga
+: 1625628135:0;paplay /usr/share/sounds/freedesktop/stereo/bell.oga
+: 1625628158:0;paplay /usr/share/sounds/freedesktop/stereo/message.oga
+: 1625628265:0;cat $(which screenshot)
+: 1625628327:0;paplay /usr/share/sounds/freedesktop/stereo/complete.oga
+: 1625628341:0;paplay /usr/share/sounds/freedesktop/stereo/service-logout.oga
+: 1625628517:0;screenrec
+: 1625628571:0;paplay /usr/share/sounds/freedesktop/stereo/service-login.oga
+: 1625628619:0;mpv Videos/rickroll.mp4
+: 1625629632:0;pacman -Ss chaotic-mirrolist
+: 1625629638:0;pacman -Ss chaotic-mirrorlist
+: 1625629648:0;pacman -Ss chaotic-keyring
+: 1625630122:0;ffmpeg -list-indevs
+: 1625630235:0;ffmpeg -list_devices
+: 1625630247:0;man ffmpeg
+: 1625631084:0;anbox session-manager
+: 1625631144:0;pkill anbox
+: 1625631181:0;mpv Videos/Recordings/recording-of-2021-07-07_12.07.29.mp4
+: 1625631423:0;nvim $AUTOSTART
+: 1625631746:0;cd Videos
+: 1625631749:0;adb push
+: 1625631758:0;adb push rickroll.mp4
+: 1625631762:0;adb help
+: 1625631790:0;adb push rickroll.mp4 /sdcard
+: 1625637404:0;sudo sv stop anbox-container-manager
+: 1625637420:0;p -R anbox-support
+: 1625637448:0;rm -rf .android
+: 1625637467:0;sudo rm -rf /etc/runit/runsvdir/default/anbox-container-manager
+: 1625637508:0;sudo rm -rf /etc/runit/sv/anbox-container-manager
+: 1625637516:0;ls /etc/runit/sv
+: 1625637528:0;cat /etc/fstab
+: 1625637543:0;sudoedit /etc/fstab
+: 1625637610:0;sudoedit /etc/pacman.conf
+: 1625637664:0;sudo find / -name "*anbox*"
+: 1625637706:0;sudo find / -name "*anbox*" | more
+: 1625637764:0;sudo rm -rf /var/lib/anbox
+: 1625637777:0;cd .local/share/applications
+: 1625637786:0;rm -rf anbox
+: 1625637909:0;p -R repkg
+: 1625637914:0;clean-cache
+: 1625638836:0;paru -Ss ungoogled-chromium
+: 1625639690:0;p -Si ungoogled-chromium
+: 1625639709:0;pacman -Si snappy
+: 1625639785:0;p -R snappy
+: 1625639867:0;p -S ungoogled-chromium
+: 1625640191:0;p -R ungoogled-chromium
+: 1625640213:0;p -Scc
+: 1625640227:0;rm -rf .config/chromium
+: 1625640230:0;ls .config
+: 1625640243:0;rm -rf /usr/share/cmake
+: 1625640250:0;sudo rm -rf /usr/share/cmake
+: 1625640267:0;ls /usr/share
+: 1625640282:0;p -R cmake
+: 1625640433:0;paru -Ss google-meet
+: 1625640466:0;paru -Si google-meet-desktop
+: 1625640506:0;paru -Si silo-google-meet
+: 1625640734:0;cd /mnt
+: 1625640739:0;cd timeshift-btrfs
+: 1625640755:0;../snapshots-daily
+: 1625640775:0;ls /timeshift-btrfs/snapshots-daily
+: 1625640822:0;rm -rf Downloads/anbox-support-1.1.0.tar.gz
+: 1625642070:0;sudo mount /dev/sda2 -o subvolid=5 /mnt
+: 1625642082:0;cd /mnt/timeshift-btrfs
+: 1625642090:0;cd snapshots
+: 1625642107:0;cd 2021-07-07_15-14-14
+: 1625642112:0;cd @
+: 1625642118:0;cd home
+: 1625642130:0;cd
+: 1625642201:0;sudo umount /mnt
+: 1625642892:0;nvim .config/picom/picom.conf
+: 1625642916:0;p -R luakit
+: 1625642926:0;p -R $(pacman -Qtdq)
+: 1625642937:0;rm -rf .config/luakit
+: 1625642953:0;rm -rf .local/share/luakit
+: 1625644101:0;sudo find / -name "*anbox*" | less
+: 1625645520:0;nvim $(which screenrec)
+: 1625645617:0;ls
+: 1625645622:0;exit
+: 1625645643:0;cd Music
+: 1625645648:0;mpv Sirena\ Mc\ -\ Belleza\ Natural-MXgj9_Uz7Pw.m4a
+: 1625645694:0;rm -rf Videos/Recordings/*
+: 1625645732:0;mpv Music/Sirena\ Mc\ -\ Belleza\ Natural-MXgj9_Uz7Pw.m4a
+: 1625646923:0;cd git-src/dmenu-neo64
+: 1625646925:0;ls
+: 1625646931:0;cat INSTALL.md
+: 1625648043:0;cd
+: 1625648051:0;cd git-src/glorious-dotfiles
+: 1625648055:0;commit
+: 1625652613:0;git add .

@@ -69,7 +69,8 @@ export SCREENREC_FPS="30"
 export SCREENREC_AUDIO="pulse"
 export SCREENREC_VCODEC="libx264"
 export SCREENREC_PRESET="ultrafast"
-export SCREENREC_ACODEC="aac"
+export SCREENREC_ACODEC="libmp3lame"
+export SCREENREC_THREADS="0"
 
 ## DBUS-LAUNCH ##
 export $(dbus-launch)
