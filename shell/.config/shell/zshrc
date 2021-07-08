@@ -30,7 +30,7 @@ hello | cowsay -f tux | lolcat
 source $XDG_CONFIG_HOME/shell/aliasrc # Sourced from $XDG_CONFIG_HOME/shell/aliasrc
 
 # Environment variables
-# All environment variables are stored in .zprofile and .xprofile (both symlinked to $XDG_CONFIG_HOME/shell/envrc) 
+# All environment variables are stored in .zprofile and .xprofile (both are symlinks to $XDG_CONFIG_HOME/shell/envrc) 
 
 # Plugins 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh # Syntax highlighting
