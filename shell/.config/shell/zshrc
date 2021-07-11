@@ -26,6 +26,13 @@ pfetch
 # Hello message
 hello | cowsay -f tux | lolcat
 
+# Check for updates
+if [ $(pacman -Qu | wc -l) -gt 0 ]; then
+	printf "󰏕 Updates are available. Run \"paru\" to apply those updates\n \n" 
+else
+	printf "󰏓 All packages are up to date\n \n"
+fi
+
 # Alises
 source $XDG_CONFIG_HOME/shell/aliasrc # Sourced from $XDG_CONFIG_HOME/shell/aliasrc
 
