@@ -30,5 +30,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " vim-sxhkdrc
 Plug 'baskerville/vim-sxhkdrc'
 
+" vim-startify
+Plug 'mhinz/vim-startify'
+
 " Initialize plugin system
 call plug#end()
