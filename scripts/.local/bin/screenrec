@@ -1,7 +1,9 @@
 #!/bin/sh
 
 # Set defaults if variables are not set yet
-[ -z "$SCREENREC_RES" ] && SCREENREC_RES="1280x720"
+[ -z "$SCREENREC_INRES" ] && SCREENREC_INRES="1280x720"
+[ -z "$SCREENREC_SCALE" ] && SCREENREC_SCALE="1280x720"
+[ -z "$SCREENREC_SCALEFLAGS" ] && SCREENREC_SCALEFLAGS="lanczos"
 [ -z "$SCREENREC_FPS" ] && SCREENREC_FPS="25"
 [ -z "$SCREENREC_AUDIO" ] && SCREENREC_AUDIO="alsa"
 [ -z "$SCREENREC_VCODEC" ] && SCREENREC_VCODEC="libx264"
@@ -19,9 +21,10 @@ sleep 5s
 paplay /usr/share/sounds/freedesktop/stereo/service-login.oga
 
 ffmpeg -vaapi_device /dev/dri/renderD128 -f x11grab \
-	-video_size $SCREENREC_RES -r $SCREENREC_FPS -i $DISPLAY \
+	-video_size $SCREENREC_INRES -r $SCREENREC_FPS -i $DISPLAY \
 	-f $SCREENREC_AUDIO -i default \
-	-vcodec $SCREENREC_VCODEC -preset $SCREENREC_PRESET -acodec $SCREENREC_ACODEC -threads $SCREENREC_THREADS \
+	-vcodec $SCREENREC_VCODEC -vf scale=$SCREENREC_SCALE:flags=$SCREENREC_SCALEFLAGS -preset $SCREENREC_PRESET \
+	-acodec $SCREENREC_ACODEC -threads $SCREENREC_THREADS \
 	$HOME/Videos/Recordings/recording-of-$(date +%Y-%m-%d_%H.%M.%S).mp4
 
 pgrep -x dunst > /dev/null && notify-send -u low -i video "Screen recorder" "Recording has been saved into the Recordings folder"

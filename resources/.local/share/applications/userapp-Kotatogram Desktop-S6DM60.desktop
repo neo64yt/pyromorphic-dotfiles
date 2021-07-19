@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+NoDisplay=true
+Exec=/usr/bin/kotatogram-desktop -workdir /home/neo64yt/.local/share/KotatogramDesktop/ -- %u
+Name=Kotatogram Desktop
+Comment=Custom definition for Kotatogram Desktop
