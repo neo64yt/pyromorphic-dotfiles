@@ -1,0 +1,44 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Use the "❯" symbol in the prompt 
+[character]                            
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# Time
+[time]
+disabled = false
+format = '[\[󰅐 $time\]]($style) '
+use_12hr = false
+style = "blue"
+
+# Username
+[username]
+disabled = false
+show_always = true
+format = '[\[󰀓 $user]($style) '
+style_user = "bold dimmed green"
+
+# Directory
+[directory]
+disabled = false
+truncation_length = 3
+truncation_symbol = ".../"
+read_only = " 󰍁 "
+read_only_style = "bold red"
+
+# Hostname
+[hostname]
+ssh_only = false
+format = '[on 󰌢 $hostname\]]($style) '
+style = "bold dimmed green"
+disabled = false
+
+
+
+# vim: ft=toml
