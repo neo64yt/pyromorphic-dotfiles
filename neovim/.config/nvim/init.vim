@@ -33,5 +33,9 @@ Plug 'baskerville/vim-sxhkdrc'
 " vim-startify
 Plug 'mhinz/vim-startify'
 
+" vim-toml
+Plug 'cespare/vim-toml'
+
 " Initialize plugin system
 call plug#end()
+
