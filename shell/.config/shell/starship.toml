@@ -40,5 +40,28 @@ style = "bold dimmed green"
 disabled = false
 
 
+## DISABLED MODULES ##
+
+# Go
+[golang]
+disabled = true
+
+# Rust
+[rust]
+disabled = true
+
+# Python
+[python]
+disabled = true
+
+# Perl
+[perl]
+disabled = true
+
+# Lua
+[lua]
+disabled = true
+
+
 
 # vim: ft=toml

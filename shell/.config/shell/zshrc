@@ -14,7 +14,7 @@ mkdir -p $XDG_CACHE_HOME/zsh
 pfetch
 
 # Hello message
-cowsay -f tux "$(hello)" | lolcat
+hello | cowsay -f tux -n | lolcat
 
 # Aliases
 source $XDG_CONFIG_HOME/shell/aliasrc # Sourced from $XDG_CONFIG_HOME/shell/aliasrc
