@@ -24,5 +24,6 @@ geary --gapplication-service &
 (sleep 3s && mate-power-manager) &
 (sleep 3s && mictray) &
 (sleep 3s && pnmixer) &
+(sleep 3s && /usr/bin/octopi-notifier) &
 
 

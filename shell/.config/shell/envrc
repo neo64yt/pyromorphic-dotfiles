@@ -43,6 +43,8 @@ export BROWSER="firefox"
 
 ## SETTINGS MANAGER ##
 export STYLE="lxappearance" # Appearance
+export QT5_SETTINGS="qt5ct" # Appearance (Qt5)
+export KVANTUM="kvantummanager" # Appearance (Kvantum)
 export USER_INFO="mugshot" # Account
 export LOGIN="lightdm-gtk-greeter-settings" # Login screen
 export RANDR="lxrandr" # Display

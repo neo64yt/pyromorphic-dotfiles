@@ -15,6 +15,8 @@ config_edit="$TERMINAL -e $EDITOR"
 list_choices(){
 	cat << EOF
 󰸌 Appearance
+󰸌 Appearance (Qt5)
+󰸌 Appearance (Kvantum)
 󰿻 Account
 󰍁 Lock screen
 󰍂 Login screen
@@ -44,6 +46,8 @@ choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
   "󰸌 Appearance") $STYLE ;;
+  "󰸌 Appearance (Qt5)") $QT5_SETTINGS ;;
+  "󰸌 Appearance (Kvantum)") $KVANTUM ;;
   "󰿻 Account") $USER_INFO ;;
   "󰍁 Lock screen") $config_edit $HOME/.xprofile ;;
   "󰍂 Login screen") pkexec $LOGIN ;;
