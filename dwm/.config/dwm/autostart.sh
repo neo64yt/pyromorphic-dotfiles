@@ -19,7 +19,7 @@ export WM_KEYBIND="$WM_CONFIG_DIR/NOTE"
 sh $AUTOSTART &
 
 # WM-specific autostart applications
-hsetroot -full $XDG_DATA_HOME/backgrounds/keyboard.png &
+hsetroot -full $XDG_DATA_HOME/backgrounds/neovim-masterrace.png &
 $wmbar &
 
 ## EOF ##
