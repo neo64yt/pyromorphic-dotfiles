@@ -1,6 +1,9 @@
 # Inserts a blank line between shell prompts
 add_newline = true
 
+# Command timeout
+command_timeout = 5000
+
 # Use the "❯" symbol in the prompt 
 [character]                            
 success_symbol = "[❯](bold green)"
@@ -38,7 +41,6 @@ ssh_only = false
 format = '[on 󰌢 $hostname\]]($style) '
 style = "bold dimmed green"
 disabled = false
-
 
 ## DISABLED MODULES ##
 
