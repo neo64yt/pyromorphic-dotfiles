@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=TLauncher
+Comment=Alternative Minecraft Launcher
+Exec=tlauncher
+Icon=minecraft
+Terminal=false
+Categories=Game;

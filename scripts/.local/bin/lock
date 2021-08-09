@@ -1,8 +1,7 @@
 #!/bin/sh
 
-xss-lock -- "$LOCKER"
-xautolock -detectsleep -time 10 -locker "$LOCKER" -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -notify 5 
-
+xss-lock -- "$LOCKER" &
+xautolock -detectsleep -tme 10 -locker "$LOCKER" -notifier '/usr/lib/xsecurelock/until_nonidle /usr/lib/xsecurelock/dimmer' -notify 5
 
 
 # vim: ft=sh
