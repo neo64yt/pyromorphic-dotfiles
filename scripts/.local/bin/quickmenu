@@ -27,13 +27,13 @@ dmenu_cmd(){
 choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
-  "󰀻 Applications") apps ;;
-  "󰆍 Run") runner ;;
-  "󰐦 System") sessionmgr ;;
-  "󰱨 Emojis") dmenuemoji ;;
-  "󰢻 Settings") set-mgr ;;
-  "󰄠 iOS Mounter") imountmgr ;;
-  "󰯜 Screen recorder") screenrecmenu ;;
+  	"󰀻 Applications") apps ;;
+  	"󰆍 Run") runner ;;
+  	"󰐦 System") sessionmgr ;;
+  	"󰱨 Emojis") dmenuemoji ;;
+  	"󰢻 Settings") set-mgr ;;
+  	"󰄠 iOS Mounter") imountmgr ;;
+  	"󰯜 Screen recorder") screenrecmenu ;;
 esac
 
 

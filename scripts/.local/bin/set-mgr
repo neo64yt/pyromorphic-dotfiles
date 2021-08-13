@@ -3,7 +3,7 @@
 # Settings manager
 
 # Defaults
-lines="$DMENU_LINES"
+lines="12"
 border="$DMENU_BORDER"
 height="$DMENU_HEIGHT"
 prompt="󰢻 Settings for $(whoami):"
@@ -14,17 +14,11 @@ config_edit="$TERMINAL -e $EDITOR"
 # List of choices (function)
 list_choices(){
 	cat << EOF
-󰸌 Appearance
+󰢻 General settings
 󰸌 Appearance (Qt5)
-󰸌 Appearance (Kvantum)
-󰿻 Account
 󰍁 Lock screen
-󰍂 Login screen
-󰍹 Display
 󰂏 Power management
 󰲝 Network
-󰂳 Bluetooth
-󰧺 Input devices
 󰕾 Audio
 󰜇 Printer
 󰌧 Autostart
@@ -32,7 +26,6 @@ list_choices(){
 󰧺 Keybindings
 󰧺 WM keybindings
 󰓦 Backup utility
-󰒄 Firewall
 EOF
 }
 
@@ -45,25 +38,18 @@ dmenu_cmd(){
 choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
-  "󰸌 Appearance") $STYLE ;;
-  "󰸌 Appearance (Qt5)") $QT5_SETTINGS ;;
-  "󰸌 Appearance (Kvantum)") $KVANTUM ;;
-  "󰿻 Account") $USER_INFO ;;
-  "󰍁 Lock screen") $config_edit $HOME/.xprofile ;;
-  "󰍂 Login screen") pkexec $LOGIN ;;
-  "󰍹 Display") $RANDR ;;
-  "󰂏 Power management") $POWER_MGR ;;
-  "󰲝 Network") $NM_EDITOR ;;
-  "󰂳 Bluetooth") $BLUETOOTH ;;
-  "󰧺 Input devices") $INPUT ;;
-  "󰕾 Audio") $AUDIO ;;
-  "󰜇 Printer") $PRINT ;;
-  "󰌧 Autostart") $config_edit $AUTOSTART ;;
-  "󰌧 WM autostart") $config_edit $WM_AUTOSTART ;;
-  "󰧺 Keybindings") $config_edit $KEYBIND ;;
-  "󰧺 WM keybindings") $WM_KEYBIND ;;
-  "󰓦 Backup utility") $BACKUP_UTIL ;;
-  "󰒄 Firewall") $FIREWALL ;;
+	"󰢻 General settings") $SET_GENERAL ;;
+  	"󰸌 Appearance (Qt5)") $QT5_SETTINGS ;;
+  	"󰍁 Lock screen") $config_edit $HOME/.xprofile ;;
+	"󰂏 Power management") $POWER_MGR ;;
+  	"󰲝 Network") $NM_EDITOR ;;
+  	"󰕾 Audio") $AUDIO ;;
+  	"󰜇 Printer") $PRINT ;;
+  	"󰌧 Autostart") $config_edit $AUTOSTART ;;
+  	"󰌧 WM autostart") $config_edit $WM_AUTOSTART ;;
+  	"󰧺 Keybindings") $config_edit $KEYBIND ;;
+  	"󰧺 WM keybindings") $WM_KEYBIND ;;
+  	"󰓦 Backup utility") $BACKUP_UTIL ;;
 esac
 
 

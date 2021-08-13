@@ -27,10 +27,10 @@ dmenu_cmd(){
 choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
-  "Just") ok ;;
-  "as") ok ;;
-  "an") OK ;;
-  "example") OK ;;
+  	"Just") ok ;;
+  	"as") ok ;;
+  	"an") OK ;;
+  	"example") OK ;;
 esac
 
 

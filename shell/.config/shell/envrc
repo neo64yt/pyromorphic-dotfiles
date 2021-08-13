@@ -42,20 +42,13 @@ export TERMINAL="alacritty"
 export BROWSER="firefox"
 
 ## SETTINGS MANAGER ##
-export STYLE="lxappearance" # Appearance
+export SET_GENERAL="xfce4-settings-manager" # General settings
 export QT5_SETTINGS="qt5ct" # Appearance (Qt5)
-export KVANTUM="kvantummanager" # Appearance (Kvantum)
-export USER_INFO="mugshot" # Account
-export LOGIN="lightdm-gtk-greeter-settings" # Login screen
-export RANDR="lxrandr" # Display
 export POWER_MGR="mate-power-preferences" # Power manager
 export NM_EDITOR="nm-connection-editor" # Network
-export BLUETOOTH="blueman-manager" # Bluetooth 
-export INPUT="lxinput" # Input devices
 export AUDIO="pavucontrol" # Audio
 export PRINT="system-config-printer" # Printer
 export BACKUP_UTIL="timeshift-launcher" # Backup & restore utility
-export FIREWALL="gufw" # Firewall
 
 ## XSECURELOCK SETTINGS ##
 export XSECURELOCK_PASSWORD_PROMPT="asterisks"

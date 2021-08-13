@@ -23,8 +23,8 @@ dmenu_cmd(){
 choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
-  "󰑊 Start recording") screenrec ;;
-  "󰓛 Stop recording") pkill -INT ffmpeg ;;
+  	"󰑊 Start recording") screenrec ;;
+  	"󰓛 Stop recording") pkill -INT ffmpeg ;;
 esac
 
 

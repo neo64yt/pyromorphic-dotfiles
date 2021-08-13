@@ -22,8 +22,8 @@ dmenu_cmd(){
 choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
-  "󰄟 Mount") ios-mount ;;
-  "󰮑 Eject") ios-unmount ;;
+	"󰄟 Mount") ios-mount ;;
+ 	"󰮑 Eject") ios-unmount ;;
 esac
 
 

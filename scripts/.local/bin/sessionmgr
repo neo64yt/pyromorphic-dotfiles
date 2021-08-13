@@ -32,11 +32,11 @@ dmenu_cmd(){
 choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
-  "󰐥 Shutdown") loginctl poweroff ;;
-  "󰜉 Restart") loginctl reboot ;;
-  "󰽥 Suspend") suspend-notify ;;
-  "󰍁 Lock") $LOCKER ;;
-  "󰍃 Log out") sh $SESSION_KILLER ;;
+  	"󰐥 Shutdown") loginctl poweroff ;;
+  	"󰜉 Restart") loginctl reboot ;;
+  	"󰽥 Suspend") suspend-notify ;;
+  	"󰍁 Lock") $LOCKER ;;
+  	"󰍃 Log out") sh $SESSION_KILLER ;;
 esac
 
 
