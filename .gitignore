@@ -1,2 +1,5 @@
 # Ignore vim-plug file
 neovim/.local/share/nvim/site/autoload/plug.vim
+
+# Ignore neovim shada file
+neovim/.local/share/nvim/shada/main.shada
