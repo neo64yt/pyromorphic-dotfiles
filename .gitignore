@@ -3,3 +3,8 @@ neovim/.local/share/nvim/site/autoload/plug.vim
 
 # Ignore neovim shada file
 neovim/.local/share/nvim/shada/main.shada
+
+# Ignore hello binary
+scripts/.local/bin/hello
+
+
