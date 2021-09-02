@@ -360,7 +360,6 @@ cursor:
     #   - _ Underline
     #   - | Beam
     shape: Block
-
     # Cursor blinking state
     #
     # Values for `blinking`:

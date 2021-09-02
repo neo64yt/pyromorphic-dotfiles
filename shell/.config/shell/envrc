@@ -16,8 +16,8 @@ export PAGER="more" # Use more as pager
 export MANPAGER="nvim -c 'set ft=man'" # Use Neovim as manpager
 export IOS_MOUNTPOINT="$HOME/iOS" # iOS mountpoint (needed by iOS Mounter)
 export GNUPGHOME="$XDG_DATA_HOME/gnupg" # GnuPG directory
-export GTK2_RC_FILES="$XDG_CONFIG_HOME/gtk-2.0/gtkrc" # GTK2 configuration
 export EDITOR="nvim"
+export VISUAL="nvim"
 export STARSHIP_CONFIG="$XDG_CONFIG_HOME/shell/starship.toml"
 
 ## SOME PROGRAMS ##
