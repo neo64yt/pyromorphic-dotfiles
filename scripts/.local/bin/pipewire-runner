@@ -20,6 +20,8 @@ pipewire &
 pipewire-pulse &
 pipewire-media-session || pipewire-media-session & 
 
+paplay $XDG_DATA_HOME/sounds/startup.ogg
+
 
 
 # vim: ft=sh

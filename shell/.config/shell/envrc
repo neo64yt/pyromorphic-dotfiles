@@ -3,22 +3,22 @@
 # This file stores environment variables 
 
 ## GENERIC CONFIGURATION ##
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH" # Binaries path
-export XDG_CONFIG_HOME="$HOME/.config" # XDG configuration directory
-export XDG_DATA_HOME="$HOME/.local/share" # XDG data directory
-export XDG_CACHE_HOME="$HOME/.cache" # XDG cache directory
-export XDG_STATE_HOME="$HOME/.local/state" # XDG state directory
-export HISTFILE="$XDG_STATE_HOME/shell/zsh_history" # History file for zsh
-export COMPDUMPFILE="$XDG_CACHE_HOME/zsh/zcompdump" # zcompdump
-export KEYBIND="$XDG_CONFIG_HOME/sxhkd/sxhkdrc" # WM-independent keybindings
-export AUTOSTART="$XDG_CONFIG_HOME/autostart-cmds/autostart.sh" # WM-independent autostart
+export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}" # Binaries path
+export XDG_CONFIG_HOME="${HOME}/.config" # XDG configuration directory
+export XDG_DATA_HOME="${HOME}/.local/share" # XDG data directory
+export XDG_CACHE_HOME="${HOME}/.cache" # XDG cache directory
+export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory
+export HISTFILE="${XDG_STATE_HOME}/shell/zsh_history" # History file for zsh
+export COMPDUMPFILE="${XDG_CACHE_HOME}/zsh/zcompdump" # zcompdump
+export KEYBIND="${XDG_CONFIG_HOME}/sxhkd/sxhkdrc" # WM-independent keybindings
+export AUTOSTART="${XDG_CONFIG_HOME}/autostart-cmds/autostart.sh" # WM-independent autostart
 export PAGER="more" # Use more as pager
 export MANPAGER="nvim -c 'set ft=man'" # Use Neovim as manpager
-export IOS_MOUNTPOINT="$HOME/iOS" # iOS mountpoint (needed by iOS Mounter)
-export GNUPGHOME="$XDG_DATA_HOME/gnupg" # GnuPG directory
+export IOS_MOUNTPOINT="${HOME}/iOS" # iOS mountpoint (needed by iOS Mounter)
+export GNUPGHOME="${XDG_DATA_HOME}/gnupg" # GnuPG directory
 export EDITOR="nvim"
 export VISUAL="nvim"
-export STARSHIP_CONFIG="$XDG_CONFIG_HOME/shell/starship.toml"
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
 
 ## SOME PROGRAMS ##
 export STARTMENU="jgmenu_run"
@@ -26,6 +26,11 @@ export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"
 export EMOJI_PICKER="dmenuemoji"
+
+## XSESSION ##
+export DE="xfce"
+export DESKTOP_SESSION="${DE}"
+export XDG_DESKTOP_SESSION="${DE}"
 
 ## DMENU DEFAULT LOOK ##
 export DMENU_HEIGHT="35"
@@ -46,7 +51,6 @@ export SET_GENERAL="xfce4-settings-manager" # General settings
 export QT5_SETTINGS="qt5ct" # Appearance (Qt5)
 export POWER_MGR="mate-power-preferences" # Power manager
 export NM_EDITOR="nm-connection-editor" # Network
-export AUDIO="pavucontrol" # Audio
 export PRINT="system-config-printer" # Printer
 export BACKUP_UTIL="timeshift-launcher" # Backup & restore utility
 

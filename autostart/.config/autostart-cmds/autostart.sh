@@ -9,7 +9,7 @@ pipewire-runner &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 picom --experimental-backend &
 /usr/bin/dunst &
-pcmanfm --daemon-mode &
+thunar --daemon &
 $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
@@ -25,5 +25,8 @@ xfsettingsd &
 (sleep 3s && mictray) &
 (sleep 3s && pnmixer) &
 (sleep 3s && pamac-tray) &
+(sleep 3s && gxkb) &
 
 
+
+# vim: ft=sh

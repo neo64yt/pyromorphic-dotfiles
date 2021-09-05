@@ -18,7 +18,7 @@
 # Settings manager
 
 # Defaults
-lines="12"
+lines="$DMENU_LINES"
 border="$DMENU_BORDER"
 height="$DMENU_HEIGHT"
 prompt="󰢻 Settings for $(whoami):"
@@ -34,7 +34,6 @@ list_choices(){
 󰍁 Lock screen
 󰂏 Power management
 󰲝 Network
-󰕾 Audio
 󰜇 Printer
 󰌧 Autostart
 󰌧 WM autostart
@@ -58,7 +57,6 @@ case "$choice" in
   	"󰍁 Lock screen") $config_edit $HOME/.xprofile ;;
 	"󰂏 Power management") $POWER_MGR ;;
   	"󰲝 Network") $NM_EDITOR ;;
-  	"󰕾 Audio") $AUDIO ;;
   	"󰜇 Printer") $PRINT ;;
   	"󰌧 Autostart") $config_edit $AUTOSTART ;;
   	"󰌧 WM autostart") $config_edit $WM_AUTOSTART ;;

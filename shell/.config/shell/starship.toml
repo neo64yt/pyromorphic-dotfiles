@@ -4,10 +4,10 @@ add_newline = true
 # Command timeout
 command_timeout = 5000
 
-# Use the "❯" symbol in the prompt 
+# Use the "" symbol in the prompt 
 [character]                            
-success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[](bold green)"
+error_symbol = "[](bold red)"
 
 # Disable the package module, hiding it from the prompt completely
 [package]
