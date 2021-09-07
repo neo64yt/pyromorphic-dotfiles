@@ -53,6 +53,8 @@ export POWER_MGR="mate-power-preferences" # Power manager
 export NM_EDITOR="nm-connection-editor" # Network
 export PRINT="system-config-printer" # Printer
 export BACKUP_UTIL="timeshift-launcher" # Backup & restore utility
+export DCONF_EDITOR="dconf-editor" # Manage Dconf configurations
+export FLATSEAL="flatseal" # Manage Flatpak apps permissions
 
 ## XSECURELOCK SETTINGS ##
 export XSECURELOCK_PASSWORD_PROMPT="asterisks"
