@@ -1,0 +1,13 @@
+#!/bin/sh
+# This is only used as a template. Please make sure you change these according to your preferences
+# Autostart for fooWM
+
+wmbar="foobar"
+
+# Autostart programs
+
+# WM-specific autostart programs
+hsetroot -center $XDG_DATA_HOME/backgrounds/neointhevoid.png &
+$wmbar &
+
+## EOF ##

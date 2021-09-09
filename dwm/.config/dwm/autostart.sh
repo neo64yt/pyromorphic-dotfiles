@@ -1,25 +1,14 @@
 #!/bin/sh
 
-# Config directory
-export WM_CONFIG_DIR="$XDG_CONFIG_HOME/dwm"
+# Autostart programs
+
 wmbar="slstatus"
 
-# Session killer
-export SESSION_KILLER="$WM_CONFIG_DIR/session-killer"
-
-# Autostart file
-export WM_AUTOSTART="$WM_CONFIG_DIR/autostart.sh"
-
-# Keybindings configuration
-export WM_KEYBIND="$WM_CONFIG_DIR/NOTE"
-
-# Autostart applications
-
-# This file contains the WM-independent autostart applications
-sh $AUTOSTART &
-
-# WM-specific autostart applications
+# WM-specific autostart programs
 hsetroot -full $XDG_DATA_HOME/backgrounds/neovim-masterrace.png &
 $wmbar &
 
+
+
+# vim: ft=sh
 ## EOF ##

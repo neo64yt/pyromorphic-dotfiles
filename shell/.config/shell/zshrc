@@ -37,3 +37,4 @@ eval "$(starship init zsh)"
 
 
 # vim: ft=zsh
+## EOF ##

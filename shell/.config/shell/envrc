@@ -42,7 +42,7 @@ export LOCKER="xsecurelock"
 export LOCK="lock" 
 export SCREENSHOOTER="screenshot"
 
-## DEFAULT APPS ##
+## DEFAULT PROGRAMS ##
 export TERMINAL="alacritty"
 export BROWSER="firefox"
 
@@ -82,3 +82,4 @@ export $(dbus-launch)
 
 
 # vim: ft=zsh
+## EOF ##

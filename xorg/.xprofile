@@ -1,1 +1,11 @@
-../shell/.zprofile
+#!/bin/sh
+
+# Set environment variables and execute autostart programs
+[ -f ~/.config/shell/envrc ] && . ~/.config/shell/envrc
+[ -f ~/.config/${XDG_SESSION_DESKTOP}/sessionenv ] && . ~/.config/${XDG_SESSION_DESKTOP}/sessionenv
+sh $AUTOSTART & 
+
+
+
+
+# vim: ft=sh

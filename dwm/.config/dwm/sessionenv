@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Config directory
+export WM_CONFIG_DIR="${XDG_CONFIG_HOME}/dwm"
+
+# Session killer
+export SESSION_KILLER="${WM_CONFIG_DIR}/sessionexit"
+
+# Autostart file
+export WM_AUTOSTART="${WM_CONFIG_DIR}/autostart.sh"
+
+# Keybindings configuration
+export WM_KEYBIND="${WM_CONFIG_DIR}/NOTE"
+
+
+
+# vim: ft=sh
+## EOF ##
