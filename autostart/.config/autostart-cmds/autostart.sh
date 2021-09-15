@@ -9,7 +9,7 @@ pipewire-runner &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 picom --experimental-backend &
 /usr/bin/dunst &
-thunar --daemon &
+pcmanfm --daemon-mode &
 $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
