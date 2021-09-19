@@ -14,7 +14,6 @@ $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
 xclickroot -r $STARTMENU &
-geary --gapplication-service &
 xfsettingsd &
 
 # Systray

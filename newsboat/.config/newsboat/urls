@@ -1,0 +1,42 @@
+News "~## NEWS ##"
+http://www.hmetro.com.my/utama.xml "~Harian Metro"
+
+Reddit "~## REDDIT LATEST POSTS ##"
+#
+# Just add ".rss" at the end of the Reddit URLs
+#
+https://reddit.com/r/Ajar_Malaysia/new.rss "~r/Ajar_Malaysia"
+https://reddit.com/r/extomatos/new.rss "~r/extomatos"
+https://reddit.com/r/linux/new.rss "~r/linux"  
+https://reddit.com/r/linuxmasterrace/new.rss "~r/linuxmasterrace"
+https://reddit.com/r/archlinux/new.rss "~r/archlinux"  
+https://reddit.com/r/artixlinux/new.rss "~r/artixlinux"  
+
+Forums "~## FORUMS ##"
+https://dragonforce.io/forums/-/index.rss "~Dragonforce.io"
+https://bbs.archlinux.org/extern.php?action=feed&type=atom "~Arch Linux"
+https://forum.artixlinux.org/index.php?action=.xml;type=rss2;limit=5 "~Artix Linux"
+
+Linux "~## LINUX & SOFTWARE ##"
+https://distrowatch.com/news/dw.xml "~Distrowatch: Latest News & Updates"
+https://archlinux.org/feeds/news/ "~Arch Linux News"
+https://artixlinux.org/feed.php "~Artix Linux News"
+https://suckless.org/atom.xml "~suckless.org News"
+
+YouTube "~## YOUTUBE ##"
+#
+# For YouTube channels feed, use the following URL format:
+#
+# https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID
+#
+# Website for finding the ID of a YouTube channel: https://youtubechannelid.com/
+#
+https://www.youtube.com/feeds/videos.xml?channel_id=UCPUeyD6WkLAN_idjMHVPBWw "~Muh channel (Neo64YT)"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCF5EsUD8lhjF9ZAebvwRq9Q "~Ajar Malaysia"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNwGa76xVVwdEVToRZBIUIg "~DenshiVideo"
+
+Websites "~## WEBSITES ##"
+https://denshi.org/rss.xml "~DenshiSite"
+https://lukesmith.xyz/rss.xml "~Luke Smith's Webpage"
