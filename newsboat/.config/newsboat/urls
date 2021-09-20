@@ -1,5 +1,6 @@
 News "~## NEWS ##"
 http://www.hmetro.com.my/utama.xml "~Harian Metro"
+http://rss.cnn.com/rss/edition_world.rss "~CNN World"
 
 Reddit "~## REDDIT LATEST POSTS ##"
 #
@@ -17,11 +18,15 @@ https://dragonforce.io/forums/-/index.rss "~Dragonforce.io"
 https://bbs.archlinux.org/extern.php?action=feed&type=atom "~Arch Linux"
 https://forum.artixlinux.org/index.php?action=.xml;type=rss2;limit=5 "~Artix Linux"
 
-Linux "~## LINUX & SOFTWARE ##"
+Linux "~## LINUX & FOSS ##"
+https://www.linux.org/articles/index.rss "~Linux.org"
+https://www.kernel.org/feeds/all.atom.xml "~Kernel.org"
 https://distrowatch.com/news/dw.xml "~Distrowatch: Latest News & Updates"
+https://www.gamingonlinux.com/article_rss.php "~GamingOnLinux"
 https://archlinux.org/feeds/news/ "~Arch Linux News"
 https://artixlinux.org/feed.php "~Artix Linux News"
 https://suckless.org/atom.xml "~suckless.org News"
+https://newsboat.org/news.atom "~Newsboat News"
 
 YouTube "~## YOUTUBE ##"
 #
@@ -33,6 +38,10 @@ YouTube "~## YOUTUBE ##"
 #
 https://www.youtube.com/feeds/videos.xml?channel_id=UCPUeyD6WkLAN_idjMHVPBWw "~Muh channel (Neo64YT)"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCF5EsUD8lhjF9ZAebvwRq9Q "~Ajar Malaysia"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5uekIwJ2N-M3P8ewfIf7Cw "~Abu Khadijah"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCzYag131RdrnZhtAmUBxU1Q "~Pegasus"
+https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~DistroTube"
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5UAwBUum7CPN5buc-_N1Fw "~The Linux Experiment"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson"
 https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCNwGa76xVVwdEVToRZBIUIg "~DenshiVideo"

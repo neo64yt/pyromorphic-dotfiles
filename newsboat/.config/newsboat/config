@@ -75,7 +75,7 @@
 #
 # Default value: no
 #
-# auto-reload yes
+auto-reload yes
 
 ####  bind-key
 #
@@ -176,7 +176,13 @@ browser "exo-open %u"
 #
 # Default value: n/a
 #
-# color background white black
+color info yellow color22
+color background white black
+color article color34 black
+color listnormal white black
+color listfocus yellow color22 bold
+color listnormal_unread yellow color1 blink
+color listfocus_unread color196 color22 bold blink
 
 ####  confirm-delete-all-articles
 #
@@ -637,6 +643,11 @@ download-retries 3
 # Default value: n/a
 #
 # highlight all "newsboat" red
+
+highlight feedlist "## .* ##" yellow black bold
+highlight feedlist ".*0/0.." black black invis
+
+
 
 ####  highlight-article
 #
