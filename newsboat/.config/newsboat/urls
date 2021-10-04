@@ -7,7 +7,6 @@ Reddit "~## REDDIT LATEST POSTS ##"
 # Just add ".rss" at the end of the Reddit URLs
 #
 https://reddit.com/r/Ajar_Malaysia/new.rss "~r/Ajar_Malaysia"
-https://reddit.com/r/extomatos/new.rss "~r/extomatos"
 https://reddit.com/r/linux/new.rss "~r/linux"  
 https://reddit.com/r/linuxmasterrace/new.rss "~r/linuxmasterrace"
 https://reddit.com/r/archlinux/new.rss "~r/archlinux"  
@@ -47,5 +46,6 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~M
 https://www.youtube.com/feeds/videos.xml?channel_id=UCNwGa76xVVwdEVToRZBIUIg "~DenshiVideo"
 
 Websites "~## WEBSITES ##"
+https://neo64yt.github.io/rss.xml "~Muh Website"
 https://denshi.org/rss.xml "~DenshiSite"
 https://lukesmith.xyz/rss.xml "~Luke Smith's Webpage"

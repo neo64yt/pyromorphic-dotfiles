@@ -4,6 +4,7 @@ call plug#begin(stdpath('data') . '/plugged')
 " Configuration
 set ignorecase
 set number
+set nowrap
 let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
 let g:airline#extensions#tabline#enabled = 1

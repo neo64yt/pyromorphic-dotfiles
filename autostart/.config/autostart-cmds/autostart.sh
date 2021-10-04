@@ -18,13 +18,14 @@ xfsettingsd &
 
 # Systray
 # Bluetooth is disabled due to vulnerabilities
-(sleep 3s && nm-applet) & 
-#(sleep 3s && blueman-applet) &
-(sleep 3s && mate-power-manager) &
-(sleep 3s && mictray) &
-(sleep 3s && pnmixer) &
-(sleep 3s && pamac-tray) &
-(sleep 3s && gxkb) &
+nm-applet & 
+#blueman-applet &
+mate-power-manager &
+mictray &
+pnmixer &
+pamac-tray &
+gxkb &
+claws-mail &
 
 
 
