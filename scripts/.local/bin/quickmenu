@@ -29,7 +29,6 @@ list_choices(){
 󰐦 System
 󰱨 Emojis
 󰢻 Settings
-󰄠 iOS Mounter
 󰯜 Screen recorder
 EOF
 }
@@ -47,7 +46,6 @@ case "$choice" in
   	"󰐦 System") sessionmgr ;;
   	"󰱨 Emojis") dmenuemoji ;;
   	"󰢻 Settings") set-mgr ;;
-  	"󰄠 iOS Mounter") imountmgr ;;
   	"󰯜 Screen recorder") screenrecmenu ;;
 esac
 

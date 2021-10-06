@@ -1,1 +1,8 @@
-{"dependencies":{}}
+{
+  "dependencies": {
+    "coc-go": ">=0.13.3",
+    "coc-html": ">=1.4.1",
+    "coc-sh": ">=0.6.0",
+    "coc-toml": ">=1.1.0"
+  }
+}

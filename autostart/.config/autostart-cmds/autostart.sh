@@ -25,7 +25,8 @@ mictray &
 pnmixer &
 pamac-tray &
 gxkb &
-claws-mail &
+birdtray &
+kdeconnect-indicator &
 
 
 
