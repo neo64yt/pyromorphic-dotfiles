@@ -1,7 +1,7 @@
 # Ignore some neovim-related files & folders
 neovim/.local/share/nvim/site/autoload/plug.vim
 neovim/.local/share/nvim/shada/main.shada
-neovim/.config/coc/extensions
+neovim/.config/coc/extensions/*
 
 # Ignore hello binary
 scripts/.local/bin/hello
