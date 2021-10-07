@@ -7,6 +7,7 @@ Reddit "~## REDDIT LATEST POSTS ##"
 # Just add ".rss" at the end of the Reddit URLs
 #
 https://reddit.com/r/Ajar_Malaysia/new.rss "~r/Ajar_Malaysia"
+https://reddit.com/r/extomatoes/new.rss "~r/extomatoes"
 https://reddit.com/r/linux/new.rss "~r/linux"  
 https://reddit.com/r/linuxmasterrace/new.rss "~r/linuxmasterrace"
 https://reddit.com/r/archlinux/new.rss "~r/archlinux"  
