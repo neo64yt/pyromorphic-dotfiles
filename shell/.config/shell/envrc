@@ -12,15 +12,14 @@ export HISTFILE="${XDG_STATE_HOME}/shell/zsh_history" # History file for zsh
 export COMPDUMPFILE="${XDG_CACHE_HOME}/zsh/zcompdump" # zcompdump
 export KEYBIND="${XDG_CONFIG_HOME}/sxhkd/sxhkdrc" # WM-independent keybindings
 export AUTOSTART="${XDG_CONFIG_HOME}/autostart-cmds/autostart.sh" # WM-independent autostart
-export PAGER="more" # Use more as pager
-export MANPAGER="nvim -c 'set ft=man'" # Use Neovim as manpager
+export PAGER="nvimpager" # Use more as pager
+export MANPAGER="${PAGER}" # Use Neovim as manpager
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg" # GnuPG directory
 export EDITOR="nvim"
 export VISUAL="nvim"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
 
 ## SOME PROGRAMS ##
-export STARTMENU="jgmenu_run"
 export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"

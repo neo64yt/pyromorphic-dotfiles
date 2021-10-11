@@ -4,9 +4,11 @@
 
 # Autostart programs
 
+dex -a &
+
 # Background daemons first
 pipewire-runner &
-/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
+#/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 picom --experimental-backend &
 /usr/bin/dunst &
 pcmanfm --daemon-mode &
@@ -14,18 +16,17 @@ $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
 xclickroot -r $STARTMENU &
-xfsettingsd &
+#xfsettingsd &
 
 # Systray
 # Bluetooth is disabled due to vulnerabilities
-nm-applet & 
+#nm-applet & 
 #blueman-applet &
-mate-power-manager &
+#mate-power-manager &
 mictray &
 pnmixer &
-pamac-tray &
+#pamac-tray &
 gxkb &
-birdtray &
 kdeconnect-indicator &
 
 

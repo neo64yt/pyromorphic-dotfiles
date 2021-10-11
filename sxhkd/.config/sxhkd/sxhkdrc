@@ -11,7 +11,7 @@ super + r
 	apps
 
 # quick menu
-super + shift + space
+super + shift + m
 	$QUICKMENU
 
 # run prompt
