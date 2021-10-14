@@ -20,7 +20,6 @@ xclickroot -r $STARTMENU &
 # Bluetooth is disabled due to vulnerabilities
 mictray &
 pnmixer &
-gxkb &
 kdeconnect-indicator &
 
 

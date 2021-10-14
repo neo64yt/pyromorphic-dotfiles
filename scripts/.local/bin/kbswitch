@@ -15,40 +15,33 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program. If not, see https://www.gnu.org/licenses/.
 
+# Keyboard layout switcher
+
 # Defaults
 lines="$DMENU_LINES"
 border="$DMENU_BORDER"
 height="$DMENU_HEIGHT"
-prompt="󱍕 Quick access:"
+prompt="󰥻 Select a keyboard layout:"
 
-# List of choices (function)
+# List of choices
 list_choices(){
 	cat << EOF
-󰀻 Applications
-󰆍 Run
-󰐦 System
-󰱨 Emojis
-󰥻 Keyboard layouts
-󰢻 Settings
-󰯜 Screen recorder
+English (US)
+Arabic
 EOF
 }
 
 # dmenu command
 dmenu_cmd(){
-	dmenu -c -n -l "$lines" -bw "$border" -h "$height" -p "$prompt"
+	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt"
 }
 
+# Command
 choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
-  	"󰀻 Applications") apps ;;
-  	"󰆍 Run") runner ;;
-  	"󰐦 System") sessionmgr ;;
-	"󰥻 Keyboard layouts") kbswitch ;;
-  	"󰱨 Emojis") dmenuemoji ;;
-  	"󰢻 Settings") set-mgr ;;
-  	"󰯜 Screen recorder") screenrecmenu ;;
+	"English (US)") setxkbmap us ;;
+  	"Arabic") setxkbmap ara ;; 
 esac
 
 
