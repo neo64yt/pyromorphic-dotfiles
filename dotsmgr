@@ -22,25 +22,28 @@
 #push() {
 #}
 
-# Command: $ dotsmgr advice
-advice() {
-	cat << EOF
-When using this script, remember to never:
-	1. give this script up
-	2. let this script down
-	3. run around and desert this script
-	4. make this script cry
-	5. say goodbye
-	6. Tell a lie and hurt this script
-
-Oh, don't forget that this script is free software.
-EOF
+# Command: $ dotsmgr pull
+# Pull the latest release of my dotfiles
+pull() {
+	printf "Pulling the latest release...\n"
+	git pull && (printf "Done!\n" && exit 0) || (printf "Oops! Something wrong happened!\n" && exit 1)
 }
+
+# Command: $ dotsmgr dwm
+# Installs my dwm build
+dwm() {
+	printf "Cloning the repository...\n"
+	git clone https://github.com/neo64yt/dwm-neo64.git ../dwm-neo64
+	printf "Installing dwm to your system...\n"
+	../dwm-neo64/install.sh && (printf "Installation finished!\n" && exit 0) || (printf "Oops! Something wrong happened!\n" && exit 1)
+}
+
+
 
 # Command: $ dotsmgr help
 help() {
 	cat << EOF
-dotsmgr v0.1
+dotsmgr
 
 Never run this script as root!
 
@@ -49,20 +52,22 @@ Usage:
 	[ENVIRONMENT VARIABLES..] dotsmgr [COMMAND]
 
 Commands:
-	advice:		Shows an advice for user (hehehe)
+	pull:		Pulls the latest release of my dotfiles
+	dwm:		Installs my dwm build	
 	help: 		Shows usage, commands and environment variables
 	about:		Shows information about this script 
 
 Environment variables:
-	DOTS_DIR (string):		The directory where all dotfiles are stored. Useful when you store the dotfiles in a custom directory
+	DOTS_DIR (string):		The directory of the dotfiles repository.
 		Default: $HOME/git-src/glorious-dotfiles
 EOF
 }
 
 # Command: $ dotsmgr about
+# About this script
 about() {
 	cat << EOF
-About dotsmgr v0.1:
+About dotsmgr:
 	Author: Neo64YT (https://github.com/neo64yt)
 	Git repository: https://github.com/neo64yt/glorious-dotfiles
 	Description: A script for managing dotfiles, included in glorious-dotfiles. Mainly using stow to have a neat and clean dotfiles management
@@ -70,5 +75,5 @@ EOF
 }
 
 # Read functions as commands. Function "help" executed when there is no command / the command used is not supported
-[ -n "$1" ] && $1 || help
+[ -n "$1" ] && $1 || (help && exit 1)
 

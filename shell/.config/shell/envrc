@@ -20,6 +20,7 @@ export VISUAL="nvim"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
 
 ## SOME PROGRAMS ##
+export STARTMENU="jgmenu_run"
 export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"

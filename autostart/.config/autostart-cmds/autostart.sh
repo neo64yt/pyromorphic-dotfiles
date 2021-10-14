@@ -2,13 +2,12 @@
 
 # This script loads common autostart programs for all WM
 
-# Autostart programs
-
+# XDG Autostart
+# To prevent autostarting a program using XDG autostart, create an empty desktop file for that program in $XDG_CONFIG_HOME/autostart/
 dex -a &
 
 # Background daemons first
 pipewire-runner &
-#/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 picom --experimental-backend &
 /usr/bin/dunst &
 pcmanfm --daemon-mode &
@@ -16,16 +15,11 @@ $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
 xclickroot -r $STARTMENU &
-#xfsettingsd &
 
 # Systray
 # Bluetooth is disabled due to vulnerabilities
-#nm-applet & 
-#blueman-applet &
-#mate-power-manager &
 mictray &
 pnmixer &
-#pamac-tray &
 gxkb &
 kdeconnect-indicator &
 
