@@ -26,9 +26,26 @@ source $XDG_CONFIG_HOME/shell/aliasrc # Sourced from $XDG_CONFIG_HOME/shell/alia
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh # Autosuggestions
 
+# Functions
+
+## START ##
+
+## Commands cheatsheet
 cheat(){
 	curl https://cheat.sh/${@};
 }
+
+## Removing an XDG autostart app
+undex(){
+	touch $XDG_CONFIG_HOME/autostart/${@}.desktop && printf "\"${@}\" was successfully removed from the autostart list.\n"
+}
+
+## Re-adding an XDG autostart app
+redex(){
+	rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null && printf "\"${@}\" was successfully re-added to the autostart list.\n" || printf "\"${@}\" isn't in the removed autostart list.\n"
+}
+
+## END ##
 
 # Starship prompt
 prompt off  # Disable prompt theme engine

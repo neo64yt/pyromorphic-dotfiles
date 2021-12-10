@@ -18,7 +18,7 @@
 # Used on non-systemd Linux systems only
 pipewire &
 pipewire-pulse &
-pipewire-media-session || pipewire-media-session & 
+wireplumber & 
 
 paplay $XDG_DATA_HOME/sounds/startup.ogg
 

@@ -10,7 +10,8 @@ dex -a &
 pipewire-runner &
 picom --experimental-backend &
 /usr/bin/dunst &
-pcmanfm --daemon-mode &
+spacefm -d &
+devmon &
 $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &

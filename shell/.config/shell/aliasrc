@@ -1,14 +1,14 @@
 #!/bin/zsh
 # This file contains aliases used in terminal session
 
-# Alises
+# Aliases
 alias rm="rm -ri" # Ask before deleting files recursively
 alias ls="ls -A --color=auto" # List all files including hidden ones
 alias grep="grep --color=auto -i" # Grep
 alias ytdl="youtube-dl" # Shorten youtube-dl command
 alias clean-cache="rm -rf $XDG_CACHE_HOME/*" # Clean home directory cache
 alias cp="cp -r" # Copy files
-alias ..="cd .." # Go up 
+alias ..="cd .." # Go to parent directory 
 alias desktop="desktop-file-validate" # Validating .desktop files
 alias patch-del="patch -R" # Reversing patches
 alias vim="nvim" # Assume Neovim as Vim
