@@ -42,7 +42,14 @@ undex(){
 
 ## Re-adding an XDG autostart app
 redex(){
-	rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null && printf "\"${@}\" was successfully re-added to the autostart list.\n" || printf "\"${@}\" isn't in the removed autostart list.\n"
+	printf "Do you really want to re-add \"${@}\" to the autostart list? [Y/N]\n" 
+	rm -ri $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null && printf "\"${@}\" was successfully re-added to the autostart list.\n" || printf "\"${@}\" isn't in the removed autostart list.\n"
+}
+
+# Connect VM to Virt-Viewer
+vmview(){
+	printf "Connecting to \"${@}\"...\n"
+	virt-viewer --attach --connect=qemu:///system --domain-name ${@} ; printf "Session ended.\n"
 }
 
 ## END ##

@@ -44,7 +44,7 @@ export SCREENSHOOTER="screenshot"
 
 ## DEFAULT PROGRAMS ##
 export TERMINAL="alacritty"
-export BROWSER="firefox"
+export BROWSER="chromium"
 
 ## SETTINGS MANAGER ##
 export SET_GENERAL="xfce4-settings-manager" # General settings

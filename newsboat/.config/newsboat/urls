@@ -13,11 +13,6 @@ https://reddit.com/r/linuxmasterrace/new.rss "~r/linuxmasterrace"
 https://reddit.com/r/archlinux/new.rss "~r/archlinux"  
 https://reddit.com/r/artixlinux/new.rss "~r/artixlinux"  
 
-Forums "~## FORUMS ##"
-https://dragonforce.io/forums/-/index.rss "~Dragonforce.io"
-https://bbs.archlinux.org/extern.php?action=feed&type=atom "~Arch Linux"
-https://forum.artixlinux.org/index.php?action=.xml;type=rss2;limit=5 "~Artix Linux"
-
 Linux "~## LINUX & FOSS ##"
 https://www.linux.org/articles/index.rss "~Linux.org"
 https://www.kernel.org/feeds/all.atom.xml "~Kernel.org"
@@ -27,24 +22,6 @@ https://archlinux.org/feeds/news/ "~Arch Linux News"
 https://artixlinux.org/feed.php "~Artix Linux News"
 https://suckless.org/atom.xml "~suckless.org News"
 https://newsboat.org/news.atom "~Newsboat News"
-
-YouTube "~## YOUTUBE ##"
-#
-# For YouTube channels feed, use the following URL format:
-#
-# https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID
-#
-# Website for finding the ID of a YouTube channel: https://youtubechannelid.com/
-#
-https://www.youtube.com/feeds/videos.xml?channel_id=UCPUeyD6WkLAN_idjMHVPBWw "~Muh channel (Neo64YT)"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCF5EsUD8lhjF9ZAebvwRq9Q "~Ajar Malaysia"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5uekIwJ2N-M3P8ewfIf7Cw "~Abu Khadijah"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCzYag131RdrnZhtAmUBxU1Q "~Pegasus"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCVls1GmFKf6WlTraIb_IaJg "~DistroTube"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5UAwBUum7CPN5buc-_N1Fw "~The Linux Experiment"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCld68syR8Wi-GY_n4CaoJGA "~Brodie Robertson"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC7YOGHUfC1Tb6E4pudI9STA "~Mental Outlaw"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCNwGa76xVVwdEVToRZBIUIg "~DenshiVideo"
 
 Websites "~## WEBSITES ##"
 https://neo64yt.github.io/rss.xml "~Muh Website"

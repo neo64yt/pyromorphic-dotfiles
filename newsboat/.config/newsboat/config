@@ -75,7 +75,7 @@
 #
 # Default value: no
 #
-auto-reload yes
+# auto-reload yes
 
 ####  bind-key
 #
