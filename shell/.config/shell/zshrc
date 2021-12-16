@@ -27,7 +27,6 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.pl
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh # Autosuggestions
 
 # Functions
-
 ## START ##
 
 ## Commands cheatsheet
@@ -37,19 +36,73 @@ cheat(){
 
 ## Removing an XDG autostart app
 undex(){
+	# Unsetting variables
+	unset UN_AU_EXISTS UN_AU_EMPTY 
+
+	# Finding user-specific autostart file
+	printf "Finding user-specific autostart file of \"${@}\" if it exists..."
+	[ -e $XDG_CONFIG_HOME/autostart/${@}.desktop ] && UN_AU_EXISTS=1 || UN_AU_EXISTS=0
+
+	if [ $UN_AU_EXISTS -eq 1 ] ; then
+		# Creating a directory to store backups of autostart files
+		[ -e $XDG_DATA_HOME/undex ] || mkdir -p $XDG_DATA_HOME/undex
+
+		# Checking if the autostart file is empty
+		printf "   Yes\nConfirming if the autostart file is not empty..."
+		[ -s $XDG_CONFIG_HOME/autostart/${@}.desktop ] && UN_AU_EMPTY=0 || UN_AU_EMPTY=1
+		
+		# Backing up the original autostart file (if not empty)
+		[ $UN_AU_EMPTY -eq 0 ] && printf "   Not empty\nBacking up the existing autostart file...\n" && mv $XDG_CONFIG_HOME/autostart/${@}.desktop $XDG_DATA_HOME/undex/${@}.desktop.bak
+
+		# Deleting the original autostart file (if empty)
+		[ $UN_AU_EMPTY -eq 1 ] && printf "   Empty\n" && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop
+	else
+		# No existing autostart file
+		printf "   No\n"
+	fi
+	
+	# Creating an empty autostart file to fool dex
 	touch $XDG_CONFIG_HOME/autostart/${@}.desktop && printf "\"${@}\" was successfully removed from the autostart list.\n"
+	return 0
 }
 
 ## Re-adding an XDG autostart app
 redex(){
-	printf "Do you really want to re-add \"${@}\" to the autostart list? [Y/N]\n" 
-	rm -ri $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null && printf "\"${@}\" was successfully re-added to the autostart list.\n" || printf "\"${@}\" isn't in the removed autostart list.\n"
+	# Unsetting variables
+	unset RE_AU_EXISTS RE_BAK_AU_EXISTS RE_AU_EMPTY
+
+	[ -e $XDG_CONFIG_HOME/autostart/${@}.desktop ] && RE_AU_EXISTS=1 || RE_AU_EXISTS=0
+	printf "Finding the backup of user-specific autostart file of \"${@}\" if it exists..."
+	[ -e $XDG_DATA_HOME/undex/${@}.desktop.bak ] && RE_BAK_AU_EXISTS=1 || RE_BAK_AU_EXISTS=0
+
+	if [ $RE_BAK_AU_EXISTS -eq 1 ] ; then
+		# Restoring backup of the original autostart file
+		printf "   Yes\nRestoring the backup...\n"
+		[ $RE_AU_EXISTS -eq 1 ] && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null
+		mv $XDG_DATA_HOME/undex/${@}.desktop.bak $XDG_CONFIG_HOME/autostart/${@}.desktop && printf "\"${@}\" was successfully re-added to the autostart list.\n"
+		return 0
+	else
+		printf "   No\n"
+
+		# Checking if the autostart file is not empty
+		[ $RE_AU_EXISTS -eq 1 ] && [ -s $XDG_CONFIG_HOME/autostart/${@}.desktop ] && RE_AU_EMPTY=0 || RE_AU_EMPTY=1
+
+		# The autostart file does not exist
+		[ $RE_AU_EXISTS -eq 0 ] && printf "\"${@}\" does not exist.\n" && return 1
+
+		# Delete the autostart file if empty
+		[ $RE_AU_EMPTY -eq 1 ] && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null && printf "\"${@}\" was successfully re-added to the autostart list.\n" && return 0
+
+		# The autostart file is not empty
+		[ $RE_AU_EMPTY -eq 0 ] && printf "\"${@}\" is already in the autostart list.\n" && return 1
+	fi
 }
 
 # Connect VM to Virt-Viewer
 vmview(){
 	printf "Connecting to \"${@}\"...\n"
-	virt-viewer --attach --connect=qemu:///system --domain-name ${@} ; printf "Session ended.\n"
+	virt-viewer --attach --connect=qemu:///system --domain-name ${@}
+	printf "Session ended.\n"
 }
 
 ## END ##

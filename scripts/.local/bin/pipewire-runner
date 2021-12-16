@@ -20,8 +20,6 @@ pipewire &
 pipewire-pulse &
 wireplumber & 
 
-paplay $XDG_DATA_HOME/sounds/startup.ogg
-
 
 
 # vim: ft=sh

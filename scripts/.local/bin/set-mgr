@@ -41,7 +41,6 @@ list_choices(){
 󰧺 WM keybindings
 󰓦 Backup utility
 󰣖 Dconf
-󰏖 Flatpak permissions
 EOF
 }
 
@@ -66,7 +65,6 @@ case "$choice" in
   	"󰧺 WM keybindings") $WM_KEYBIND ;;
   	"󰓦 Backup utility") $BACKUP_UTIL ;;
 	"󰣖 Dconf") $DCONF_EDITOR ;;
-	"󰏖 Flatpak permissions") $FLATSEAL ;;
 esac
 
 

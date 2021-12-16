@@ -4,10 +4,10 @@
 
 ## GENERIC CONFIGURATION ##
 export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}" # Binaries path
-export XDG_CONFIG_HOME="${HOME}/.config" # XDG configuration directory
-export XDG_DATA_HOME="${HOME}/.local/share" # XDG data directory
-export XDG_CACHE_HOME="${HOME}/.cache" # XDG cache directory
-export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory
+export XDG_CONFIG_HOME="${HOME}/.config" # XDG configuration directory (user)
+export XDG_DATA_HOME="${HOME}/.local/share" # XDG data directory (user)
+export XDG_CACHE_HOME="${HOME}/.cache" # XDG cache directory (user)
+export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory (user)
 export HISTFILE="${XDG_STATE_HOME}/shell/zsh_history" # History file for zsh
 export COMPDUMPFILE="${XDG_CACHE_HOME}/zsh/zcompdump" # zcompdump
 export KEYBIND="${XDG_CONFIG_HOME}/sxhkd/sxhkdrc" # WM-independent keybindings
@@ -18,7 +18,7 @@ export GNUPGHOME="${XDG_DATA_HOME}/gnupg" # GnuPG directory
 export EDITOR="nvim"
 export VISUAL="nvim"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
-export COWPATH="${XDG_DATA_HOME}/cows:${XDG_DATA_DIRS}/cows"
+export COWPATH="${XDG_DATA_HOME}/cows:/usr/share/cows"
 
 ## SOME PROGRAMS ##
 export STARTMENU="jgmenu_run"
@@ -54,7 +54,6 @@ export NM_EDITOR="nm-connection-editor" # Network
 export PRINT="system-config-printer" # Printer
 export BACKUP_UTIL="timeshift-launcher" # Backup & restore utility
 export DCONF_EDITOR="dconf-editor" # Manage Dconf configurations
-export FLATSEAL="flatpak run com.github.tchx84.Flatseal" # Manage Flatpak apps permissions
 
 ## XSECURELOCK SETTINGS ##
 export XSECURELOCK_PASSWORD_PROMPT="asterisks"

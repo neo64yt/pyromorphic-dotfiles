@@ -2,7 +2,7 @@
 Type=Application
 Name=winebrowser
 MimeType=application/x-extension-htm;
-Exec=env WINEPREFIX="/home/neo64yt/.wine" wine start /ProgIDOpen htmlfile %f
+Exec=env WINEPREFIX="/home/neo64yt/Games" wine start /ProgIDOpen htmlfile %f
 NoDisplay=true
 StartupNotify=true
 Icon=81F5_winebrowser.0

@@ -5,6 +5,8 @@
 [ -f ~/.config/${XDG_SESSION_DESKTOP}/sessionenv ] && . ~/.config/${XDG_SESSION_DESKTOP}/sessionenv
 sh $AUTOSTART & 
 
+# Play startup sound
+paplay ${XDG_DATA_HOME}/sounds/startup.ogg &
 
 
 

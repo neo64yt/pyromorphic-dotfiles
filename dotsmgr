@@ -1,4 +1,5 @@
 #!/bin/sh
+# shellcheck disable=SC2015
 
 #    This file is part of Glorious-Dotfiles.
 #
@@ -77,3 +78,6 @@ EOF
 # Read functions as commands. Function "help" executed when there is no command / the command used is not supported
 [ -n "$1" ] && $1 || (help && exit 1)
 
+
+
+# vim: ft=sh
