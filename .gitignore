@@ -8,4 +8,3 @@ scripts/.local/bin/hello
 
 # Ignore cache files from apps
 zathura/.local/share/zathura/history
-zathura/.local/share/zathura/history.bak
