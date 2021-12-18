@@ -30,11 +30,13 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 ## START ##
 
 ## Commands cheatsheet
+## Usage: cheat [COMMAND_NAME]
 cheat(){
 	curl https://cheat.sh/${@};
 }
 
 ## Removing an XDG autostart app
+## Usage: undex [APP_NAME]
 undex(){
 	# Unsetting variables
 	unset UN_AU_EXISTS UN_AU_EMPTY 
@@ -67,6 +69,7 @@ undex(){
 }
 
 ## Re-adding an XDG autostart app
+## Usage: redex [APP_NAME]
 redex(){
 	# Unsetting variables
 	unset RE_AU_EXISTS RE_BAK_AU_EXISTS RE_AU_EMPTY
@@ -98,11 +101,26 @@ redex(){
 	fi
 }
 
-# Connect VM to Virt-Viewer
+## Connect VM to Virt-Viewer
+## Usage: vmview [VM_NAME]
 vmview(){
 	printf "Connecting to \"${@}\"...\n"
 	virt-viewer --attach --connect=qemu:///system --domain-name ${@}
 	printf "Session ended.\n"
+}
+
+## Upload file to https://0x0.st/ and add to a list 
+## Usage: stshare [FILE] [DESCRIPTION]
+stshare(){
+	unset SHARE_URL UP_FILE FILE_DESC
+	UP_FILE=${1}
+	FILE_DESC=${2}
+	SHARE_URL=`curl -F"file=@${UP_FILE}" https://0x0.st`
+	LIST_FILE="$HOME/Documents/list_of_files_on_0x0.st.txt"
+
+	printf "Generating file share link..."
+	printf "* $FILE_DESC -> $SHARE_URL\n" >> $LIST_FILE && printf "   Done!\n"
+	printf "Here's the link!\n-> $SHARE_URL\n"
 }
 
 ## END ##

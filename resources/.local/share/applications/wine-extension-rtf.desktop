@@ -2,7 +2,7 @@
 Type=Application
 Name=wordpad
 MimeType=application/rtf;
-Exec=env WINEPREFIX="/home/neo64yt/Games" wine start /ProgIDOpen rtffile %f
+Exec=env WINEPREFIX="/home/neo64yt/.wine" wine start /ProgIDOpen rtffile %f
 NoDisplay=true
 StartupNotify=true
 Icon=3365_wordpad.0

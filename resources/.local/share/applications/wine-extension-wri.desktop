@@ -2,7 +2,7 @@
 Type=Application
 Name=wordpad
 MimeType=application/x-mswrite;
-Exec=env WINEPREFIX="/home/neo64yt/Games" wine start /ProgIDOpen wrifile %f
+Exec=env WINEPREFIX="/home/neo64yt/.wine" wine start /ProgIDOpen wrifile %f
 NoDisplay=true
 StartupNotify=true
 Icon=3365_wordpad.0
