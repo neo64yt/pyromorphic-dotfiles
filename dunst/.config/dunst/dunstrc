@@ -149,10 +149,10 @@ browser = /usr/bin/chromium -new-tab
 
 # Align icons left/right/off
 icon_position = left
-max_icon_size = 48
+max_icon_size = 32
 
 # Paths to default icons.
-icon_path = /usr/share/icons/Flat-Remix-Teal-Dark/actions/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/animations/:/usr/share/icons/Flat-Remix-Teal-Dark/apps/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/categories/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/devices/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/emblems/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/mimetypes/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/panel/:/usr/share/icons/Flat-Remix-Teal-Dark/places/scalable/:/usr/share/icons/Flat-Remix-Teal-Dark/status/scalable/
+icon_path = /usr/share/icons/Papirus-Dark/32x32/actions/:/usr/share/icons/Papirus-Dark/24x24/animations/:/usr/share/icons/Papirus-Dark/32x32/apps/:/usr/share/icons/Papirus-Dark/32x32/categories/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/emblems/:/usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/24x24/panel/:/usr/share/icons/Papirus-Dark/32x32/places/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/emotes/
 frame_width = 3
 frame_color = "#8EC07C"
 

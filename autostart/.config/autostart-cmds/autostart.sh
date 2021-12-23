@@ -15,14 +15,12 @@ devmon &
 $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
-xclickroot -r $STARTMENU &
 
 # Systray
 # Bluetooth is disabled due to vulnerabilities
 mictray &
+indicator-kdeconnect &
 pnmixer &
-kdeconnect-indicator &
-
 
 
 # vim: ft=sh

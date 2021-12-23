@@ -21,7 +21,6 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
 export COWPATH="${XDG_DATA_HOME}/cows:/usr/share/cows"
 
 ## SOME PROGRAMS ##
-export STARTMENU="jgmenu_run"
 export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"
