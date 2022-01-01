@@ -3,7 +3,7 @@
 # This file stores environment variables 
 
 ## GENERIC CONFIGURATION ##
-export PATH="${HOME}/.local/bin:${HOME}/bin:${PATH}" # Binaries path
+export PATH="${HOME}/.local/bin:${PATH}" # Binaries path
 export XDG_CONFIG_HOME="${HOME}/.config" # XDG configuration directory (user)
 export XDG_DATA_HOME="${HOME}/.local/share" # XDG data directory (user)
 export XDG_CACHE_HOME="${HOME}/.cache" # XDG cache directory (user)
@@ -15,35 +15,36 @@ export AUTOSTART="${XDG_CONFIG_HOME}/autostart-cmds/autostart.sh" # WM-independe
 export PAGER="nvimpager" # Use more as pager
 export MANPAGER="${PAGER}" # Use Neovim as manpager
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg" # GnuPG directory
-export EDITOR="nvim"
 export VISUAL="nvim"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
 export COWPATH="${XDG_DATA_HOME}/cows:/usr/share/cows"
+export WGETRC="${XDG_CONFIG_HOME}/wget/wgetrc" # Wget config file location
+export NPM_CONFIG_CACHE="${XDG_CACHE_HOME}/npm"
 
-## SOME PROGRAMS ##
+## SCRIPTS ##
 export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"
 export EMOJI_PICKER="dmenuemoji"
+export LOCK="lock" 
+export SCREENSHOOTER="screenshot"
 
-## XSESSION ##
+## SESSION ##
 export DE="xfce"
 export DESKTOP_SESSION="${DE}"
 export XDG_DESKTOP_SESSION="${DE}"
+export $(dbus-launch)
 
 ## DMENU DEFAULT LOOK ##
 export DMENU_HEIGHT="35"
 export DMENU_LINES="15"
 export DMENU_BORDER="3"
 
-## UTILITY SCRIPTS ##
-export LOCKER="xsecurelock"
-export LOCK="lock" 
-export SCREENSHOOTER="screenshot"
-
 ## DEFAULT PROGRAMS ##
 export TERMINAL="alacritty"
-export BROWSER="chromium"
+export EDITOR="nvim"
+export BROWSER="firefox"
+export LOCKER="xsecurelock"
 
 ## SETTINGS MANAGER ##
 export SET_GENERAL="xfce4-settings-manager" # General settings
@@ -73,9 +74,6 @@ export SCREENREC_VCODEC="libx264"
 export SCREENREC_PRESET="ultrafast"
 export SCREENREC_ACODEC="libmp3lame"
 export SCREENREC_THREADS="0"
-
-## DBUS-LAUNCH ##
-export $(dbus-launch)
 
 
 

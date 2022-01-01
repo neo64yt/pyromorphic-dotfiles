@@ -19,6 +19,20 @@
 # Set environment variables to default when they are not set
 [ -z "$DOTS_DIR" ] && DOTS_DIR="$HOME/git-src/glorious-dotfiles"
 
+# Set the directory of the dotfiles as the working directory
+PWD=$DOTS_DIR
+
+# Command: $ dotsmgr deploy
+# Deploy my dotfiles
+deploy() {
+	printf "dotsmgr\nStarting to deploy...\n"
+	printf "Deploying 'alacritty'..."
+	stow -S alacritty -t $HOME && printf "   Done!\n"
+
+	printf "Creating a symlink for this script..."
+	ln -s $HOME/.local/bin/dotsmgr && printf "   Done!\nNow you can use this script without being in this directory!\n"
+}
+
 # Command: $ dotsmgr push
 #push() {
 #}
@@ -31,7 +45,7 @@ pull() {
 }
 
 # Command: $ dotsmgr dwm
-# Installs my dwm build
+# Install my dwm build
 dwm() {
 	printf "Cloning the repository...\n"
 	git clone https://github.com/neo64yt/dwm-neo64.git ../dwm-neo64

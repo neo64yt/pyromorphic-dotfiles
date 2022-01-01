@@ -4,6 +4,5 @@ Version=1.0
 Terminal=false
 Type=Application
 Name=DFM Chat
-Exec=/usr/bin/chromium --profile-directory=Default --app-id=gfjilipdlpjpgdldipddkjpgaimmfhoh
+Exec=/usr/bin/firefox --new-tab https://dragonforce.io/chat/fullpage
 Icon=chrome-gfjilipdlpjpgdldipddkjpgaimmfhoh-Default
-StartupWMClass=crx_gfjilipdlpjpgdldipddkjpgaimmfhoh
