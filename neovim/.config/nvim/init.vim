@@ -37,6 +37,9 @@ Plug 'mhinz/vim-startify'
 " vim-toml
 Plug 'cespare/vim-toml'
 
+" colorizer
+Plug 'lilydjwg/colorizer'
+
 " Initialize plugin system
 call plug#end()
 

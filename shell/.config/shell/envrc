@@ -17,9 +17,10 @@ export MANPAGER="${PAGER}" # Use Neovim as manpager
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg" # GnuPG directory
 export VISUAL="nvim"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
-export COWPATH="${XDG_DATA_HOME}/cows:/usr/share/cows"
+export COWPATH="${XDG_DATA_HOME}/cows:${XDG_DATA_DIRS}/cows"
 export WGETRC="${XDG_CONFIG_HOME}/wget/wgetrc" # Wget config file location
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME}/npm"
+export _JAVA_AWT_WM_NONREPARENTING=1 # Fix Java applications running under tiling WMs 
 
 ## SCRIPTS ##
 export QUICKMENU="quickmenu"

@@ -18,9 +18,16 @@
 
 # Set environment variables to default when they are not set
 [ -z "$DOTS_DIR" ] && DOTS_DIR="$HOME/git-src/glorious-dotfiles"
-
-# Set the directory of the dotfiles as the working directory
 PWD=$DOTS_DIR
+
+# Formatting
+# Source: http://colors.sh/
+NO_FORMAT="\033[0m"
+F_BOLD="\033[1m"
+
+# Colors
+# Source: http://colors.sh/
+C_LIME="\033[38;5;10m"
 
 # Command: $ dotsmgr deploy
 # Deploy my dotfiles
@@ -40,8 +47,8 @@ deploy() {
 # Command: $ dotsmgr pull
 # Pull the latest release of my dotfiles
 pull() {
-	printf "Pulling the latest release...\n"
-	git pull && (printf "Done!\n" && exit 0) || (printf "Oops! Something wrong happened!\n" && exit 1)
+	printf "${F_BOLD}Pulling the latest release...${NO_FORMAT}\n"
+	git pull && (printf "${C_LIME}Done!${NO_FORMAT}\n" && exit 0) || (printf "Oops! Something wrong happened!\n" && exit 1)
 }
 
 # Command: $ dotsmgr dwm
