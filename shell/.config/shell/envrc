@@ -20,7 +20,8 @@ export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
 export COWPATH="${XDG_DATA_HOME}/cows:${XDG_DATA_DIRS}/cows"
 export WGETRC="${XDG_CONFIG_HOME}/wget/wgetrc" # Wget config file location
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME}/npm"
-export _JAVA_AWT_WM_NONREPARENTING=1 # Fix Java applications running under tiling WMs 
+export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under tiling WMs 
+export QT_STYLE_OVERRIDE="kvantum-dark"
 
 ## SCRIPTS ##
 export QUICKMENU="quickmenu"
@@ -49,7 +50,6 @@ export LOCKER="xsecurelock"
 
 ## SETTINGS MANAGER ##
 export SET_GENERAL="xfce4-settings-manager" # General settings
-export QT5_SETTINGS="qt5ct" # Appearance (Qt5)
 export POWER_MGR="mate-power-preferences" # Power manager
 export NM_EDITOR="nm-connection-editor" # Network
 export PRINT="system-config-printer" # Printer

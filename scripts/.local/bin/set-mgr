@@ -30,7 +30,6 @@ config_edit="$TERMINAL -e $EDITOR"
 list_choices(){
 	cat << EOF
 󰢻 General settings
-󰸌 Appearance (Qt5)
 󰍁 Lock screen
 󰂏 Power management
 󰲝 Network
@@ -54,7 +53,6 @@ choice=$(list_choices | dmenu_cmd)
 
 case "$choice" in
 	"󰢻 General settings") $SET_GENERAL ;;
-  	"󰸌 Appearance (Qt5)") $QT5_SETTINGS ;;
   	"󰍁 Lock screen") $config_edit $HOME/.xprofile ;;
 	"󰂏 Power management") $POWER_MGR ;;
   	"󰲝 Network") $NM_EDITOR ;;
