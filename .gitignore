@@ -8,3 +8,6 @@ scripts/.local/bin/hello
 
 # Ignore cache files from apps
 zathura/.local/share/zathura/history
+
+# Ignore mpv plugins/scripts
+mpv/.config/mpv/scripts/*
