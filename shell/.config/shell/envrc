@@ -37,10 +37,12 @@ export DESKTOP_SESSION="${DE}"
 export XDG_DESKTOP_SESSION="${DE}"
 export $(dbus-launch)
 
-## DMENU DEFAULT LOOK ##
+## MENU SETTINGS ##
 export DMENU_HEIGHT="35"
 export DMENU_LINES="15"
 export DMENU_BORDER="3"
+export DMENU_MARGINS="300"
+export BEMENU_OPTS="-l $DMENU_LINES -H $DMENU_HEIGHT -M $DMENU_MARGINS -P \"\" -i -s -c --scrollbar always" # Global bemenu options
 
 ## DEFAULT PROGRAMS ##
 export TERMINAL="alacritty"
@@ -67,14 +69,15 @@ export XSECURELOCK_AUTH_SOUNDS="1"
 
 ## SCREENREC SETTINGS ##
 export SCREENREC_INRES="1366x768"
-export SCREENREC_SCALE="1280x720"
+export SCREENREC_SCALE="1920x1080"
 export SCREENREC_SCALEFLAGS="lanczos"
-export SCREENREC_FPS="30"
+export SCREENREC_FPS="60"
 export SCREENREC_AUDIO="pulse"
 export SCREENREC_VCODEC="libx264"
 export SCREENREC_PRESET="ultrafast"
-export SCREENREC_ACODEC="libmp3lame"
+export SCREENREC_ACODEC="aac"
 export SCREENREC_THREADS="0"
+export SCREENREC_CRF="23"
 
 
 

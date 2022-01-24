@@ -9,7 +9,7 @@ set relativenumber
 set termguicolors
 let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
-let g:airine#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 nmap <C-n> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '󰦿'
 let g:NERDTreeDirArrowCollapsible = '󰧃'

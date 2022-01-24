@@ -6,7 +6,7 @@
 sh $AUTOSTART & 
 
 # Play startup sound
-paplay ${XDG_DATA_HOME}/sounds/startup.ogg &
+paplay ${XDG_DATA_HOME}/sounds/startup.ogg
 
 
 

@@ -15,4 +15,9 @@ alias commit="git commit" # Commiting Git changes
 alias p="sudo pacman" # Package management
 alias push="git push" # Push Git commits to upstream repository
 alias pull="git pull" # Sync local Git repository with upstream
+alias scrcpy="scrcpy -m 1080" # Scrcpy
 alias :x="exit" # Vim-like exit :P
+
+
+
+# vim: ft=zsh

@@ -1,0 +1,5 @@
+DMENU|DMENU_MARGINS|around
+DMENU_HE|DMENU_HEIGHT|around
+DMEN|DMENU_BORDER|around
+DMENU|DMENU_LINES|around
+sc|scrcpy|around
