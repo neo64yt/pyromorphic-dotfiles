@@ -3,7 +3,7 @@ call plug#begin(stdpath('data') . '/plugged')
 
 " Configuration
 set ignorecase
-set nowrap
+set wrap
 set number
 set relativenumber
 set termguicolors
@@ -17,31 +17,20 @@ let g:vaxe_enable_airline_defaults = 0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd VimEnter * :silent exec "!kill -s SIGWINCH $PPID"
 
-" nerdtree
-Plug 'preservim/nerdtree'
-
-" vim-devicons
-Plug 'ryanoasis/vim-devicons'
-
-" vim-airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" COC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" vim-sxhkdrc
-Plug 'baskerville/vim-sxhkdrc'
-
-" vim-startify
-Plug 'mhinz/vim-startify'
-
-" vim-toml
-Plug 'cespare/vim-toml'
-
-" colorizer
-Plug 'lilydjwg/colorizer'
+" Plugins
+Plug 'preservim/nerdtree' " nerdtree
+Plug 'ryanoasis/vim-devicons' " devicons
+Plug 'vim-airline/vim-airline' " airline
+Plug 'vim-airline/vim-airline-themes' " themes for airline
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc.nvim
+Plug 'baskerville/vim-sxhkdrc' " sxhkdrc
+Plug 'mhinz/vim-startify' " startify
+Plug 'cespare/vim-toml' " toml
+Plug 'lilydjwg/colorizer' " colorizer
 
 " Initialize plugin system
 call plug#end()
 
+
+
+" vim: ft=vim

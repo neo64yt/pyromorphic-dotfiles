@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 # This file stores environment variables 
 
@@ -8,18 +8,19 @@ export XDG_CONFIG_HOME="${HOME}/.config" # XDG configuration directory (user)
 export XDG_DATA_HOME="${HOME}/.local/share" # XDG data directory (user)
 export XDG_CACHE_HOME="${HOME}/.cache" # XDG cache directory (user)
 export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory (user)
-export HISTFILE="${XDG_STATE_HOME}/shell/zsh_history" # History file for zsh
-export COMPDUMPFILE="${XDG_CACHE_HOME}/zsh/zcompdump" # zcompdump
-export KEYBIND="${XDG_CONFIG_HOME}/sxhkd/sxhkdrc" # WM-independent keybindings
-export AUTOSTART="${XDG_CONFIG_HOME}/autostart-cmds/autostart.sh" # WM-independent autostart
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/shell/zsh" # Zsh config
+export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/shell/zsh/zsh_history" # History file for zsh
+export COMPDUMPFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump" # zcompdump
+export KEYBIND="${XDG_CONFIG_HOME:-$HOME/.config}/sxhkd/sxhkdrc" # WM-independent keybindings
+export AUTOSTART="${XDG_CONFIG_HOME:-$HOME/.config}/autostart-cmds/autostart.sh" # WM-independent autostart
 export PAGER="nvimpager" # Use more as pager
 export MANPAGER="${PAGER}" # Use Neovim as manpager
-export GNUPGHOME="${XDG_DATA_HOME}/gnupg" # GnuPG directory
+export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg" # GnuPG directory
 export VISUAL="nvim"
-export STARSHIP_CONFIG="${XDG_CONFIG_HOME}/shell/starship.toml"
-export COWPATH="${XDG_DATA_HOME}/cows:${XDG_DATA_DIRS}/cows"
-export WGETRC="${XDG_CONFIG_HOME}/wget/wgetrc" # Wget config file location
-export NPM_CONFIG_CACHE="${XDG_CACHE_HOME}/npm"
+export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship.toml"
+export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cows:${XDG_DATA_DIRS}/cows"
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file location
+export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
 export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under tiling WMs 
 export QT_STYLE_OVERRIDE="kvantum-dark"
 
@@ -38,11 +39,38 @@ export XDG_DESKTOP_SESSION="${DE}"
 export $(dbus-launch)
 
 ## MENU SETTINGS ##
+# Non-color options
 export DMENU_HEIGHT="35"
 export DMENU_LINES="15"
 export DMENU_BORDER="3"
 export DMENU_MARGINS="300"
-export BEMENU_OPTS="-l $DMENU_LINES -H $DMENU_HEIGHT -M $DMENU_MARGINS -P \"\" -i -s -c --scrollbar always" # Global bemenu options
+export BEMENU_NONCOLOR="-l $DMENU_LINES -H $DMENU_HEIGHT -M $DMENU_MARGINS -P  -i -s -c --scrollbar always"
+# Title color options
+export BEMENU_TITLE_BG="#272a34"
+export BEMENU_TITLE_FG="#ffffff"
+export BEMENU_TITLE="--tb $BEMENU_TITLE_BG --tf $BEMENU_TITLE_FG" 
+# Filter color options
+export BEMENU_FILTER_BG="#272a34"
+export BEMENU_FILTER_FG="#ffffff"
+export BEMENU_FILTER="--fb $BEMENU_FILTER_BG --ff $BEMENU_FILTER_FG"
+# Normal color options
+export BEMENU_NORMAL_BG="#272a34"
+export BEMENU_NORMAL_FG="#ffffff"
+export BEMENU_NORMAL="--nb $BEMENU_NORMAL_BG --nf $BEMENU_NORMAL_FG"
+# Highlight color options
+export BEMENU_HL_BG="#12846e"
+export BEMENU_HL_FG="#ffffff"
+export BEMENU_HL="--hb $BEMENU_HL_BG --hf $BEMENU_HL_FG"
+# Selection color options
+export BEMENU_SELECT_BG="#000000"
+export BEMENU_SELECT_FG="#12846e"
+export BEMENU_SELECT="--sb $BEMENU_SELECT_BG --sf $BEMENU_SELECT_FG" 
+# Scrollbar color options
+export BEMENU_SCROLL_BG="#272a34"
+export BEMENU_SCROLL_FG="#12846e"
+export BEMENU_SCROLL="--scb $BEMENU_SCROLL_BG --scf $BEMENU_SCROLL_FG" 
+# All options
+export BEMENU_OPTS="$BEMENU_NONCOLOR $BEMENU_TITLE $BEMENU_FILTER $BEMENU_NORMAL $BEMENU_HL $BEMENU_SELECT $BEMENU_SCROLL" # Global bemenu options
 
 ## DEFAULT PROGRAMS ##
 export TERMINAL="alacritty"
@@ -81,5 +109,5 @@ export SCREENREC_CRF="23"
 
 
 
-# vim: ft=zsh
+# vim: ft=sh
 ## EOF ##

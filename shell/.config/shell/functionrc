@@ -1,30 +1,4 @@
 #!/bin/zsh
-#   |\     |
-#   | \    |
-#   |  \   |
-#   |   \  |
-#   |    \ |
-#   |     \|
-# (c) Made by Neo64YT
-
-# Dump 
-mkdir -p $XDG_CACHE_HOME/zsh
-
-# Show fetch tool
-pfetch
-
-# Hello message
-hello | cowsay -f tux -n | lolcat
-
-# Aliases
-source $XDG_CONFIG_HOME/shell/aliasrc # Sourced from $XDG_CONFIG_HOME/shell/aliasrc
-
-# Environment variables
-# All environment variables are stored in .zprofile and .xprofile (both are symlinks to $XDG_CONFIG_HOME/shell/envrc) 
-
-# Plugins 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh # Syntax highlighting
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh # Autosuggestions
 
 # Functions
 ## START ##
@@ -75,14 +49,14 @@ redex(){
 	unset RE_AU_EXISTS RE_BAK_AU_EXISTS RE_AU_EMPTY
 
 	[ -e $XDG_CONFIG_HOME/autostart/${@}.desktop ] && RE_AU_EXISTS=1 || RE_AU_EXISTS=0
-	printf "Finding the backup of user-specific autostart file of \"${@}\" if it exists..."
+	printf "Finding the backup of user-specific autostart file of '${@}' if it exists..."
 	[ -e $XDG_DATA_HOME/undex/${@}.desktop.bak ] && RE_BAK_AU_EXISTS=1 || RE_BAK_AU_EXISTS=0
 
 	if [ $RE_BAK_AU_EXISTS -eq 1 ] ; then
 		# Restoring backup of the original autostart file
 		printf "   Yes\nRestoring the backup...\n"
 		[ $RE_AU_EXISTS -eq 1 ] && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null
-		mv $XDG_DATA_HOME/undex/${@}.desktop.bak $XDG_CONFIG_HOME/autostart/${@}.desktop && printf "\"${@}\" was successfully re-added to the autostart list.\n"
+		mv $XDG_DATA_HOME/undex/${@}.desktop.bak $XDG_CONFIG_HOME/autostart/${@}.desktop && printf "'${@}' was successfully re-added to the autostart list.\n"
 		return 0
 	else
 		printf "   No\n"
@@ -91,20 +65,20 @@ redex(){
 		[ $RE_AU_EXISTS -eq 1 ] && [ -s $XDG_CONFIG_HOME/autostart/${@}.desktop ] && RE_AU_EMPTY=0 || RE_AU_EMPTY=1
 
 		# The autostart file does not exist
-		[ $RE_AU_EXISTS -eq 0 ] && printf "\"${@}\" does not exist.\n" && return 1
+		[ $RE_AU_EXISTS -eq 0 ] && printf "'${@}' does not exist.\n" && return 1
 
 		# Delete the autostart file if empty
-		[ $RE_AU_EMPTY -eq 1 ] && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null && printf "\"${@}\" was successfully re-added to the autostart list.\n" && return 0
+		[ $RE_AU_EMPTY -eq 1 ] && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null && printf "'${@}' was successfully re-added to the autostart list.\n" && return 0
 
 		# The autostart file is not empty
-		[ $RE_AU_EMPTY -eq 0 ] && printf "\"${@}\" is already in the autostart list.\n" && return 1
+		[ $RE_AU_EMPTY -eq 0 ] && printf "'${@}' is already in the autostart list.\n" && return 1
 	fi
 }
 
 ## Connect VM to Virt-Viewer
 ## Usage: vmview [VM_NAME]
 vmview(){
-	printf "Connecting to \"${@}\"...\n"
+	printf "Connecting to '${@}'...\n"
 	virt-viewer --attach --connect=qemu:///system --domain-name ${@}
 	printf "Session ended.\n"
 }
@@ -125,11 +99,4 @@ stshare(){
 
 ## END ##
 
-# Starship prompt
-prompt off  # Disable prompt theme engine
-eval "$(starship init zsh)"
-
-
-
 # vim: ft=zsh
-## EOF ##

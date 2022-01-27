@@ -1,12 +1,9 @@
 #!/bin/sh
 
 # Set environment variables and execute autostart programs
-[ -f ~/.config/shell/envrc ] && . ~/.config/shell/envrc
+[ -f ~/.zshenv ] && . ~/.zshenv
 [ -f ~/.config/${XDG_SESSION_DESKTOP}/sessionenv ] && . ~/.config/${XDG_SESSION_DESKTOP}/sessionenv
 sh $AUTOSTART & 
-
-# Play startup sound
-paplay ${XDG_DATA_HOME}/sounds/startup.ogg
 
 
 

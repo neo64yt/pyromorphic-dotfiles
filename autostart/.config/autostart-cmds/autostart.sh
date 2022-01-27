@@ -15,6 +15,7 @@ $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
 steam -silent &
+mpd &
 
 # Systray
 indicator-kdeconnect &
