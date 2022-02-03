@@ -17,20 +17,19 @@
 
 # Managing sessions
 
-# NOTE: Please change according to your init system
-# systemd: systemctl
-# other init with elogind: loginctl
-
 # Defaults
-lines=5
-border="$DMENU_BORDER"
-height="$DMENU_HEIGHT"
 prompt="󰐦 System ($(uptime -p)):"
+BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
+
+case "$(readlink -f /sbin/init)" in
+	*systemd*) ctl="systemctl" ;;
+	*) ctl="loginctl" ;;
+esac
 
 # List of choices
 list_choices(){
 	cat << EOF
-󰐥 Shutdown
+󰐥 Power off
 󰜉 Restart
 󰽥 Suspend
 󰍁 Lock
@@ -38,20 +37,16 @@ list_choices(){
 EOF
 }
 
-# dmenu command
-dmenu_cmd(){
-	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt" 
-}
-
-# Command
-choice=$(list_choices | dmenu_cmd)
+# Menu
+choice=$(list_choices | bemenu)
 
 case "$choice" in
-  	"󰐥 Shutdown") loginctl poweroff ;;
-  	"󰜉 Restart") loginctl reboot ;;
-  	"󰽥 Suspend") suspend-notify ;;
-  	"󰍁 Lock") $LOCKER ;;
-  	"󰍃 Log out") sh $SESSION_KILLER ;;
+  	"󰐥 Power off") $initctl poweroff -i ;;
+	"󰜉 Restart") $initctl reboot -i ;;
+	"󰽥 Suspend") suspend-notify ;;
+	"󰍁 Lock") $LOCKER ;;
+	"󰍃 Log out") sh $SESSION_KILLER ;;
+	*) exit 1 ;;
 esac
 
 

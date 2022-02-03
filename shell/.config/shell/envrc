@@ -18,11 +18,12 @@ export MANPAGER="${PAGER}" # Use Neovim as manpager
 export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg" # GnuPG directory
 export VISUAL="nvim"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship.toml"
-export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cows:${XDG_DATA_DIRS}/cows"
+export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cows:${XDG_DATA_DIRS:-/usr/share}/cows"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file location
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
 export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under tiling WMs 
 export QT_STYLE_OVERRIDE="kvantum-dark"
+export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 
 ## SCRIPTS ##
 export QUICKMENU="quickmenu"
@@ -40,14 +41,15 @@ export $(dbus-launch)
 
 ## MENU SETTINGS ##
 # Non-color options
-export DMENU_HEIGHT="35"
-export DMENU_LINES="15"
-export DMENU_BORDER="3"
-export DMENU_MARGINS="300"
-export BEMENU_NONCOLOR="-l $DMENU_LINES -H $DMENU_HEIGHT -M $DMENU_MARGINS -P  -i -s -c --scrollbar always"
+export BEMENU_HEIGHT="35"
+export BEMENU_LINES="15"
+export BEMENU_BORDER="3"
+export BEMENU_MARGINS="300"
+export BEMENU_FONT="JetBrains Mono 13"
+export BEMENU_NONCOLOR="-l $BEMENU_LINES -H $BEMENU_HEIGHT -M $BEMENU_MARGINS -P  -i -s -c -f --scrollbar always --fn '$BEMENU_FONT'"
 # Title color options
-export BEMENU_TITLE_BG="#272a34"
-export BEMENU_TITLE_FG="#ffffff"
+export BEMENU_TITLE_BG="#000000"
+export BEMENU_TITLE_FG="#12846e"
 export BEMENU_TITLE="--tb $BEMENU_TITLE_BG --tf $BEMENU_TITLE_FG" 
 # Filter color options
 export BEMENU_FILTER_BG="#272a34"
@@ -66,7 +68,7 @@ export BEMENU_SELECT_BG="#000000"
 export BEMENU_SELECT_FG="#12846e"
 export BEMENU_SELECT="--sb $BEMENU_SELECT_BG --sf $BEMENU_SELECT_FG" 
 # Scrollbar color options
-export BEMENU_SCROLL_BG="#272a34"
+export BEMENU_SCROLL_BG="#000000"
 export BEMENU_SCROLL_FG="#12846e"
 export BEMENU_SCROLL="--scb $BEMENU_SCROLL_BG --scf $BEMENU_SCROLL_FG" 
 # All options

@@ -18,10 +18,9 @@
 # Keyboard layout switcher
 
 # Defaults
-lines="$DMENU_LINES"
-border="$DMENU_BORDER"
-height="$DMENU_HEIGHT"
 prompt="󰥻 Select a keyboard layout:"
+
+BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
 
 # List of choices
 list_choices(){
@@ -31,17 +30,13 @@ Arabic
 EOF
 }
 
-# dmenu command
-dmenu_cmd(){
-	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt"
-}
-
 # Command
-choice=$(list_choices | dmenu_cmd)
+choice=$(list_choices | bemenu)
 
 case "$choice" in
 	"English (US)") setxkbmap us ;;
   	"Arabic") setxkbmap ara ;; 
+	*) exit 1 ;;
 esac
 
 

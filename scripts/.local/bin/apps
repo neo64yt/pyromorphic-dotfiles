@@ -18,16 +18,10 @@
 # This script is used for showing programs with desktop entries
 
 # Defaults
-lines="$DMENU_LINES"
-border="$DMENU_BORDER"
-height="$DMENU_HEIGHT"
 prompt="󰀻 Applications:"
 
-# dmenu command
-DMENU="dmenu -c -n -l $lines -bw $border -h $height -p \"$prompt\""
-
 # Command
-j4-dmenu-desktop --dmenu="$DMENU" --term="$TERMINAL"
+j4-dmenu-desktop --dmenu="bemenu -p '$prompt'" --term="$TERMINAL"
 
 
 

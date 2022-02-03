@@ -16,10 +16,8 @@
 #    along with this program. If not, see https://www.gnu.org/licenses/.
 
 # Defaults
-lines="$DMENU_LINES"
-border="$DMENU_BORDER"
-height="$DMENU_HEIGHT"
 prompt="󱍕 Quick access:"
+BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
 
 # List of choices (function)
 list_choices(){
@@ -34,12 +32,7 @@ list_choices(){
 EOF
 }
 
-# dmenu command
-dmenu_cmd(){
-	dmenu -c -n -l "$lines" -bw "$border" -h "$height" -p "$prompt"
-}
-
-choice=$(list_choices | dmenu_cmd)
+choice=$(list_choices | bemenu)
 
 case "$choice" in
   	"󰀻 Applications") apps ;;
@@ -49,6 +42,7 @@ case "$choice" in
   	"󰱨 Emojis") dmenuemoji ;;
   	"󰢻 Settings") set-mgr ;;
   	"󰯜 Screen recorder") screenrecmenu ;;
+	*) exit 1 ;;
 esac
 
 

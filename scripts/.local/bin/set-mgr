@@ -18,10 +18,8 @@
 # Settings manager
 
 # Defaults
-lines="$DMENU_LINES"
-border="$DMENU_BORDER"
-height="$DMENU_HEIGHT"
 prompt="󰢻 Settings for $(whoami):"
+BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
 
 # For settings that need config file editing
 config_edit="$TERMINAL -e $EDITOR"
@@ -44,13 +42,8 @@ list_choices(){
 EOF
 }
 
-# dmenu command
-dmenu_cmd(){
-	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt"
-}
-
 # Command
-choice=$(list_choices | dmenu_cmd)
+choice=$(list_choices | bemenu)
 
 case "$choice" in
 	"󰢻 General settings") $SET_GENERAL ;;

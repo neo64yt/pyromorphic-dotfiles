@@ -1,12 +1,8 @@
 #!/bin/sh
 
-# Scripts directory
-
 # Defaults
-lines="$DMENU_LINES"
-border="$DMENU_BORDER"
-height="$DMENU_HEIGHT"
-prompt="Somthing random:"
+prompt="Something random:"
+BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
 
 # List of choices
 list_choices(){
@@ -18,19 +14,15 @@ example
 EOF
 }
 
-# dmenu command
-dmenu_cmd(){
-	dmenu -c -n -l $lines -bw $border -h $height -p "$prompt"
-}
-
 # Command
-choice=$(list_choices | dmenu_cmd)
+choice=$(list_choices | bemenu)
 
 case "$choice" in
   	"Just") ok ;;
   	"as") ok ;;
   	"an") OK ;;
   	"example") OK ;;
+	*) exit 1 ;;
 esac
 
 
