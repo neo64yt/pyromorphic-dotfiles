@@ -1,3 +1,5 @@
+ssh-|ssh-agent|sh
+ssh-ag|ssh-agent|sh
 p|prompt|sh
 BE|BEMENU_OPTS|sh
 ini|init|file

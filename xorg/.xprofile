@@ -3,6 +3,7 @@
 # Set environment variables and execute autostart programs
 [ -f ~/.zshenv ] && . ~/.zshenv
 [ -f ~/.config/${XDG_SESSION_DESKTOP}/sessionenv ] && . ~/.config/${XDG_SESSION_DESKTOP}/sessionenv
+eval $(ssh-agent)
 sh $AUTOSTART & 
 
 

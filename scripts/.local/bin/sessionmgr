@@ -22,8 +22,8 @@ prompt="󰐦 System ($(uptime -p)):"
 BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
 
 case "$(readlink -f /sbin/init)" in
-	*systemd*) ctl="systemctl" ;;
-	*) ctl="loginctl" ;;
+	*systemd*) initctl="systemctl" ;;
+	*) initctl="loginctl" ;;
 esac
 
 # List of choices
@@ -41,8 +41,8 @@ EOF
 choice=$(list_choices | bemenu)
 
 case "$choice" in
-  	"󰐥 Power off") $initctl poweroff -i ;;
-	"󰜉 Restart") $initctl reboot -i ;;
+  	"󰐥 Power off") $initctl poweroff ;;
+	"󰜉 Restart") $initctl reboot ;;
 	"󰽥 Suspend") suspend-notify ;;
 	"󰍁 Lock") $LOCKER ;;
 	"󰍃 Log out") sh $SESSION_KILLER ;;
