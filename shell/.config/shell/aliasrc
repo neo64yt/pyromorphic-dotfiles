@@ -17,6 +17,7 @@ alias push="git push" # Push Git commits to upstream repository
 alias pull="git pull" # Sync local Git repository with upstream
 alias scrcpy="scrcpy -m 1080" # Scrcpy
 alias :x="exit" # Vim-like exit :P
+alias mp3dl="yt-dlp -x -f bestaudio/best --extract-audio --audio-format mp3 --audio-quality 0"
 
 
 

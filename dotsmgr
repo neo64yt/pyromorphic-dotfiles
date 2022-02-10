@@ -28,16 +28,26 @@ F_BOLD="\033[1m"
 # Colors
 # Source: http://colors.sh/
 C_LIME="\033[38;5;10m"
+C_YELLOW="\033[38;5;11m"
 
 # Command: $ dotsmgr deploy
 # Deploy my dotfiles
 deploy() {
-	printf "dotsmgr\nStarting to deploy...\n"
-	printf "Deploying 'alacritty'..."
-	stow -S alacritty -t $HOME && printf "   Done!\n"
+	printf "${F_BOLD}Checking for updates...${NO_FORMAT}\n"
+	git pull
+	printf "${F_BOLD}Starting to deploy...${NO_FORMAT}\n"
+	printf "Enter the location of the dotfiles list file (defaults to the included stowpkg.list): "
+	read stow_list
+	[ -z "$stow_list" ] && stow_list="stowpkg.list"
 
-	printf "Creating a symlink for this script..."
-	ln -s $HOME/.local/bin/dotsmgr && printf "   Done!\nNow you can use this script without being in this directory!\n"
+	for STOW_PKG in $(cut -d '#' -f1 $stow_list | sed "/^[[:space:]]*$/d"); do
+		printf "${F_BOLD}Deploying '$STOW_PKG'...${NO_FORMAT}"
+		stow -S $STOW_PKG -t $HOME
+		printf "   ${C_LIME}Done${NO_FORMAT}\n"
+	done
+
+	printf "${F_BOLD}Creating a symlink for this script...${NO_FORMAT}"
+	ln -s $HOME/.local/bin/dotsmgr && printf "   ${C_LIME}Done!${NO_FORMAT}\nNow you can use this script without being in this directory.\n"
 }
 
 # Command: $ dotsmgr push
@@ -48,34 +58,18 @@ deploy() {
 # Pull the latest release of my dotfiles
 pull() {
 	printf "${F_BOLD}Pulling the latest release...${NO_FORMAT}\n"
-	git pull && (printf "${C_LIME}Done!${NO_FORMAT}\n" && exit 0) || (printf "Oops! Something wrong happened!\n" && exit 1)
+	git pull && (printf "${F_BOLD}${C_LIME}Done!${NO_FORMAT}\n" && exit 0) || (printf "Oops! Something wrong happened!\n" && exit 1)
 }
-
-# Command: $ dotsmgr dwm
-# Install my dwm build
-dwm() {
-	printf "Cloning the repository...\n"
-	git clone https://github.com/neo64yt/dwm-neo64.git ../dwm-neo64
-	printf "Installing dwm to your system...\n"
-	../dwm-neo64/install.sh && (printf "Installation finished!\n" && exit 0) || (printf "Oops! Something wrong happened!\n" && exit 1)
-}
-
-
 
 # Command: $ dotsmgr help
 help() {
 	cat << EOF
-dotsmgr
-
-Never run this script as root!
-
-Usage: 
-	dotsmgr [COMMAND]
-	[ENVIRONMENT VARIABLES..] dotsmgr [COMMAND]
+Usage: [ENVIRONMENT VARIABLES]... dotsmgr [COMMAND] 
+Manage dotfiles.
 
 Commands:
-	pull:		Pulls the latest release of my dotfiles
-	dwm:		Installs my dwm build	
+	deploy:		Deploys the dotfiles
+	pull:		Pulls the latest release of dotfiles
 	help: 		Shows usage, commands and environment variables
 	about:		Shows information about this script 
 

@@ -37,7 +37,6 @@ export SCREENSHOOTER="screenshot"
 export DE="xfce"
 export DESKTOP_SESSION="${DE}"
 export XDG_DESKTOP_SESSION="${DE}"
-export $(dbus-launch)
 
 ## MENU SETTINGS ##
 # Non-color options
@@ -87,6 +86,7 @@ export NM_EDITOR="nm-connection-editor" # Network
 export PRINT="system-config-printer" # Printer
 export BACKUP_UTIL="timeshift-launcher" # Backup & restore utility
 export DCONF_EDITOR="dconf-editor" # Manage Dconf configurations
+export FLATSEAL="flatpak run com.github.tchx84.Flatseal"
 
 ## XSECURELOCK SETTINGS ##
 export XSECURELOCK_PASSWORD_PROMPT="asterisks"

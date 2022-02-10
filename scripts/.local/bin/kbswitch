@@ -25,8 +25,8 @@ BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
 # List of choices
 list_choices(){
 	cat << EOF
-English (US)
-Arabic
+🇺🇸 English (US)
+🇸🇦 Arabic
 EOF
 }
 
@@ -34,8 +34,8 @@ EOF
 choice=$(list_choices | bemenu)
 
 case "$choice" in
-	"English (US)") setxkbmap us ;;
-  	"Arabic") setxkbmap ara ;; 
+	"🇺🇸 English (US)") setxkbmap us ;;
+  	"🇸🇦 Arabic") setxkbmap ara ;; 
 	*) exit 1 ;;
 esac
 
