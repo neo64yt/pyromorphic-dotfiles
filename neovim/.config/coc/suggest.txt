@@ -1,3 +1,15 @@
+ti|title|around
+str|strong|html
+d|dock|around
+dropdow|dropdown_menu|around
+Corn|Corners|around
+Op|Opacity|around
+Tra|Transparency|around
+class|class_g|around
+antit|antitheistcheesecake|around
+rss|rss|around
+|hdd.jpg|file
+Pic|Pictures|file
 spectru|spectrum|around
 dbus|dbus-launch|sh
 F|F_BOLD|sh

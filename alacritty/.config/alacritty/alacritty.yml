@@ -164,6 +164,12 @@ colors:
   # Default colors
   primary:
     background: '#1e1e1e' #Background from Dark Theme
+    foreground: '#cccccc'
+
+  # Selection colors
+  selection:
+    text: CellForeground
+    background: '#565656'
 
   # Normal colors
   normal:
@@ -187,7 +193,6 @@ colors:
     cyan:    '#29b8db'
     white:   '#e5e5e5'
 
-
   # Default colors
   # primary:
   #  background: '#272a34'
@@ -208,9 +213,9 @@ colors:
   #
   # Allowed values are CellForeground and CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  cursor:
-    text: CellBackground
-    cursor: CellForeground
+  #cursor:
+  #  text: CellBackground
+  #  cursor: CellForeground
 
   # Vi mode cursor colors
   #
@@ -340,7 +345,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.75
+background_opacity: 0.85
 
 selection:
   # This string contains all characters that are used as separators for
@@ -359,7 +364,7 @@ cursor:
     #   - ▇ Block
     #   - _ Underline
     #   - | Beam
-    shape: Block
+    shape: Beam
     # Cursor blinking state
     #
     # Values for `blinking`:

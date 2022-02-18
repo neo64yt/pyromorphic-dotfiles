@@ -1,26 +1,33 @@
 #!/bin/sh
 
-# This file stores environment variables 
+#################################
+#     Environment variables     #
+#################################
 
-## GENERIC CONFIGURATION ##
-export PATH="${HOME}/.local/bin:${PATH}" # Binaries path
+#################################
+#     XDG User Directories      #
+#################################
 export XDG_CONFIG_HOME="${HOME}/.config" # XDG configuration directory (user)
 export XDG_DATA_HOME="${HOME}/.local/share" # XDG data directory (user)
 export XDG_CACHE_HOME="${HOME}/.cache" # XDG cache directory (user)
 export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory (user)
+
+## GENERIC CONFIGURATION ##
+export PATH="${HOME}/.local/bin:${PATH}" # Binaries path
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/shell/zsh" # Zsh config
 export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/shell/zsh/zsh_history" # History file for zsh
 export COMPDUMPFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump" # zcompdump
 export KEYBIND="${XDG_CONFIG_HOME:-$HOME/.config}/sxhkd/sxhkdrc" # WM-independent keybindings
 export AUTOSTART="${XDG_CONFIG_HOME:-$HOME/.config}/autostart-cmds/autostart.sh" # WM-independent autostart
-export PAGER="nvimpager" # Use more as pager
-export MANPAGER="${PAGER}" # Use Neovim as manpager
+export PAGER="nvimpager" # Use Neovim as pager (via nvimpager)
+export MANPAGER="${PAGER}" # Use default pager 
 export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg" # GnuPG directory
 export VISUAL="nvim"
 export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship.toml"
 export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cows:${XDG_DATA_DIRS:-/usr/share}/cows"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file location
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under tiling WMs 
 export QT_STYLE_OVERRIDE="kvantum-dark"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
@@ -92,6 +99,7 @@ export FLATSEAL="flatpak run com.github.tchx84.Flatseal"
 export XSECURELOCK_PASSWORD_PROMPT="asterisks"
 export XSECURELOCK_FONT="JetBrains Mono:size=15"
 export XSECURELOCK_COMPOSITE_OBSCURER="0"
+#export XSECURELOCK_NO_COMPOSITE="1"
 export XSECURELOCK_SHOW_DATETIME="1"
 export XSECURELOCK_SHOW_HOSTNAME="2"
 export XSECURELOCK_AUTH_CURSOR_BLINK="1"

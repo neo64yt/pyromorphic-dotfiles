@@ -1,29 +1,48 @@
-News "~## NEWS ##"
-http://www.hmetro.com.my/utama.xml "~Harian Metro"
-http://rss.cnn.com/rss/edition_world.rss "~CNN World"
+# News
+---News---
+http://www.hmetro.com.my/utama.xml "~Harian Metro - News"
 
-Reddit "~## REDDIT LATEST POSTS ##"
+# Reddit
 #
 # Just add ".rss" at the end of the Reddit URLs
 #
-https://reddit.com/r/Ajar_Malaysia/new.rss "~r/Ajar_Malaysia"
-https://reddit.com/r/extomatoes/new.rss "~r/extomatoes"
-https://reddit.com/r/linux/new.rss "~r/linux"  
-https://reddit.com/r/linuxmasterrace/new.rss "~r/linuxmasterrace"
-https://reddit.com/r/archlinux/new.rss "~r/archlinux"  
-https://reddit.com/r/artixlinux/new.rss "~r/artixlinux"  
+---Reddit---
+https://reddit.com/r/Ajar_Malaysia/new.rss "~r/Ajar_Malaysia - Reddit"
+https://reddit.com/r/extomatoes/new.rss "~r/extomatoes - Reddit"
+https://reddit.com/r/linux/new.rss "~r/linux - Reddit"  
+https://reddit.com/r/linuxmemes/new.rss "~r/linuxmemes - Reddit"
+https://reddit.com/r/linuxmasterrace/new.rss "~r/linuxmasterrace - Reddit"
+https://reddit.com/r/archlinux/new.rss "~r/archlinux - Reddit"  
+https://reddit.com/r/artixlinux/new.rss "~r/artixlinux - Reddit"
+https://reddit.com/r/antitheistcheesecake/new.rss "~r/antitheistcheesecake - Reddit"
 
-Linux "~## LINUX & FOSS ##"
-https://www.linux.org/articles/index.rss "~Linux.org"
-https://www.kernel.org/feeds/all.atom.xml "~Kernel.org"
-https://distrowatch.com/news/dw.xml "~Distrowatch: Latest News & Updates"
-https://www.gamingonlinux.com/article_rss.php "~GamingOnLinux"
-https://archlinux.org/feeds/news/ "~Arch Linux News"
-https://artixlinux.org/feed.php "~Artix Linux News"
-https://suckless.org/atom.xml "~suckless.org News"
-https://newsboat.org/news.atom "~Newsboat News"
+# Linux
+---Linux---
+https://www.linux.org/articles/index.rss "~Linux.org - Linux"
+https://www.kernel.org/feeds/all.atom.xml "~Kernel.org - Linux"
+https://distrowatch.com/news/dw.xml "~Distrowatch: Latest News - Linux"
+https://www.gamingonlinux.com/article_rss.php "~GamingOnLinux - Linux"
+https://archlinux.org/feeds/news/ "~Arch Linux News - Linux"
+https://artixlinux.org/feed.php "~Artix Linux News - Linux"
+https://www.linux-magazine.com/rss/feed/lmi_news "~Linux Magazine - Linux"
 
-Websites "~## WEBSITES ##"
-https://neo64yt.github.io/rss.xml "~Muh Website"
-https://denshi.org/rss.xml "~DenshiSite"
-https://lukesmith.xyz/rss.xml "~Luke Smith's Webpage"
+# Software
+---Software---
+https://suckless.org/atom.xml "~suckless.org News - Software"
+https://newsboat.org/news.atom "~Newsboat News - Software"
+https://planet.gnu.org/rss20.xml "~GNU - Software"
+
+# Tech
+---Tech---
+https://www.xda-developers.com/feed "~XDA Developers - Tech"
+https://www.androidpolice.com/feed "~Android Police - Tech"
+
+# Blog
+---Blog---
+https://neo64yt.github.io/rss.xml "~Neo64YT - Blog"
+https://denshi.org/rss.xml "~DenshiSite - Blog"
+https://lukesmith.xyz/rss.xml "~Luke Smith's Webpage - Blog"
+
+# Comic 
+---Comic---
+https://xkcd.com/atom.xml "~XKCD - Comic"

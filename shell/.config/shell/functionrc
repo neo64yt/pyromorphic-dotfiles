@@ -5,13 +5,13 @@
 
 ## Commands cheatsheet
 ## Usage: cheat [COMMAND_NAME]
-cheat(){
+cheat() {
 	curl https://cheat.sh/${@};
 }
 
 ## Removing an XDG autostart app
 ## Usage: undex [APP_NAME]
-undex(){
+undex() {
 	# Unsetting variables
 	unset UN_AU_EXISTS UN_AU_EMPTY 
 
@@ -44,7 +44,7 @@ undex(){
 
 ## Re-adding an XDG autostart app
 ## Usage: redex [APP_NAME]
-redex(){
+redex() {
 	# Unsetting variables
 	unset RE_AU_EXISTS RE_BAK_AU_EXISTS RE_AU_EMPTY
 
@@ -77,7 +77,7 @@ redex(){
 
 ## Connect VM to Virt-Viewer
 ## Usage: vmview [VM_NAME]
-vmview(){
+vmview() {
 	printf "Connecting to '${@}'...\n"
 	virt-viewer --attach --connect=qemu:///system --domain-name ${@}
 	printf "Session ended.\n"
@@ -85,7 +85,7 @@ vmview(){
 
 ## Upload file to https://0x0.st/ and add to a list 
 ## Usage: stshare [FILE] [DESCRIPTION]
-stshare(){
+stshare() {
 	unset SHARE_URL UP_FILE FILE_DESC
 	UP_FILE=${1}
 	FILE_DESC=${2}
@@ -98,5 +98,7 @@ stshare(){
 }
 
 ## END ##
+
+
 
 # vim: ft=zsh

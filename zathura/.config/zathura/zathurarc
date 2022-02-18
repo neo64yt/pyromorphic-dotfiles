@@ -1,3 +1,4 @@
+set sandbox none
 set default-bg "#272a34"
 set completion-group-fg "#272a34"
 set font "JetBrains Mono 12"

@@ -1,3 +1,8 @@
+"""""""""""""""""""""""""""""""""
+"          init.vim             "
+"""""""""""""""""""""""""""""""""
+
+
 " Vimplug
 call plug#begin(stdpath('data') . '/plugged')
 
@@ -7,6 +12,9 @@ set wrap
 set number
 set relativenumber
 set termguicolors
+set expandtab
+set tabstop=4
+set shiftwidth=4
 let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
 let g:airline#extensions#tabline#enabled = 1
@@ -26,10 +34,12 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} " coc.nvim
 Plug 'baskerville/vim-sxhkdrc' " sxhkdrc
 Plug 'mhinz/vim-startify' " startify
 Plug 'cespare/vim-toml' " toml
-Plug 'lilydjwg/colorizer' " colorizer
+Plug 'norcalli/nvim-colorizer.lua' " nvim-colorizer.lua
 
 " Initialize plugin system
 call plug#end()
+
+lua require'colorizer'.setup()
 
 
 

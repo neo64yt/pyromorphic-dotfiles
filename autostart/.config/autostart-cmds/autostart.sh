@@ -1,6 +1,8 @@
 #!/bin/sh
 
-# This script loads common autostart programs for all WM
+#################################
+#       Autostart (Global)      #
+#################################
 
 # XDG Autostart
 # To prevent autostarting a program using XDG autostart, create an empty desktop file for that program in $XDG_CONFIG_HOME/autostart/
@@ -18,9 +20,8 @@ mpd &
 
 # Systray
 indicator-kdeconnect &
-pnmixer &
+volumeicon &
 
 
 
 # vim: ft=sh
-## EOF ##
