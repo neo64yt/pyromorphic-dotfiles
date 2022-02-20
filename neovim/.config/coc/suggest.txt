@@ -1,3 +1,10 @@
+false|false|around
+disab|disabled|around
+dura|duration|around
+fal|false|around
+disa|disabled|around
+cmd|cmd_duration|around
+window|window_type|around
 ti|title|around
 str|strong|html
 d|dock|around

@@ -2,6 +2,8 @@
 #     Starship Configuration    #
 #################################
 
+right_format = """$cmd_duration $time"""
+
 # Inserts a blank line between shell prompts
 add_newline = true
 
@@ -20,15 +22,15 @@ disabled = true
 # Time
 [time]
 disabled = false
-format = '[\[󰅐 $time\]]($style) '
+format = '[\[󰅐 $time\]]($style)'
 use_12hr = false
-style = "blue"
+style = "bold blue"
 
 # Username
 [username]
 disabled = false
 show_always = true
-format = '[\[󰀓 $user]($style) '
+format = '[\[󰀓 $user ]($style)'
 style_user = "bold dimmed green"
 
 # Directory
@@ -45,6 +47,22 @@ ssh_only = false
 format = '[on 󰌢 $hostname\]]($style) '
 style = "bold dimmed green"
 disabled = false
+
+# Command duration
+[cmd_duration]
+disabled = false
+show_notifications = false
+format = 'took [󰚭 $duration]($style)'
+style = "bold yellow"
+
+# Shell indicator
+[shell]
+disabled = false
+zsh_indicator = '\[zsh\]'
+bash_indicator = '\[bash\]'
+unknown_indicator = '\[??\]'
+format = '[ $indicator]($style) '
+style = "bold yellow"
 
 
 

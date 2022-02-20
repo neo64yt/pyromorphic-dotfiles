@@ -1,7 +1,8 @@
 #!/bin/zsh
 
-# Functions
-## START ##
+#################################
+#          Functions            #
+#################################
 
 ## Commands cheatsheet
 ## Usage: cheat [COMMAND_NAME]
@@ -96,8 +97,6 @@ stshare() {
 	printf "* $FILE_DESC -> $SHARE_URL\n" >> $LIST_FILE && printf "   Done!\n"
 	printf "Here's the link!\n-> $SHARE_URL\n"
 }
-
-## END ##
 
 
 

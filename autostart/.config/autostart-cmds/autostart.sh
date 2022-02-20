@@ -17,9 +17,10 @@ $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
 mpd &
+syncthing --no-browser &
+steam -silent &
 
 # Systray
-indicator-kdeconnect &
 volumeicon &
 
 

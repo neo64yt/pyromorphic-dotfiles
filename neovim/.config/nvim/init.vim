@@ -15,6 +15,7 @@ set termguicolors
 set expandtab
 set tabstop=4
 set shiftwidth=4
+set updatetime=100
 let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
 let g:airline#extensions#tabline#enabled = 1
@@ -35,6 +36,7 @@ Plug 'baskerville/vim-sxhkdrc' " sxhkdrc
 Plug 'mhinz/vim-startify' " startify
 Plug 'cespare/vim-toml' " toml
 Plug 'norcalli/nvim-colorizer.lua' " nvim-colorizer.lua
+Plug 'mhinz/vim-signify' " vim-signify
 
 " Initialize plugin system
 call plug#end()
