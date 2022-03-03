@@ -11,14 +11,12 @@ dex -a &
 # Daemons 
 pipewire-runner &
 picom --experimental-backend &
-/usr/bin/dunst &
+dunst &
 thunar --daemon &
 $LOCK &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
 mpd &
-syncthing --no-browser &
-steam -silent &
 
 # Systray
 volumeicon &

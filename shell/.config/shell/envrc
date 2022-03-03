@@ -29,7 +29,7 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under tiling WMs 
-export QT_STYLE_OVERRIDE="kvantum-dark"
+export QT_STYLE_OVERRIDE="kvantum"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 
 ## SCRIPTS ##
@@ -107,9 +107,9 @@ export XSECURELOCK_AUTH_SOUNDS="1"
 
 ## SCREENREC SETTINGS ##
 export SCREENREC_INRES="1366x768"
-export SCREENREC_SCALE="1920x1080"
+export SCREENREC_SCALE="1280x720"
 export SCREENREC_SCALEFLAGS="lanczos"
-export SCREENREC_FPS="60"
+export SCREENREC_FPS="30"
 export SCREENREC_AUDIO="pulse"
 export SCREENREC_VCODEC="libx264"
 export SCREENREC_PRESET="ultrafast"

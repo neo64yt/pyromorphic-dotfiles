@@ -2,7 +2,11 @@
 #     Starship Configuration    #
 #################################
 
+# Modules to be displayed on the right side of the prompt
 right_format = """$cmd_duration $time"""
+
+# Continuation prompt
+continuation_prompt = "[](bold yellow) "
 
 # Inserts a blank line between shell prompts
 add_newline = true
@@ -14,6 +18,7 @@ command_timeout = 5000
 [character]                            
 success_symbol = "[](bold green)"
 error_symbol = "[](bold red)"
+vicmd_symbol = "[](bold green)"
 
 # Disable the package module, hiding it from the prompt completely
 [package]
@@ -62,7 +67,7 @@ zsh_indicator = '\[zsh\]'
 bash_indicator = '\[bash\]'
 unknown_indicator = '\[??\]'
 format = '[ $indicator]($style) '
-style = "bold yellow"
+style = "bold underline yellow"
 
 
 

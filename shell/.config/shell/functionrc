@@ -98,6 +98,22 @@ stshare() {
 	printf "Here's the link!\n-> $SHARE_URL\n"
 }
 
+# Doas (with warning message)
+doas() {
+    printf "A friendly reminder from Doaswoodo (formerly Sudowoodo):\n"
+    cowsay -f sudowoodo "You have been warned. Use doas at your own risk."
+    printf " \n"
+    /usr/bin/doas ${@}
+}
+
+# Also display warning message for topgrade
+topgrade() {
+    printf "A friendly reminder from Doaswoodo (formerly Sudowoodo) regarding system updates:\n"
+    cowsay -f sudowoodo "Update your system responsibly and carefully."
+    printf " \n"
+    /usr/bin/topgrade ${@}
+}
+
 
 
 # vim: ft=zsh

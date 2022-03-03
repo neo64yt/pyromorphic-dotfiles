@@ -1,4 +1,4 @@
 {
-	"coc.preferences.colorSupport": true,
-	"list.height": 8
+	"list.height": 8,
+    "CocFloating": "#ffffff"
 }

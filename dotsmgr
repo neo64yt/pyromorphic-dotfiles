@@ -18,7 +18,6 @@
 
 # Set environment variables to default when they are not set
 [ -z "$DOTS_DIR" ] && DOTS_DIR="$HOME/git-src/glorious-dotfiles"
-PWD=$DOTS_DIR
 
 # Formatting
 # Source: http://colors.sh/
@@ -30,15 +29,17 @@ F_BOLD="\033[1m"
 C_LIME="\033[38;5;10m"
 C_YELLOW="\033[38;5;11m"
 
+script_conf() {
+    conf_file="$1"
+    [ -f "$conf_file" ] && source "$conf_file" || (printf "The config file was not found, exiting...\n" && exit 1)
+}
+
 stow_files() {
 	for STOW_PKG in $(cut -d '#' -f1 $stow_list | sed "/^[[:space:]]*$/d"); do
 		printf "${F_BOLD}Deploying '$STOW_PKG'...${NO_FORMAT}"
 		stow -S $STOW_PKG -t $HOME
-		printf "   ${C_LIME}Done${NO_FORMAT}\n"
+		printf "   ${C_LIME}Done!${NO_FORMAT}\n"
 	done
-
-	printf "${F_BOLD}Creating a symlink for this script...${NO_FORMAT}"
-	ln -s $HOME/.local/bin/dotsmgr && printf "   ${C_LIME}Done!${NO_FORMAT}\nNow you can use this script without being in this directory.\n"
 }
 
 deploy_dots() {
@@ -76,7 +77,7 @@ Environment variables:
 EOF
 }
 
-about() {
+about_script() {
 	cat << EOF
 About dotsmgr:
 	Author: Neo64YT (https://github.com/neo64yt)
@@ -85,13 +86,13 @@ About dotsmgr:
 EOF
 }
 
-# Options
+# Commands
 case "$1" in
-	deploy) deploy_dots ;;
-	pull) pull_updates ;;
-	help) usage ;;
-	about) version ;;
-	*) printf "You must specify a command.\n" ; usage ; exit 1 ;;
+    deploy) deploy_dots ;;
+    pull) pull_updates ;;
+    help) usage ;;
+    about) about_script ;;
+    *) printf "You must specify a command.\n"; usage; exit 1 ;;
 esac
 
 
