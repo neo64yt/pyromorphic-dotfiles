@@ -28,7 +28,6 @@ list_choices(){
 󰱨 Emojis
 󰥻 Keyboard layouts
 󰢻 Settings
-󰯜 Screen recorder
 EOF
 }
 
@@ -41,7 +40,6 @@ case "$choice" in
 	"󰥻 Keyboard layouts") kbswitch ;;
   	"󰱨 Emojis") dmenuemoji ;;
   	"󰢻 Settings") set-mgr ;;
-  	"󰯜 Screen recorder") screenrecmenu ;;
 	*) exit 1 ;;
 esac
 

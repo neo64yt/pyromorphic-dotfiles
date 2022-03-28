@@ -9,4 +9,6 @@ Sxiv.foreground: #12846e
 ! Font
 Sxiv.font: JetBrains Mono:size=12
 
-/* EOF */
+
+
+! vim: ft=xdefaults

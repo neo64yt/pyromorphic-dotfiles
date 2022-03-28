@@ -10,13 +10,16 @@ dex -a &
 
 # Daemons 
 pipewire-runner &
-picom --experimental-backend &
+#xsettingsd --config=$XDG_CONFIG_HOME/xsettingsd/xsettingsd.conf &
+picom --experimental-backends &
 dunst &
-thunar --daemon &
-$LOCK &
+pcmanfm --daemon-mode &
+xss-lock --ignore-sleep -- $LOCKER &
+xscreensaver -nosplash &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
 mpd &
+unclutter --start-hidden &
 
 # Systray
 volumeicon &

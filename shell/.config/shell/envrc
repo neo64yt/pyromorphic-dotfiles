@@ -12,7 +12,9 @@ export XDG_DATA_HOME="${HOME}/.local/share" # XDG data directory (user)
 export XDG_CACHE_HOME="${HOME}/.cache" # XDG cache directory (user)
 export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory (user)
 
-## GENERIC CONFIGURATION ##
+#################################
+#      GENERIC CONFIGURATION    #
+#################################
 export PATH="${HOME}/.local/bin:${PATH}" # Binaries path
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/shell/zsh" # Zsh config
 export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/shell/zsh/zsh_history" # History file for zsh
@@ -29,7 +31,7 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under tiling WMs 
-export QT_STYLE_OVERRIDE="kvantum"
+export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 
 ## SCRIPTS ##
@@ -37,13 +39,7 @@ export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"
 export EMOJI_PICKER="dmenuemoji"
-export LOCK="lock" 
 export SCREENSHOOTER="screenshot"
-
-## SESSION ##
-export DE="xfce"
-export DESKTOP_SESSION="${DE}"
-export XDG_DESKTOP_SESSION="${DE}"
 
 ## MENU SETTINGS ##
 # Non-color options
@@ -84,38 +80,18 @@ export BEMENU_OPTS="$BEMENU_NONCOLOR $BEMENU_TITLE $BEMENU_FILTER $BEMENU_NORMAL
 export TERMINAL="alacritty"
 export EDITOR="nvim"
 export BROWSER="firefox"
-export LOCKER="xsecurelock"
+export LOCKER="xscreensaver-command -lock"
 
 ## SETTINGS MANAGER ##
-export SET_GENERAL="xfce4-settings-manager" # General settings
+export GENERAL_SETTINGS="xfce4-settings-manager"
+export LOOKS_QT5="qt5ct"
+export LOOKS_QT6="qt6ct"
 export POWER_MGR="mate-power-preferences" # Power manager
 export NM_EDITOR="nm-connection-editor" # Network
 export PRINT="system-config-printer" # Printer
 export BACKUP_UTIL="timeshift-launcher" # Backup & restore utility
 export DCONF_EDITOR="dconf-editor" # Manage Dconf configurations
 export FLATSEAL="flatpak run com.github.tchx84.Flatseal"
-
-## XSECURELOCK SETTINGS ##
-export XSECURELOCK_PASSWORD_PROMPT="asterisks"
-export XSECURELOCK_FONT="JetBrains Mono:size=15"
-export XSECURELOCK_COMPOSITE_OBSCURER="0"
-#export XSECURELOCK_NO_COMPOSITE="1"
-export XSECURELOCK_SHOW_DATETIME="1"
-export XSECURELOCK_SHOW_HOSTNAME="2"
-export XSECURELOCK_AUTH_CURSOR_BLINK="1"
-export XSECURELOCK_AUTH_SOUNDS="1"
-
-## SCREENREC SETTINGS ##
-export SCREENREC_INRES="1366x768"
-export SCREENREC_SCALE="1280x720"
-export SCREENREC_SCALEFLAGS="lanczos"
-export SCREENREC_FPS="30"
-export SCREENREC_AUDIO="pulse"
-export SCREENREC_VCODEC="libx264"
-export SCREENREC_PRESET="ultrafast"
-export SCREENREC_ACODEC="aac"
-export SCREENREC_THREADS="0"
-export SCREENREC_CRF="23"
 
 
 

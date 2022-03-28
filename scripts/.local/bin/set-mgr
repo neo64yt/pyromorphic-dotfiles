@@ -27,8 +27,9 @@ config_edit="$TERMINAL -e $EDITOR"
 # List of choices (function)
 list_choices(){
 	cat << EOF
-󰢻 General settings
-󰍁 Lock screen
+󰢻 General
+󰏘 Qt5
+󰏘 Qt6
 󰂏 Power management
 󰲝 Network
 󰜇 Printer
@@ -46,8 +47,9 @@ EOF
 choice=$(list_choices | bemenu)
 
 case "$choice" in
-	"󰢻 General settings") $SET_GENERAL ;;
-  	"󰍁 Lock screen") $config_edit $HOME/.xprofile ;;
+    "󰢻 General") $GENERAL_SETTINGS ;;
+    "󰏘 Qt5") $LOOKS_QT5 ;;
+    "󰏘 Qt6") $LOOKS_QT6 ;;
 	"󰂏 Power management") $POWER_MGR ;;
   	"󰲝 Network") $NM_EDITOR ;;
   	"󰜇 Printer") $PRINT ;;

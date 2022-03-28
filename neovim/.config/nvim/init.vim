@@ -13,6 +13,7 @@ set number
 set relativenumber
 set termguicolors
 set expandtab
+set smarttab
 set tabstop=4
 set shiftwidth=4
 set updatetime=100

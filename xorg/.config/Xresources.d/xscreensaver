@@ -1,0 +1,11 @@
+/* XScreenSaver configuration */
+
+! Switch user command
+xscreensaver-auth.default.*.newLoginCommand: dm-tool switch-to-greeter
+
+xscreensaver-auth.default.Dialog.background: #272a34
+
+xscreensaver-auth.default.Dialog.foreground: #ffffff
+
+
+! vim: ft=xdefaults

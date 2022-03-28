@@ -27,14 +27,38 @@ case "$(readlink -f /sbin/init)" in
 esac
 
 # List of choices
-list_choices(){
+list_choices() {
 	cat << EOF
 󰐥 Power off
 󰜉 Restart
-󰽥 Suspend
 󰍁 Lock
 󰍃 Log out
+󰓦 Refresh session
 EOF
+}
+
+detect_wm() {
+    id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
+    id=${id##* }
+    wm=$(xprop -id "$id" -notype -len 25 -f _NET_WM_NAME 8t)
+    wm=${wm##*_NET_WM_NAME = \"}
+    wm=${wm%%\"*}
+}
+
+quit_wm() {
+    detect_wm
+
+    case "$wm" in
+        "dwm") $HOME/.config/dwm/dwmmgr quit ;;
+    esac
+}
+
+refresh_wm() {
+    detect_wm
+
+    case "$wm" in
+        "dwm") $HOME/.config/dwm/dwmmgr restart ;;
+    esac
 }
 
 # Menu
@@ -43,9 +67,9 @@ choice=$(list_choices | bemenu)
 case "$choice" in
   	"󰐥 Power off") $initctl poweroff ;;
 	"󰜉 Restart") $initctl reboot ;;
-	"󰽥 Suspend") suspend-notify ;;
 	"󰍁 Lock") $LOCKER ;;
-	"󰍃 Log out") sh $SESSION_KILLER ;;
+	"󰍃 Log out") quit_wm ;;
+    "󰓦 Refresh session") refresh_wm ;;
 	*) exit 1 ;;
 esac
 

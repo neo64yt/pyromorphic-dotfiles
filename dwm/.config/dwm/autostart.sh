@@ -6,7 +6,7 @@
 
 wmbar="slstatus"
 
-hsetroot -full $HOME/Pictures/hdd.png &
+hsetroot -full $HOME/Pictures/plane-in-ocean.png &
 $wmbar &
 
 
