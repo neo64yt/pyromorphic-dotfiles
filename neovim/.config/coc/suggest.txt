@@ -1,3 +1,16 @@
+kdec|kdeconnect-indicator|sh
+10|10%|css
+.ascii|.asciicast|css
+as|asciicast|around
+class|class|html
+ascii|asciicast|around
+|center|css
+ju|justify-content|css
+ali|align-items|css
+displ|display|css
+text-al|text-align|css
+cen|center|css
+justi|justify-content|css
 qui|quit_wm|sh
 detec|detect_wm|sh
 ref|refresh_wm|sh

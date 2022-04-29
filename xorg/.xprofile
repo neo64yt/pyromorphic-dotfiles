@@ -2,7 +2,7 @@
 
 # Set environment variables and execute autostart programs
 [ -f ~/.zshenv ] && . ~/.zshenv
-[ -f ~/.config/${XDG_SESSION_DESKTOP}/sessionenv ] && . ~/.config/${XDG_SESSION_DESKTOP}/sessionenv
+#[ -f ~/.config/${XDG_SESSION_DESKTOP}/sessionenv ] && . ~/.config/${XDG_SESSION_DESKTOP}/sessionenv
 eval $(ssh-agent)
 [ -z "$DBUS_SESSION_BUS_ADDRESS" ] && eval $(dbus-launch --sh-syntax --exit-with-session)
 sh $AUTOSTART & 

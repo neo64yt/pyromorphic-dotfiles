@@ -27,7 +27,7 @@ disabled = true
 # Time
 [time]
 disabled = false
-format = '[\[󰅐 $time\]]($style)'
+format = '[\[ $time\]]($style)'
 use_12hr = false
 style = "bold blue"
 
@@ -35,7 +35,7 @@ style = "bold blue"
 [username]
 disabled = false
 show_always = true
-format = '[\[󰀓 $user ]($style)'
+format = '[\[ $user ]($style)'
 style_user = "bold dimmed green"
 
 # Directory
@@ -43,13 +43,13 @@ style_user = "bold dimmed green"
 disabled = false
 truncation_length = 3
 truncation_symbol = ".../"
-read_only = " 󰍁 "
+read_only = "  "
 read_only_style = "bold red"
 
 # Hostname
 [hostname]
 ssh_only = false
-format = '[on 󰌢 $hostname\]]($style) '
+format = '[on  $hostname\]]($style) '
 style = "bold dimmed green"
 disabled = false
 
@@ -57,7 +57,7 @@ disabled = false
 [cmd_duration]
 disabled = false
 show_notifications = false
-format = 'took [󰚭 $duration]($style)'
+format = 'took [ﮫ $duration]($style)'
 style = "bold yellow"
 
 # Shell indicator

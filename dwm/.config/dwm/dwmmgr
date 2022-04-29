@@ -1,8 +1,0 @@
-#!/bin/sh
-
-case $1 in
-    quit) kill -INT $(pidof -s dwm) ;;
-    restart) xdotool key super+ctrl+shift+q ;;
-esac
-
-

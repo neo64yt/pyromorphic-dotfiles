@@ -23,6 +23,7 @@ unclutter --start-hidden &
 
 # Systray
 volumeicon &
+kdeconnect-indicator &
 
 
 

@@ -49,7 +49,7 @@ quit_wm() {
     detect_wm
 
     case "$wm" in
-        "dwm") $HOME/.config/dwm/dwmmgr quit ;;
+        "dwm") kill -INT $(pidof -s dwm) ;;
     esac
 }
 
@@ -57,7 +57,7 @@ refresh_wm() {
     detect_wm
 
     case "$wm" in
-        "dwm") $HOME/.config/dwm/dwmmgr restart ;;
+        "dwm") xdotool key super+ctrl+shift+q ;;
     esac
 }
 

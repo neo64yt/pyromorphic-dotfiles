@@ -34,9 +34,7 @@ list_choices(){
 󰲝 Network
 󰜇 Printer
 󰌧 Autostart
-󰌧 WM autostart
 󰧺 Keybindings
-󰧺 WM keybindings
 󰓦 Backup utility
 󰣖 Dconf
 󰏖 Flatpak permissions
@@ -54,9 +52,7 @@ case "$choice" in
   	"󰲝 Network") $NM_EDITOR ;;
   	"󰜇 Printer") $PRINT ;;
   	"󰌧 Autostart") $config_edit $AUTOSTART ;;
-  	"󰌧 WM autostart") $config_edit $WM_AUTOSTART ;;
   	"󰧺 Keybindings") $config_edit $KEYBIND ;;
-  	"󰧺 WM keybindings") $WM_KEYBIND ;;
   	"󰓦 Backup utility") $BACKUP_UTIL ;;
 	"󰣖 Dconf") $DCONF_EDITOR ;;
 	"󰏖 Flatpak permissions") $FLATSEAL ;;
