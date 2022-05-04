@@ -10,7 +10,6 @@ dex -a &
 
 # Daemons 
 pipewire-runner &
-#xsettingsd --config=$XDG_CONFIG_HOME/xsettingsd/xsettingsd.conf &
 picom --experimental-backends &
 dunst &
 pcmanfm --daemon-mode &

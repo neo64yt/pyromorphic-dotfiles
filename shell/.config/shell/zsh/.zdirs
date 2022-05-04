@@ -1,6 +1,12 @@
 /home/neo64yt/git-src/glorious-dotfiles
 /home/neo64yt
+/home/neo64yt/git-src/dwm-neo64
+/home/neo64yt/git-src/Firefox-UI-Fix
+/home/neo64yt/git-src
+/home/neo64yt/Documents
 /home/neo64yt/git-src/neo64yt.github.io
+/home/neo64yt/Videos
+/home/neo64yt/git-src/glorious-dotfiles/neovim/.local/share/nvim/plugged/nvim-colorizer.lua
 /home/neo64yt/.cache/paru/clone/ly-git
 /home/neo64yt/.cache/paru/clone/ly-git/ly
 /home/neo64yt/.cache/paru/clone/ly-git/ly/info
@@ -10,12 +16,3 @@
 /home/neo64yt/.config/runit/sv/pipewire
 /home/neo64yt/.config/runit/sv/wireplumber
 /home/neo64yt/.config/runit/sv/pipewire-pulse
-/home/neo64yt/.config/runit/sv
-/home/neo64yt/git-src
-/home/neo64yt/Documents/Syncthing
-/home/neo64yt/Pictures/Logos
-/boot/efi/EFI
-/boot/efi/EFI/tools
-/home/neo64yt/Documents/mok
-/home/neo64yt/Documents
-/home/neo64yt/.config/dwm

@@ -33,6 +33,10 @@ export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under tiling WMs 
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
+export XCURSOR_PATH="/usr/share/icons"
+export XCURSOR_THEME="Breeze"
+export XCURSOR_SIZE="25"
+
 
 ## SCRIPTS ##
 export QUICKMENU="quickmenu"

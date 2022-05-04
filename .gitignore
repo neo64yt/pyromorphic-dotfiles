@@ -11,3 +11,8 @@ zathura/.local/share/zathura/history
 
 # Ignore mpv plugins/scripts
 mpv/.config/mpv/scripts/*
+
+# Ignore some desktop entries
+resources/.local/share/applications/wine*.desktop
+resources/.local/share/applications/waydroid*.desktop
+resources/.local/share/applications/Waydroid.desktop
