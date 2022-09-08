@@ -4,7 +4,7 @@
 #           Aliases             #
 #################################
 
-alias rm="rm -ri" # Ask before deleting files recursively
+alias rm="rm -rI" # Ask before deleting files recursively
 alias ls="ls -A --color=auto" # List all files including hidden ones
 alias grep="grep --color=auto -i" # Grep
 alias clean-cache="rm -rf $XDG_CACHE_HOME/*" # Clean home directory cache

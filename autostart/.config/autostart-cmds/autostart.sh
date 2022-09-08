@@ -10,9 +10,10 @@ dex -a &
 
 # Daemons 
 pipewire-runner &
-picom --experimental-backends &
+#picom --experimental-backends &
+xcompmgr -c -f -F -o 0 -I 0.13 -O 0.13 -D 25 &
 dunst &
-pcmanfm --daemon-mode &
+thunar --daemon &
 xss-lock --ignore-sleep -- $LOCKER &
 xscreensaver -nosplash &
 sxhkd -c $KEYBIND &
