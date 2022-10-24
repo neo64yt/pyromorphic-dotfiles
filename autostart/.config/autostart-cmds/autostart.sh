@@ -25,6 +25,8 @@ unclutter --start-hidden &
 volumeicon &
 kdeconnect-indicator &
 
+# XInput settings
+xinput set-prop "PixArt USB Optical Mouse" "libinput Middle Emulation Enabled" 1 # Enable middle click
 
 
 # vim: ft=sh

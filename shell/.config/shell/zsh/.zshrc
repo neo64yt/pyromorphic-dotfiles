@@ -10,8 +10,11 @@ mkdir -p ${XDG_CACHE_HOME:-$HOME/.cache}/zsh
 # Show fetch tool
 pfetch
 
-# Hello message
-hello | cowsay -f tux -n | lolcat
+# Run crunchbang-mini colorscript
+crunchbang-mini
+
+# Display fortune message 
+fortune -s | cowsay -f tux -n | lolcat
 
 # Vi mode
 bindkey -v

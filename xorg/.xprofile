@@ -7,5 +7,4 @@ eval $(ssh-agent)
 sh $AUTOSTART & 
 
 
-
 # vim: ft=sh

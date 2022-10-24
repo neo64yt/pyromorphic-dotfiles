@@ -1,6 +1,8 @@
 -- Note: This config file must be used with NvChad
 
--- Options
+-------------
+-- Options --
+-------------
 vim.opt.ignorecase = true
 vim.opt.wrap = true
 vim.opt.number = true
