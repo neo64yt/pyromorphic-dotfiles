@@ -1,0 +1,74 @@
+#################################
+#     Starship Configuration    #
+#################################
+
+# Modules to be displayed on the right side of the prompt
+right_format = """$cmd_duration $time"""
+
+# Continuation prompt
+continuation_prompt = "[>>](bold yellow) "
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# Command timeout
+command_timeout = 5000
+
+# Use the "" symbol in the prompt 
+[character]                            
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"
+vicmd_symbol = "[<](bold green)"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# Time
+[time]
+disabled = false
+format = '[\[$time\]]($style)'
+use_12hr = false
+style = "bold blue"
+
+# Username
+[username]
+disabled = false
+show_always = true
+format = '[\[$user ]($style)'
+style_user = "bold dimmed green"
+
+# Directory
+[directory]
+disabled = false
+truncation_length = 3
+truncation_symbol = ".../"
+read_only = " ro "
+read_only_style = "bold red"
+
+# Hostname
+[hostname]
+ssh_only = false
+format = '[on $hostname\]]($style) '
+style = "bold dimmed green"
+disabled = false
+
+# Command duration
+[cmd_duration]
+disabled = false
+show_notifications = false
+format = 'took [$duration]($style)'
+style = "bold yellow"
+
+# Shell indicator
+[shell]
+disabled = false
+zsh_indicator = '\[zsh\]'
+bash_indicator = '\[bash\]'
+unknown_indicator = '\[??\]'
+format = '[\[>_\] $indicator]($style) '
+style = "bold underline yellow"
+
+
+
+# vim: ft=toml

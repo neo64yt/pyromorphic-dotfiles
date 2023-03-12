@@ -11,6 +11,7 @@ dex -a &
 # Daemons 
 pipewire-runner &
 #picom --experimental-backends &
+xsettingsd --config=$XDG_CONFIG_HOME/xsettingsd/xsettingsd.conf &
 xcompmgr -c -f -F -o 0 -I 0.13 -O 0.13 -D 25 &
 dunst &
 thunar --daemon &

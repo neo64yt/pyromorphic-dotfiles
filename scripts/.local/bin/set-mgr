@@ -27,7 +27,8 @@ config_edit="$TERMINAL -e $EDITOR"
 # List of choices (function)
 list_choices(){
 	cat << EOF
-󰢻 General
+󰏘 GTK
+󰏘 Kvantum
 󰏘 Qt5
 󰏘 Qt6
 󰂏 Power management
@@ -45,7 +46,8 @@ EOF
 choice=$(list_choices | bemenu)
 
 case "$choice" in
-    "󰢻 General") $GENERAL_SETTINGS ;;
+    "󰏘 GTK") $config_edit $LOOKS_GTK ;;
+    "󰏘 Kvantum") $KVANTUM_MGR ;;
     "󰏘 Qt5") $LOOKS_QT5 ;;
     "󰏘 Qt6") $LOOKS_QT6 ;;
 	"󰂏 Power management") $POWER_MGR ;;

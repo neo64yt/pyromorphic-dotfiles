@@ -6,8 +6,8 @@
 
 wmbar="slstatus"
 
-hsetroot -full $HOME/Pictures/plane-in-ocean.png &
-$wmbar &
+hsetroot -full $XDG_DATA_HOME/current-wallpaper &
+$wmbar 2> /dev/null &
 
 
 
