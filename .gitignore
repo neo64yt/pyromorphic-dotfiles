@@ -3,6 +3,9 @@ neovim/.local/share/nvim/site/autoload/plug.vim
 neovim/.local/share/nvim/shada/main.shada
 neovim/.config/coc/extensions/*
 
+# Ignore compiled s6 databases
+s6/.local/share/s6/rc/*
+
 # Ignore hello binary
 scripts/.local/bin/hello
 

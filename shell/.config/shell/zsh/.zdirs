@@ -1,5 +1,8 @@
 /home/neo64yt/git-src/glorious-dotfiles
 /home/neo64yt
+/home/neo64yt/git-src/glorious-dotfiles/s6/.local/share/s6
+/home/neo64yt/git-src/glorious-dotfiles/s6/.local/share/s6/rc
+/home/neo64yt/git-src/glorious-dotfiles/s6
 /home/neo64yt/Downloads
 /home/neo64yt/Pictures
 /home/neo64yt/Videos
@@ -15,6 +18,3 @@
 /home/neo64yt/.local/share/s6/sv
 /home/neo64yt/.local/share/s6/rc
 /etc/s6/adminsv/local-s6-user
-/etc/s6/adminsv/local-s6-rc-user
-/etc/s6/config
-/etc/s6/adminsv/user-services
