@@ -9,8 +9,9 @@
 dex -a &
 
 # Daemons 
-pipewire-runner &
+#pipewire-runner &
 #picom --experimental-backends &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 xsettingsd --config=$XDG_CONFIG_HOME/xsettingsd/xsettingsd.conf &
 xcompmgr -c -f -F -o 0 -I 0.13 -O 0.13 -D 25 &
 dunst &
@@ -19,12 +20,12 @@ xss-lock --ignore-sleep -- $LOCKER &
 xscreensaver -nosplash &
 sxhkd -c $KEYBIND &
 xrdb -merge $XDG_CONFIG_HOME/Xresources &
-mpd &
+#mpd &
 unclutter --start-hidden &
 
 # Systray
 volumeicon &
-kdeconnect-indicator &
+#kdeconnect-indicator &
 
 # XInput settings
 xinput set-prop "PixArt USB Optical Mouse" "libinput Middle Emulation Enabled" 1 # Enable middle click

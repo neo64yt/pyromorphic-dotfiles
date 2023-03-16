@@ -99,9 +99,8 @@ export LOOKS_QT6="qt6ct"
 export POWER_MGR="mate-power-preferences" # Power manager
 export NM_EDITOR="nm-connection-editor" # Network
 export PRINT="system-config-printer" # Printer
-export BACKUP_UTIL="pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY timeshift-gtk" # Backup & restore utility
+export BACKUP_UTIL="pkexec env DISPLAY=$DISPLAY snapper-gui" # Backup & restore utility
 export DCONF_EDITOR="dconf-editor" # Manage Dconf configurations
-export FLATSEAL="flatpak run com.github.tchx84.Flatseal"
 
 
 
