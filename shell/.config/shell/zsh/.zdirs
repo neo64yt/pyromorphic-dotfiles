@@ -1,5 +1,9 @@
 /home/neo64yt/git-src/glorious-dotfiles
 /home/neo64yt
+/home/neo64yt/.local/share/s6/sv
+/home/neo64yt/.local/share/s6/sv/kdeconnectd
+/home/neo64yt/.local/share/s6/sv/kdeconnect-indicator
+/home/neo64yt/.local/share/s6/sv/kdeconnect
 /home/neo64yt/git-src/glorious-dotfiles/s6/.local/share/s6
 /home/neo64yt/git-src/glorious-dotfiles/s6/.local/share/s6/rc
 /home/neo64yt/git-src/glorious-dotfiles/s6
@@ -13,8 +17,3 @@
 /home/neo64yt/.config/wireplumber/main.lua.d
 /home/neo64yt/.config/wireplumber
 /home/neo64yt/.config
-/home/neo64yt/.local/share/s6/sv/wireplumber
-/home/neo64yt/.local/share/s6/sv/wireplumber/dependencies.d
-/home/neo64yt/.local/share/s6/sv
-/home/neo64yt/.local/share/s6/rc
-/etc/s6/adminsv/local-s6-user

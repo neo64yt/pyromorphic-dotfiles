@@ -20,7 +20,7 @@ alias pull="git pull" # Sync local Git repository with upstream
 alias scrcpy="scrcpy -m 1080" # Scrcpy
 alias :x="exit" # Vim-like exit :P
 alias mp3dl="yt-dlp -x -f bestaudio/best --extract-audio --audio-format mp3 --audio-quality 0"
-
+alias s6-user-rc="s6-rc -l /run/$USER/s6-rc"
 
 
 # vim: ft=sh
