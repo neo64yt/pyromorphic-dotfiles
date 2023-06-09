@@ -1,3 +1,6 @@
 /* The main Xresources file */
 #include "Xresources.d/sxiv"
 #include "Xresources.d/xscreensaver"
+
+Xcursor.theme: Breeze
+Xcursor.size: 25

@@ -25,7 +25,7 @@ unclutter --start-hidden &
 
 # Systray
 volumeicon &
-#kdeconnect-indicator &
+kdeconnect-indicator &
 
 # XInput settings
 xinput set-prop "PixArt USB Optical Mouse" "libinput Middle Emulation Enabled" 1 # Enable middle click
