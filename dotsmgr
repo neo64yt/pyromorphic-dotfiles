@@ -1,14 +1,14 @@
 #!/bin/sh
 # shellcheck disable=SC2015
 
-#    This file is part of Glorious-Dotfiles.
+#    This file is part of pyromorphic-dotfiles.
 #
-#    Glorious-Dotfiles is free software: you can redistribute it and/or modify it under
+#    pyromorphic-dotfiles is free software: you can redistribute it and/or modify it under
 #    the terms of the GNU General Public License as published by the
 #    Free Software Foundation, either version 3 of the License, or (at your
 #    option) any later version.
 #
-#    Glorious-Dotfiles is distributed in the hope that it will be useful, but
+#    pyromorphic-dotfiles is distributed in the hope that it will be useful, but
 #    WITHOUT ANY WARRANTY; without even the implied warranty of
 #    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 #    General Public License for more details.
@@ -17,7 +17,7 @@
 #    along with this program. If not, see https://www.gnu.org/licenses/.
 
 # Set environment variables to default when they are not set
-[ -z "$DOTS_DIR" ] && DOTS_DIR="$HOME/git-src/glorious-dotfiles"
+[ -z "$DOTS_DIR" ] && DOTS_DIR="$HOME/git-src/pyromorphic-dotfiles"
 
 # Formatting
 # Source: http://colors.sh/
@@ -73,16 +73,16 @@ Commands:
 
 Environment variables:
 	DOTS_DIR (string):		The directory of the dotfiles repository.
-		Default: $HOME/git-src/glorious-dotfiles
+		Default: $HOME/git-src/pyromorphic-dotfiles
 EOF
 }
 
 about_script() {
 	cat << EOF
 About dotsmgr:
-	Author: Neo64YT (https://github.com/neo64yt)
-	Git repository: https://github.com/neo64yt/glorious-dotfiles
-	Description: A script for managing dotfiles, included in glorious-dotfiles. Mainly using stow to have a neat and clean dotfiles management
+	Author: Neo64YT (https://codeberg.org/neo64yt)
+	Git repository: https://codeberg.org/neo64yt/pyromorphic-dotfiles
+	Description: A script for managing dotfiles, included in pyromorphic-dotfiles. Mainly using stow to have a neat and clean dotfiles management
 EOF
 }
 

@@ -1,5 +1,5 @@
-# glorious-dotfiles
-This is my new dotfiles repository, succeeding the now read-only [dotfiles](https://github.com/neo64yt/dotfiles/).
+# pyromorphic-dotfiles
+This is the dotfiles component of [pyromorphic-dotfiles](https://codeberg.org/neo64yt/pyromorphic-dotfiles). Formerly known as glorious-dotfiles.
 
 ## Screenshot
 ![screenshot](screenshot.png)
