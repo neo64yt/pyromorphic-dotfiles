@@ -26,7 +26,10 @@ source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/functionrc # Functions
 # Plugins 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh # Autosuggestions
-source /usr/share/doc/pkgfile/command-not-found.zsh # Suggest packages to install for unavailable commands
+
+# Prevent spaces and duplicates in history
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
 
 # Fix cursor shape after exiting Vim/Neovim
 _fix_cursor() {

@@ -18,6 +18,8 @@ export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory (user)
 export PATH="${HOME}/.local/bin:${PATH}" # Binaries path
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/shell/zsh" # Zsh config
 export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/shell/zsh/zsh_history" # History file for zsh
+export HISTSIZE="5000" # Zsh history file size 
+export SAVEHIST="$HISTSIZE" 
 export COMPDUMPFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump" # zcompdump
 export KEYBIND="${XDG_CONFIG_HOME:-$HOME/.config}/sxhkd/sxhkdrc" # WM-independent keybindings
 export AUTOSTART="${XDG_CONFIG_HOME:-$HOME/.config}/autostart-cmds/autostart.sh" # WM-independent autostart
@@ -32,6 +34,11 @@ else
     export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship.toml"
 fi
 
+if [ -z "GPG_TTY" ]; then 
+    export GPG_TTY="$(tty)"
+    gpg-connect-agent updatestartuptty /bye>/dev/null
+fi
+
 export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cows:${XDG_DATA_DIRS:-/usr/share}/cows"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file location
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
@@ -40,15 +47,15 @@ export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under til
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 export XCURSOR_PATH="/usr/share/icons"
-export XCURSOR_THEME="Breeze"
-export XCURSOR_SIZE="25"
-
+export XCURSOR_THEME="Colloid-dark-cursors"
+export XCURSOR_SIZE="27"
+export XDEB_PKGROOT="${XDG_CONFIG_HOME:-$HOME/.config}/xdeb"
 
 ## SCRIPTS ##
 export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"
-export EMOJI_PICKER="dmenuemoji"
+export EMOJI_PICKER="rofi -modi emoji -show emoji"
 export SCREENSHOOTER="screenshot"
 
 ## MENU SETTINGS ##
@@ -87,19 +94,18 @@ export BEMENU_SCROLL="--scb $BEMENU_SCROLL_BG --scf $BEMENU_SCROLL_FG"
 export BEMENU_OPTS="$BEMENU_NONCOLOR $BEMENU_TITLE $BEMENU_FILTER $BEMENU_NORMAL $BEMENU_HL $BEMENU_SELECT $BEMENU_SCROLL" # Global bemenu options
 
 ## DEFAULT PROGRAMS ##
-export TERMINAL="alacritty"
+export TERMINAL="wezterm"
 export EDITOR="nvim"
 export BROWSER="firefox"
 export LOCKER="xscreensaver-command -lock"
 
 ## SETTINGS MANAGER ##
-export GENERAL_SETTINGS="xfce4-settings-manager"
+export LOOKS_GTK="nwg-look"
 export LOOKS_QT5="qt5ct"
 export LOOKS_QT6="qt6ct"
-export POWER_MGR="mate-power-preferences" # Power manager
+export KVANTUM_MGR="kvantummanager"
 export NM_EDITOR="nm-connection-editor" # Network
 export PRINT="system-config-printer" # Printer
-export BACKUP_UTIL="pkexec env DISPLAY=$DISPLAY snapper-gui" # Backup & restore utility
 export DCONF_EDITOR="dconf-editor" # Manage Dconf configurations
 
 

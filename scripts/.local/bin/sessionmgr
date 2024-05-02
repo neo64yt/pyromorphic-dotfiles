@@ -18,59 +18,57 @@
 # Managing sessions
 
 # Defaults
-prompt="󰐦 System ($(uptime -p)):"
-BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
-
-case "$(readlink -f /sbin/init)" in
-	*systemd*) initctl="systemctl" ;;
-	*) initctl="loginctl" ;;
-esac
+set -x
+prompt="󰐦 System"
+message="󰞌 Uptime: $(uptime -p | sed 's/up //g')"
 
 # List of choices
-list_choices() {
-	cat << EOF
-󰐥 Power off
-󰜉 Restart
-󰍁 Lock
-󰍃 Log out
-󰓦 Refresh session
-EOF
+poweroff="󰐥 Power off"
+reboot="󰜉 Restart"
+lockscr="󰍁 Lock"
+logout="󰍃 Exit session"
+
+
+yes="󰄬 Proceed"
+no="󰜺 Cancel"
+
+
+# Ask for confirmation
+confirm_exit() {
+    sleep 1
+	echo "$yes\n$no" | rofi -dmenu -p "󰘥 Confirmation" -mesg "$chosen" -l 1
 }
 
-detect_wm() {
-    id=$(xprop -root -notype _NET_SUPPORTING_WM_CHECK)
-    id=${id##* }
-    wm=$(xprop -id "$id" -notype -len 25 -f _NET_WM_NAME 8t)
-    wm=${wm##*_NET_WM_NAME = \"}
-    wm=${wm%%\"*}
+# Pass variables to rofi dmenu
+run_rofi() {
+	echo "$poweroff\n$reboot\n$lockscr\n$logout" | rofi -dmenu -p "$prompt" -mesg "$message" -l 2
 }
 
-quit_wm() {
-    detect_wm
-
-    case "$wm" in
-        "dwm") kill -INT $(pidof -s dwm) ;;
-    esac
+# Execute command
+run_cmd() {
+	selected="$(confirm_exit)"
+	if [ "$selected" = "$yes" ]; then
+		case "$1" in 
+            "--shutdown") sudo poweroff ;;
+            "--reboot") sudo reboot ;;
+            "--logout") ${XDG_CONFIG_HOME}/${XDG_CURRENT_DESKTOP}/exit-session ;;
+        esac
+	else
+		exit 0
+	fi
 }
 
-refresh_wm() {
-    detect_wm
-
-    case "$wm" in
-        "dwm") xdotool key super+ctrl+shift+q ;;
-    esac
-}
-
-# Menu
-choice=$(list_choices | bemenu)
-
-case "$choice" in
-  	"󰐥 Power off") $initctl poweroff ;;
-	"󰜉 Restart") $initctl reboot ;;
-	"󰍁 Lock") $LOCKER ;;
-	"󰍃 Log out") quit_wm ;;
-    "󰓦 Refresh session") refresh_wm ;;
-	*) exit 1 ;;
+# Actions
+chosen="$(run_rofi)"
+case ${chosen} in
+    "$poweroff") run_cmd --shutdown ;;
+    "$reboot") run_cmd --reboot ;;
+    "$lockscr")
+		 case "$XDG_SESSION_TYPE" in
+             "x11") xscreensaver-command -lock ;;
+         esac
+        ;;
+    "$logout") run_cmd --logout ;;
 esac
 
 

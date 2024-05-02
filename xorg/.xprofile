@@ -3,7 +3,6 @@
 # Set environment variables and execute autostart programs
 [ -f ~/.zshenv ] && . ~/.zshenv
 eval $(ssh-agent)
-[ -z "$DBUS_SESSION_BUS_ADDRESS" ] && eval $(dbus-launch --sh-syntax --exit-with-session)
 sh $AUTOSTART & 
 
 

@@ -18,8 +18,7 @@
 # Settings manager
 
 # Defaults
-prompt="󰢻 Settings for $(whoami):"
-BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
+prompt="󰢻 Settings for $(whoami)"
 
 # For settings that need config file editing
 config_edit="$TERMINAL -e $EDITOR"
@@ -31,31 +30,25 @@ list_choices(){
 󰏘 Kvantum
 󰏘 Qt5
 󰏘 Qt6
-󰂏 Power management
 󰲝 Network
 󰜇 Printer
 󰌧 Autostart
-󰧺 Keybindings
-󰓦 Backup utility
 󰣖 Dconf
 󰏖 Flatpak permissions
 EOF
 }
 
 # Command
-choice=$(list_choices | bemenu)
+choice=$(list_choices | rofi -dmenu -p "$prompt" -l 5)
 
 case "$choice" in
-    "󰏘 GTK") $config_edit $LOOKS_GTK ;;
+    "󰏘 GTK") $LOOKS_GTK ;;
     "󰏘 Kvantum") $KVANTUM_MGR ;;
     "󰏘 Qt5") $LOOKS_QT5 ;;
     "󰏘 Qt6") $LOOKS_QT6 ;;
-	"󰂏 Power management") $POWER_MGR ;;
   	"󰲝 Network") $NM_EDITOR ;;
   	"󰜇 Printer") $PRINT ;;
   	"󰌧 Autostart") $config_edit $AUTOSTART ;;
-  	"󰧺 Keybindings") $config_edit $KEYBIND ;;
-  	"󰓦 Backup utility") $BACKUP_UTIL ;;
 	"󰣖 Dconf") $DCONF_EDITOR ;;
 	"󰏖 Flatpak permissions") $FLATSEAL ;;
 esac

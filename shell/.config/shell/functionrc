@@ -98,11 +98,11 @@ stshare() {
 	printf "Here's the link!\n-> $SHARE_URL\n"
 }
 
-# Doas (with warning message)
-doas() {
-    cowsay -f sudowoodo "You have been warned. Use doas at your own risk."
+# Sudo (with warning message)
+sudo() {
+    cowsay -f sudowoodo "You have been warned. Use your superuser privileges carefully."
     printf " \n"
-    /usr/bin/doas ${@}
+    /usr/bin/sudo ${@}
 }
 
 # Also display warning message for topgrade

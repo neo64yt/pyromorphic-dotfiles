@@ -16,9 +16,15 @@
 #    along with this program. If not, see https://www.gnu.org/licenses/.
 
 # Screenshot
+
+output_file="$HOME/Pictures/Screenshots/screenshot-of-$(date +%Y-%m-%d_%H.%M.%S).png"
+
 mkdir -p $HOME/Pictures/Screenshots
 
-scrot -d 5 "$HOME/Pictures/Screenshots/screenshot-of-$(date +%Y-%m-%d_%H.%M.%S).png" 
+case "$XDG_SESSION_TYPE" in
+    "x11")  scrot -p $output_file ;;
+    "wayland") grim -c $output_file ;;
+esac
 
 pgrep -x dunst > /dev/null && notify-send -u low -i camera Screenshooter "The screenshot has been saved into the Screenshots folder"
 

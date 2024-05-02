@@ -22,7 +22,7 @@ plain_text = no
 #   %I  iconname (without its path)
 #   %p  progress value if set ([  0%] to [100%]) or nothing
 # Markup is allowed
-format = "<b><u>%s</u></b>\n%b\n%p"
+format = "<b><u>%s %p</u></b>\n%b"
 
 # Sort messages by urgency.
 sort = no
@@ -149,12 +149,23 @@ browser = xdg-open
 
 # Align icons left/right/off
 icon_position = left
-max_icon_size = 32
+#min_icon_size = 32
+#max_icon_size = 128
 
 # Paths to default icons.
-icon_path = /usr/share/icons/Papirus-Dark/32x32/apps/:/usr/share/icons/Papirus-Dark/32x32/actions/:/usr/share/icons/Papirus-Dark/24x24/animations/:/usr/share/icons/Papirus-Dark/32x32/categories/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/emblems/:/usr/share/icons/Papirus-Dark/32x32/emotes/:/usr/share/icons/Papirus-Dark/32x32/places/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/24x24/panel/
+#icon_path = /usr/share/icons/Papirus-Dark/32x32/apps/:/usr/share/icons/Papirus-Dark/32x32/actions/:/usr/share/icons/Papirus-Dark/24x24/animations/:/usr/share/icons/Papirus-Dark/32x32/categories/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/emblems/:/usr/share/icons/Papirus-Dark/32x32/emotes/:/usr/share/icons/Papirus-Dark/32x32/places/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/24x24/panel/
+#enable_recursive_icon_lookup = true
+#icon_theme = "Tela-manjaro-dark, Tela-manjaro, Papirus-Dark, Papirus"
+icon_path = /usr/share/icons/Tela-manjaro-dark/24/panel/:/usr/share/icons/Tela-manjaro-dark/24/actions/:/usr/share/icons/Tela-manjaro-dark/32/:/usr/share/icons/Tela-manjaro-dark/scalable/apps/:/usr/share/icons/Tela-manjaro-dark/scalable/places/:/usr/share/icons/Tela-manjaro-dark/scalable/devices/:/usr/share/icons/Tela-manjaro-dark/scalable/mimetypes/:/usr/share/icons/Tela-manjaro-dark/22/emblems/:/usr/share/icons/Tela-manjaro-dark/32/status/:/usr/share/icons/Papirus-Dark/32x32/apps/:/usr/share/icons/Papirus-Dark/32x32/actions/:/usr/share/icons/Papirus-Dark/24x24/animations/:/usr/share/icons/Papirus-Dark/32x32/categories/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/emblems/:/usr/share/icons/Papirus-Dark/32x32/emotes/:/usr/share/icons/Papirus-Dark/32x32/places/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/24x24/panel/
+max_icon_size = 48
+
 frame_width = 3
 frame_color = "#12846e"
+
+
+progress_bar = true 
+progress_bar_height = 10px 
+progress_bar_frame_width = 5px
 
 [shortcuts]
 
@@ -179,24 +190,27 @@ context = ctrl+shift+period
 
 [urgency_low]
 frame_color = "#12846e"
-foreground = "#ffffff"
-background = "#272a34"
+foreground = "#dddddd"
+background = "#000000"
+highlight = "#12846e"
 timeout = 6
-icon = "~/.local/share/assets/dunst/icons/normal.png"
+icon = "/home/neo64yt/.local/share/assets/dunst/icons/normal.png"
 
 [urgency_normal]
 frame_color = "#12846e"
 foreground = "#ffffff"
-background = "#272a34"
+background = "#000000"
+highlight = "#12846e"
 timeout = 6
-icon = "~/.local/share/assets/dunst/icons/normal.png"
+icon = "/home/neo64yt/.local/share/assets/dunst/icons/normal.png"
 
 [urgency_critical]
 frame_color = "#12846e"
 foreground = "#ffffff"
 background = "#B7472A"
+highlight = "#12846e"
 timeout = 8
-icon = "~/.local/share/assets/dunst/icons/urgent.png"
+icon = "/home/neo64yt/.local/share/assets/dunst/icons/urgent.png"
 
 
 

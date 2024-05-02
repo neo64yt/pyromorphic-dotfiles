@@ -16,8 +16,8 @@
 #    along with this program. If not, see https://www.gnu.org/licenses/.
 
 # Defaults
-prompt="󱍕 Quick access:"
-BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
+prompt="󱍕 Quick access"
+message="󰌢 $(hostname)"
 
 # List of choices (function)
 list_choices(){
@@ -26,19 +26,19 @@ list_choices(){
 󰆍 Run
 󰐦 System
 󰱨 Emojis
-󰥻 Keyboard layouts
+󰪚 Calculator
 󰢻 Settings
 EOF
 }
 
-choice=$(list_choices | bemenu)
+choice=$(list_choices | rofi -dmenu -p "$prompt" -mesg "$message" -l 3)
 
 case "$choice" in
-  	"󰀻 Applications") apps ;;
-  	"󰆍 Run") runner ;;
+  	"󰀻 Applications") rofi -show drun ;;
+  	"󰆍 Run") rofi -show run ;;
   	"󰐦 System") sessionmgr ;;
-	"󰥻 Keyboard layouts") kbswitch ;;
-  	"󰱨 Emojis") dmenuemoji ;;
+  	"󰱨 Emojis") rofi -show emoji -modi emoji ;;
+    "󰪚 Calculator") rofi -show calc -modi calc ;;
   	"󰢻 Settings") set-mgr ;;
 	*) exit 1 ;;
 esac

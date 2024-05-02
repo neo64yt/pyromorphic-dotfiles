@@ -2,5 +2,5 @@
 #include "Xresources.d/sxiv"
 #include "Xresources.d/xscreensaver"
 
-Xcursor.theme: Breeze
-Xcursor.size: 25
+Xcursor.theme: Colloid-dark-cursors
+Xcursor.size: 27

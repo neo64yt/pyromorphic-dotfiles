@@ -5,8 +5,8 @@
 #################################
 
 alias rm="rm -rI" # Ask before deleting files recursively
-alias ls="ls -A --color=auto" # List all files including hidden ones
-alias grep="grep --color=auto -i" # Grep
+alias ls="eza -A --color=auto" # List all files including hidden ones
+alias grep="rg -p --vimgrep -i" # Grep
 alias clean-cache="rm -rf $XDG_CACHE_HOME/*" # Clean home directory cache
 alias cp="cp -r" # Copy files
 alias ..="cd .." # Go to parent directory 

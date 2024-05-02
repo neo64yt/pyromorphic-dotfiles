@@ -3,12 +3,12 @@
 #
 
 # terminal emulator
-super + shift + Return
-	$TERMINAL
+#super + shift + Return
+#	$TERMINAL
 
 # program launcher
-super + r
-	apps
+#super + r
+#	rofi -show drun
 
 # quick menu
 super + shift + m

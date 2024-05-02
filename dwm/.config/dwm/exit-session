@@ -1,0 +1,8 @@
+#!/bin/sh 
+# Just an automation script for clicking exit keybind
+
+xdotool key super+shift+q
+
+
+
+# vim: ft=sh

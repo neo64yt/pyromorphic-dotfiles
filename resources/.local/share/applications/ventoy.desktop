@@ -2,7 +2,7 @@
 Type=Application
 Icon=ventoy
 Name=Ventoy
-Exec=/opt/ventoy/VentoyGUI.x86_64
+Exec=sh -c ventoygui
 Terminal=false
 Hidden=false
 Categories=Utility

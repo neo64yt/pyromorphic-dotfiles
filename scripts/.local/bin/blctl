@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Modified from https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a 
+
+# Usage:
+# - Increase brightness by 5%:
+#   $ blctl up
+# - Decrease brightness by 5%:
+#   $ blctl down
+
+get_brightness() {
+    brightnessctl get | awk '{print int($1/255*100)}'
+}
+
+send_notification() {
+    brightness=$(get_brightness)
+
+    # Send the notification
+    dunstify -i display-brightness -u normal -h string:x-dunst-stack-tag:display "Display brightness" -h int:value:"$brightness"
+}
+
+case $1 in
+    up)
+	# Increase the brightness (+ 5%)
+	brightnessctl set +5% > /dev/null
+	send_notification
+	;;
+    down)
+	# Decrease the brightness (- 5%)
+	brightnessctl set 5%- > /dev/null
+	send_notification
+	;;
+esac

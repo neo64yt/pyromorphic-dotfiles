@@ -1,0 +1,105 @@
+/**
+ * ROFI Color theme
+ * User: Qball
+ * Copyright: Dave Davenport
+ */
+
+* {
+    background-color: #000000;
+    border-color: #ffffff;
+    text-color: #ffffff;
+    font: "JetBrains Mono 13";
+}
+
+window {
+    anchor: west;
+    location: west;
+    padding: 10px;
+    height: 100%;
+    children: [ inputbar, message, listview ];
+}
+
+inputbar {
+    orientation: horizontal;
+    children: [ prompt, textbox-prompt-sep, entry, num-filtered-rows ];
+    padding: 0 0 5px 0;
+}
+
+prompt {
+    border: 0 0 2.5px 0;
+    border-color: #12846e;
+    color: #12846e;
+    margin: 3px 0 8px 0;
+}
+
+message {
+    enabled: true;
+    border: 0;
+}
+
+textbox {
+    horizontal-align: 0.5;
+    text-color: yellow;
+}
+
+textbox-prompt-sep {
+    text-color: #ffffff;
+    str: "::";
+    expand: false;
+    padding: 5px 5px 0 5px;
+}
+
+num-filtered-rows {
+    border: 0 0 2.5px 0;
+    border-color: #12846e;
+    color: #12846e;
+    margin: 3px 0 8px 5px;
+}
+
+listview {
+    layout: vertical;
+    scrollbar: true;
+    spacing: 10px;
+    columns: 1;
+    fixed-columns: true;
+    border: 2px dash 0 0 0;
+    border-color: yellow;
+    padding: 5px 0 0 0;
+}
+
+scrollbar {
+    handle-color: #12846e;
+    background-color: #272a34;
+    width: 5px;
+}
+
+entry {
+    expand: true;
+    border: 0 0 2.5px 0;
+    background-color: #272a34;
+    border-color: #ffffff;
+    placeholder: "󰍉 Type here to search...";
+    placeholder-color: #cccccc;
+    padding: 5px;
+}
+
+element {
+    padding: 7px 5px;
+}
+
+element selected {
+    background-color: #272a34;
+    text-color: #12846e;
+    border: 0 0 0 3px;
+    border-color: #12846e;
+}
+
+element-text, element-icon {
+  background-color: inherit;
+  text-color: inherit;
+}
+
+element-icon {
+    size: 32;
+    padding: 0 5px;
+}

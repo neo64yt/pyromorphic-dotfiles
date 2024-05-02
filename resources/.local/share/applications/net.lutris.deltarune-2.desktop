@@ -1,0 +1,7 @@
+
+[Desktop Entry]
+Type=Application
+Name=DELTARUNE
+Icon=lutris_deltarune
+Exec=env LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/2
+Categories=Game
