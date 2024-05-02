@@ -27,6 +27,7 @@ list_choices(){
 󰐦 System
 󰱨 Emojis
 󰪚 Calculator
+󱕴 Passwords
 󰢻 Settings
 EOF
 }
@@ -39,6 +40,7 @@ case "$choice" in
   	"󰐦 System") sessionmgr ;;
   	"󰱨 Emojis") rofi -show emoji -modi emoji ;;
     "󰪚 Calculator") rofi -show calc -modi calc ;;
+    "󱕴 Passwords") rofi-rbw ;;
   	"󰢻 Settings") set-mgr ;;
 	*) exit 1 ;;
 esac

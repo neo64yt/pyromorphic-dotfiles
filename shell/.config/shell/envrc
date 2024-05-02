@@ -58,41 +58,6 @@ export SESSION_MGR="sessionmgr"
 export EMOJI_PICKER="rofi -modi emoji -show emoji"
 export SCREENSHOOTER="screenshot"
 
-## MENU SETTINGS ##
-# Non-color options
-export BEMENU_HEIGHT="35"
-export BEMENU_LINES="15"
-export BEMENU_BORDER="3"
-export BEMENU_MARGINS="300"
-export BEMENU_FONT="JetBrains Mono 13"
-export BEMENU_NONCOLOR="-l $BEMENU_LINES -H $BEMENU_HEIGHT -M $BEMENU_MARGINS -P  -i -s -c -f --scrollbar always --fn '$BEMENU_FONT'"
-# Title color options
-export BEMENU_TITLE_BG="#000000"
-export BEMENU_TITLE_FG="#12846e"
-export BEMENU_TITLE="--tb $BEMENU_TITLE_BG --tf $BEMENU_TITLE_FG" 
-# Filter color options
-export BEMENU_FILTER_BG="#272a34"
-export BEMENU_FILTER_FG="#ffffff"
-export BEMENU_FILTER="--fb $BEMENU_FILTER_BG --ff $BEMENU_FILTER_FG"
-# Normal color options
-export BEMENU_NORMAL_BG="#272a34"
-export BEMENU_NORMAL_FG="#ffffff"
-export BEMENU_NORMAL="--nb $BEMENU_NORMAL_BG --nf $BEMENU_NORMAL_FG"
-# Highlight color options
-export BEMENU_HL_BG="#12846e"
-export BEMENU_HL_FG="#ffffff"
-export BEMENU_HL="--hb $BEMENU_HL_BG --hf $BEMENU_HL_FG"
-# Selection color options
-export BEMENU_SELECT_BG="#000000"
-export BEMENU_SELECT_FG="#12846e"
-export BEMENU_SELECT="--sb $BEMENU_SELECT_BG --sf $BEMENU_SELECT_FG" 
-# Scrollbar color options
-export BEMENU_SCROLL_BG="#000000"
-export BEMENU_SCROLL_FG="#12846e"
-export BEMENU_SCROLL="--scb $BEMENU_SCROLL_BG --scf $BEMENU_SCROLL_FG" 
-# All options
-export BEMENU_OPTS="$BEMENU_NONCOLOR $BEMENU_TITLE $BEMENU_FILTER $BEMENU_NORMAL $BEMENU_HL $BEMENU_SELECT $BEMENU_SCROLL" # Global bemenu options
-
 ## DEFAULT PROGRAMS ##
 export TERMINAL="wezterm"
 export EDITOR="nvim"
