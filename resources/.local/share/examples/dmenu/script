@@ -2,7 +2,6 @@
 
 # Defaults
 prompt="Something random:"
-BEMENU_OPTS="$BEMENU_OPTS -p '$prompt'"
 
 # List of choices
 list_choices(){
@@ -15,7 +14,7 @@ EOF
 }
 
 # Command
-choice=$(list_choices | bemenu)
+choice=$(list_choices | rofi -dmenu -p "$prompt")
 
 case "$choice" in
   	"Just") ok ;;

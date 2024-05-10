@@ -98,18 +98,17 @@ stshare() {
 	printf "Here's the link!\n-> $SHARE_URL\n"
 }
 
-# Sudo (with warning message)
-sudo() {
-    cowsay -f sudowoodo "You have been warned. Use your superuser privileges carefully."
+# doas (with warning message)
+doas() {
+    cat $XDG_DATA_HOME/assets/sudo-lecture | cowsay -n -f sudowoodo
     printf " \n"
-    /usr/bin/sudo ${@}
+    /usr/bin/doas ${@}
 }
 
-# Also display warning message for topgrade
-topgrade() {
-    cowsay -f sudowoodo "Update your system responsibly and carefully."
+sudo() {
+    cat $XDG_DATA_HOME/assets/sudo-lecture | cowsay -n -f sudowoodo
     printf " \n"
-    /usr/bin/topgrade ${@}
+    /usr/bin/sudo ${@}
 }
 
 
