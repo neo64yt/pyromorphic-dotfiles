@@ -1,0 +1,18 @@
+[Desktop Entry]
+Comment[en_US]=
+Comment=
+Exec=/usr/bin/firefox --new-tab https://dragonforce.io/chat/fullpage
+GenericName[en_US]=
+GenericName=
+Icon=chrome-gfjilipdlpjpgdldipddkjpgaimmfhoh-Default
+MimeType=
+Name[en_US]=DFM Chat
+Name=DFM Chat
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-KDE-SubstituteUID=false
+X-KDE-Username=

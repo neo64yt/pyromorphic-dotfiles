@@ -21,7 +21,7 @@ export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/shell/zsh/zsh_history" # 
 export HISTSIZE="5000" # Zsh history file size 
 export SAVEHIST="$HISTSIZE" 
 export COMPDUMPFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zcompdump" # zcompdump
-export KEYBIND="${XDG_CONFIG_HOME:-$HOME/.config}/sxhkd/sxhkdrc" # WM-independent keybindings
+#export KEYBIND="${XDG_CONFIG_HOME:-$HOME/.config}/sxhkd/sxhkdrc" # WM-independent keybindings
 export AUTOSTART="${XDG_CONFIG_HOME:-$HOME/.config}/autostart-cmds/autostart.sh" # WM-independent autostart
 export PAGER="nvimpager" # Use Neovim as pager (via nvimpager)
 export MANPAGER="${PAGER}" # Use default pager 
@@ -39,6 +39,7 @@ if [ -z "GPG_TTY" ]; then
     gpg-connect-agent updatestartuptty /bye>/dev/null
 fi
 
+export MOZ_ENABLE_WAYLAND=1 # Needed for running Thunderbird natively under Wayland
 export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cows:${XDG_DATA_DIRS:-/usr/share}/cows"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file location
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
@@ -47,9 +48,8 @@ export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under til
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 export XCURSOR_PATH="/usr/share/icons"
-export XCURSOR_THEME="Colloid-dark-cursors"
-export XCURSOR_SIZE="27"
-export XDEB_PKGROOT="${XDG_CONFIG_HOME:-$HOME/.config}/xdeb"
+export XCURSOR_THEME="Bibata-Modern-Classic"
+export XCURSOR_SIZE="24"
 
 ## SCRIPTS ##
 export QUICKMENU="quickmenu"
@@ -62,7 +62,7 @@ export SCREENSHOOTER="screenshot"
 export TERMINAL="wezterm"
 export EDITOR="nvim"
 export BROWSER="firefox"
-export LOCKER="xscreensaver-command -lock"
+#export LOCKER="xscreensaver-command -lock"
 
 ## SETTINGS MANAGER ##
 export LOOKS_GTK="nwg-look"

@@ -1,5 +1,0 @@
-[screencast]
-output_name=LVDS-1
-max_fps=60
-chooser_cmd=slurp -f %o -or
-chooser_type=simple

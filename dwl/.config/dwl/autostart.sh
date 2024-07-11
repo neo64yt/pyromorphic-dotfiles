@@ -4,7 +4,8 @@
 #       Autostart (dwl)      #
 ##############################
 
-wbg $HOME/Pictures/pixel-forest-waterfall.jpg &
+wlr-randr --output eDP-1 --scale 1.75
+swaybg --image $HOME/Pictures/pixel-forest-waterfall.jpg --mode fit &
 #waybar &
 dwlb -ipc \
     -tags 6 " 󰋜 " " 󰺶 " " 󰆍 " " 󰆌 " " 󰐋 " " 󰠔 " \

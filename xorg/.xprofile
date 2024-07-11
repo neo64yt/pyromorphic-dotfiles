@@ -3,6 +3,7 @@
 # Set environment variables and execute autostart programs
 [ -f ~/.zshenv ] && . ~/.zshenv
 eval $(ssh-agent)
+xrandr --output eDP-1 --scale 1.14x1.14 --dpi 192
 sh $AUTOSTART & 
 
 

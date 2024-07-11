@@ -7,7 +7,6 @@ local o = vim.o
 o.cursorline = true
 o.cursorlineopt = "both"
 o.cursorcolumn = true
-o.cursorcolumnopt = "both"
 o.ignorecase = true
 o.wrap = true
 o.number = true

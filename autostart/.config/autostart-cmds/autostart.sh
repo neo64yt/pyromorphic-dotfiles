@@ -26,5 +26,9 @@ sleep 1; kdeconnect-indicator &
 # XInput settings
 xinput set-prop "PixArt USB Optical Mouse" "libinput Middle Emulation Enabled" 1 # Enable middle click
 
+# Set backlight brightness to 50%
+brightnessctl set 50%
+
+
 
 # vim: ft=sh

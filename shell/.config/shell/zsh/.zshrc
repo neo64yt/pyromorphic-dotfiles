@@ -7,7 +7,6 @@
 # Dump 
 mkdir -p ${XDG_CACHE_HOME:-$HOME/.cache}/zsh
 
-# Show fetch tool
 pfetch
 
 # Run crunchbang-mini colorscript
@@ -26,6 +25,7 @@ source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/functionrc # Functions
 # Plugins 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh # Syntax highlighting
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh # Autosuggestions
+source /usr/share/doc/find-the-command/ftc.zsh # Enable pacman command-not-found (for Arch-based distros only)
 
 # Prevent spaces and duplicates in history
 setopt hist_ignore_all_dups

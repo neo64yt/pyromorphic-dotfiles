@@ -9,7 +9,7 @@
 #   $ blctl down
 
 get_brightness() {
-    brightnessctl get | awk '{print int($1/255*100)}'
+    brightnessctl get | awk '{print int($1/19200*100)}'
 }
 
 send_notification() {

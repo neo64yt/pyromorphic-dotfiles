@@ -24,10 +24,10 @@ config.font_size = 11.0
 config.color_scheme = 'Google Dark (Gogh)'
 config.window_background_opacity = 0.90
 config.window_padding = {
-  left = '15px',
-  right = '15px',
-  top = '15px',
-  bottom = '15px',
+  left = '35px',
+  right = '35px',
+  top = '35px',
+  bottom = '35px',
 }
 config.enable_tab_bar = false
 config.default_cursor_style = "BlinkingBar"

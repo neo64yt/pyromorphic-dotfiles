@@ -2,5 +2,6 @@
 #include "Xresources.d/sxiv"
 #include "Xresources.d/xscreensaver"
 
-Xcursor.theme: Colloid-dark-cursors
-Xcursor.size: 27
+Xft.dpi: 192
+Xcursor.theme: Bibata-Modern-Classic
+Xcursor.size: 24

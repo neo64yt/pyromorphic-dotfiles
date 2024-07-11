@@ -8,6 +8,7 @@ wmbar="slstatus"
 
 hsetroot -full $HOME/Pictures/plane-in-ocean.png &
 #xcompmgr -c -f -F -o 0 -I 0.13 -O 0.13 -D 25 &
+xss-lock --ignore-sleep -- xscreensaver-command -lock &
 picom &
 xscreensaver -nosplash &
 $wmbar 2> /dev/null &

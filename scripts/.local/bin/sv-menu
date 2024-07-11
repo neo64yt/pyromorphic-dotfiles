@@ -1,0 +1,29 @@
+#!/bin/sh
+
+# Defaults
+prompt="Something random:"
+
+# List of choices
+list_choices(){
+	cat << EOF
+Just
+as
+an
+example
+EOF
+}
+
+# Command
+choice=$(list_choices | rofi -dmenu -p "$prompt")
+
+case "$choice" in
+  	"Just") ok ;;
+  	"as") ok ;;
+  	"an") OK ;;
+  	"example") OK ;;
+	*) exit 1 ;;
+esac
+
+
+
+# vim: ft=sh

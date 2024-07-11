@@ -1,0 +1,5 @@
+[Desktop Entry]
+Exec=flatpak run --command=goldwarden_ui_main.py com.quexten.Goldwarden --hidden
+Name=com.quexten.Goldwarden
+Type=Application
+X-Flatpak=com.quexten.Goldwarden
