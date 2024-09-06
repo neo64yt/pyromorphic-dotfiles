@@ -1,5 +1,6 @@
 require "nvchad.options"
 local o = vim.o
+local g = vim.g
 
 -------------
 -- Options --
@@ -18,17 +19,15 @@ o.tabstop = 4
 o.shiftwidth = 4
 o.updatetime = 100
 
+------------------------------
+-- Neovide-specific Options --
+------------------------------
+o.guifont = "JetBrainsMono Nerd Font:h11"
+g.neovide_transparency = 0.75
+
 --------------
 -- Autocmds --
 --------------
-
--- Neovim resizing
-local window_size = vim.api.nvim_create_augroup("WindowSize", {})
-vim.api.nvim_create_autocmd("VimEnter", {
-  desc = "Automatically resize Neovim when started from a script",
-  group = window_size,
-  command = "silent exec '!kill -s SIGWINCH $PPID'",
-})
 
 -- Restart xsettingsd when changed
 vim.api.nvim_create_autocmd("BufWritePost", {

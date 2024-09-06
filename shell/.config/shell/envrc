@@ -40,7 +40,7 @@ if [ -z "GPG_TTY" ]; then
 fi
 
 export MOZ_ENABLE_WAYLAND=1 # Needed for running Thunderbird natively under Wayland
-export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cows:${XDG_DATA_DIRS:-/usr/share}/cows"
+export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cowsay/cows:${XDG_DATA_DIRS:-/usr/share}/cowsay/cows"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file location
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
@@ -48,7 +48,7 @@ export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under til
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 export XCURSOR_PATH="/usr/share/icons"
-export XCURSOR_THEME="Bibata-Modern-Classic"
+export XCURSOR_THEME="Bibata-Original-Classic"
 export XCURSOR_SIZE="24"
 
 ## SCRIPTS ##

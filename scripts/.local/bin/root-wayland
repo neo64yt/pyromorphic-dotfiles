@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# There is still a small risk of collision when using -u but this is unlikely.
+SOCKET=`mktemp -u /tmp/sudo-waypipe.XXXXXXX.sock`
+
+waypipe --socket "$SOCKET" client &
+
+# waypipe --server requires a proper XDG_RUNTIME_DIR directory for the root user.
+#
+# That should typically be /run/user/0 or /var/run/0
+#
+# Unfortunalely, sudo does not create a user session so this variable is not set.
+# Even worse, systemd destroys the directory when the last session terminates.
+#
+# In practice, that means that we cannot assume that /run/user/0 or /var/run/0
+# exists and, even if it does exist, it cannot be safely used because it may
+# be removed by systemd at any time. 
+#
+# Ideally, a user session should be created for user 0 (via systemctl?) 
+# but this is not that easy. The alternative is to use a custom directory in /root
+#
+# The disadvantage is that the application may not be able to access services
+# such as dbus.
+#
+
+pkexec sh -c "XDG_RUNTIME_DIR=\$HOME/xdg-run/ ; mkdir -m 700 -p \$XDG_RUNTIME_DIR ; export XDG_RUNTIME_DIR ; waypipe --socket $SOCKET server -- $(printf "%q " "$@")"
+kill %1
+rm -f "$SOCKET" 

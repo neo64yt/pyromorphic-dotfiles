@@ -2,8 +2,8 @@
 local M = {}
 
 M.ui = {
-    theme = "yoru",
-    transparency = false,
+    theme = "everforest",
+    transparency = true,
     nvdash = {
         load_on_startup = true,
         header = {
