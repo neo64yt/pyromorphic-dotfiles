@@ -19,3 +19,5 @@ mpv/.config/mpv/scripts/*
 resources/.local/share/applications/wine*.desktop
 resources/.local/share/applications/waydroid*.desktop
 resources/.local/share/applications/Waydroid.desktop
+
+shell/.config/shell/zsh/.zdirs
