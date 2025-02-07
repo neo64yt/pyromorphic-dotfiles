@@ -5,7 +5,7 @@
  */
 
 * {
-    background-color: #000000;
+    background-color: transparent;
     border-color: #ffffff;
     text-color: #ffffff;
     font: "JetBrains Mono 13";
@@ -16,6 +16,13 @@ window {
     location: west;
     padding: 10px;
     height: 100%;
+    transparency: "real";
+    border-color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+mainbox {
+    enabled: true;
     children: [ inputbar, message, listview ];
 }
 
@@ -90,7 +97,8 @@ element {
 element selected {
     background-color: #272a34;
     text-color: #12846e;
-    border: 0 0 0 3px;
+    border: 0 0 3px 0;
+    border-radius: 10px;
     border-color: #12846e;
 }
 

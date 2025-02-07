@@ -29,6 +29,7 @@ config.window_padding = {
   top = '35px',
   bottom = '35px',
 }
+config.enable_wayland = true
 config.enable_tab_bar = false
 config.default_cursor_style = "BlinkingBar"
 config.visual_bell = {

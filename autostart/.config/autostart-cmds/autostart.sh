@@ -16,7 +16,6 @@ dex -a &
 xsettingsd --config=$XDG_CONFIG_HOME/xsettingsd/xsettingsd.conf &
 dunst &
 thunar --daemon &
-xrdb -merge $XDG_CONFIG_HOME/Xresources &
 mpd &
 unclutter --start-hidden &
 

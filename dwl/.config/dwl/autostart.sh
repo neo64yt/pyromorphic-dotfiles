@@ -5,7 +5,12 @@
 ##############################
 
 wlr-randr --output eDP-1 --scale 1.75
-swaybg --image $HOME/Pictures/pixel-forest-waterfall.jpg --mode fit &
+xprop -root -format _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
+xsetroot -xcf /usr/share/icons/Bibata-Modern-Classic/cursors/left_ptr 48
+xrdb -merge $XDG_CONFIG_HOME/Xresources
+swayidle -w &
+exec sway-audio-idle-inhibit &
+swaybg --image $HOME/Pictures/train_tracks_in_a_forest_with_tux.jpg --mode fit &
 waybar &
 #dwlb -ipc \
 #    -tags 6 " 󰋜 " " 󰺶 " " 󰆍 " " 󰆌 " " 󰐋 " " 󰠔 " \

@@ -1,0 +1,5 @@
+#!/bin/sh
+# Change XWayland scaling from 2 to 1 (AKA let the compositor manage scaling) temporarily for certain programs (e.g. games) and change it back once they are exited 
+xprop -root -format _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 1
+"$@"
+xprop -root -format _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2

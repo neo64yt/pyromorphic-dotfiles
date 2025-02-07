@@ -1,0 +1,8 @@
+/* For confirmation dialogs only; uses the same color scheme as "sidebar" but the window is centered instead */
+@import "sessionmgr"
+
+listview {
+    scrollbar: false;
+    columns: 2;
+    lines: 1;
+}

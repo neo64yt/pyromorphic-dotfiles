@@ -1,0 +1,23 @@
+/* For sessionmgr only; uses the same color scheme as "sidebar" but the window is centered instead */
+@import "sidebar"
+
+configuration {
+    fixed-num-lines: false;
+}
+
+window {
+    anchor: center;
+    location: center;
+    height: 0;
+    width: 700px;
+}
+
+inputbar {
+    children: [ prompt, textbox-prompt-sep, entry ];
+}
+
+listview {
+    scrollbar: false;
+    columns: 3;
+    lines: 2;
+}

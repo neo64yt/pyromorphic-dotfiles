@@ -48,8 +48,8 @@ export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under til
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 export XCURSOR_PATH="/usr/share/icons"
-export XCURSOR_THEME="Bibata-Original-Classic"
-export XCURSOR_SIZE="24"
+export XCURSOR_THEME="Bibata-Modern-Classic"
+#export XCURSOR_SIZE="48"
 
 ## SCRIPTS ##
 export QUICKMENU="quickmenu"
@@ -59,7 +59,7 @@ export EMOJI_PICKER="rofi -modi emoji -show emoji"
 export SCREENSHOOTER="screenshot"
 
 ## DEFAULT PROGRAMS ##
-export TERMINAL="wezterm"
+export TERMINAL="kitty"
 export EDITOR="nvim"
 export BROWSER="firefox"
 #export LOCKER="xscreensaver-command -lock"

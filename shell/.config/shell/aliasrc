@@ -5,7 +5,7 @@
 #################################
 
 alias rm="rm -rI" # Ask before deleting files recursively
-alias ls="eza -A --color=auto" # List all files including hidden ones
+alias ls="ls -A --color=auto" # List all files including hidden ones
 alias grep="rg -p --vimgrep -i" # Grep
 alias clean-cache="rm -rf $XDG_CACHE_HOME/*" # Clean home directory cache
 alias cp="cp -r" # Copy files
@@ -14,12 +14,11 @@ alias desktop="desktop-file-validate" # Validating .desktop files
 alias patch-del="patch -R" # Reversing patches
 alias vim="nvim" # Assume Neovim as Vim
 alias commit="git commit" # Commiting Git changes
-alias xi="doas xi" # Package management
 alias push="git push" # Push Git commits to upstream repository
 alias pull="git pull" # Sync local Git repository with upstream
 alias scrcpy="scrcpy -m 1080" # Scrcpy
 alias :x="exit" # Vim-like exit :P
-alias mp3dl="yt-dlp -x -f bestaudio/best --extract-audio --audio-format mp3 --audio-quality 0"
+alias musicdl="yt-dlp -x -f bestaudio/best --extract-audio --audio-format opus --audio-quality 0"
 
 
 

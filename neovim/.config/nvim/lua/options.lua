@@ -19,12 +19,6 @@ o.tabstop = 4
 o.shiftwidth = 4
 o.updatetime = 100
 
-------------------------------
--- Neovide-specific Options --
-------------------------------
-o.guifont = "JetBrainsMono Nerd Font:h11"
-g.neovide_transparency = 0.75
-
 --------------
 -- Autocmds --
 --------------

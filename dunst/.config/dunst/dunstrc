@@ -102,6 +102,10 @@ monitor = 0
 # will be ignored.
 follow = mouse
 
+mouse_left_click = do_action
+mouse_middle_click = close_current
+mouse_right_click = close_all
+
 # Should a notification popped up from history be sticky or timeout
 # as if it would normally do.
 sticky_history = yes
@@ -110,7 +114,7 @@ sticky_history = yes
 history_length = 15
 
 # Display indicators for URLs (U) and actions (A).
-show_indicators = no
+show_indicators = yes
 
 # The height of a single line.  If the height is smaller than the
 # font height, it will get raised to the font height.
@@ -142,7 +146,7 @@ separator_color = frame
 startup_notification = false
 
 # dmenu path.
-dmenu = /usr/bin/bemenu -p dunst:
+dmenu = /usr/bin/rofi -dmenu -p dunst:
 
 # Browser for opening urls in context menu.
 browser = xdg-open

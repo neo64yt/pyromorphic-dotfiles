@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # There is still a small risk of collision when using -u but this is unlikely.
-SOCKET=`mktemp -u /tmp/sudo-waypipe.XXXXXXX.sock`
+#SOCKET=`mktemp -u /tmp/sudo-waypipe.XXXXXXX.sock`
 
-waypipe --socket "$SOCKET" client &
+#waypipe --socket "$SOCKET" client &
 
 # waypipe --server requires a proper XDG_RUNTIME_DIR directory for the root user.
 #
@@ -23,6 +23,19 @@ waypipe --socket "$SOCKET" client &
 # such as dbus.
 #
 
-pkexec sh -c "XDG_RUNTIME_DIR=\$HOME/xdg-run/ ; mkdir -m 700 -p \$XDG_RUNTIME_DIR ; export XDG_RUNTIME_DIR ; waypipe --socket $SOCKET server -- $(printf "%q " "$@")"
+#pkexec sh -c "DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus ; \
+#    XDG_RUNTIME_DIR=\$HOME/xdg-run/ ; \
+#    mkdir -m 700 -p \$XDG_RUNTIME_DIR ; \
+#    export XDG_RUNTIME_DIR ; \
+#    waypipe --socket $SOCKET server -- $(printf "%q " "$@")"
+pkexec su -c "DBUS_SESSION_BUS_ADDRESS=$DBUS_SESSION_BUS_ADDRESS ; \
+    XDG_RUNTIME_DIR=$XDG_RUNTIME_DIR ; \
+    DISPLAY=$DISPLAY ;\
+    WAYLAND_DISPLAY=$WAYLAND_DISPLAY; \
+    export DBUS_SESSION_BUS_ADDRESS ;\
+    export XDG_RUNTIME_DIR ; \
+    export DISPLAY ;\
+    export WAYLAND_DISPLAY ;\
+    $@"
 kill %1
 rm -f "$SOCKET" 

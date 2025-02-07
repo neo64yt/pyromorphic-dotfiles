@@ -1,0 +1,4 @@
+lock 'swaylock -f'
+timeout 300 'wlopm --off eDP-1' resume 'wlopm --on eDP-1'
+timeout 600 'loginctl suspend'
+before-sleep 'swaylock -f -c 000000'

@@ -42,12 +42,12 @@ case $1 in
 	# Set the volume on (if it was muted)
 	wpctl set-mute "$dev_id" 0 > /dev/null
 	# Up the volume (+ 5%)
-	wpctl set-volume "$dev_id" 5%+ > /dev/null
+	wpctl set-volume "$dev_id" 1%+ > /dev/null
 	send_notification
 	;;
     down)
 	wpctl set-mute "$dev_id" 0 > /dev/null
-	wpctl set-volume "$dev_id" 5%- > /dev/null
+	wpctl set-volume "$dev_id" 1%- > /dev/null
 	send_notification
 	;;
     mute)
