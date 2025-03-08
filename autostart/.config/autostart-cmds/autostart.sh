@@ -8,7 +8,7 @@ dbus-update-activation-environment --all
 
 # XDG Autostart
 # To prevent autostarting a program using XDG autostart, create an empty desktop file for that program in $XDG_CONFIG_HOME/autostart/
-dex -a &
+dex -a -s $XDG_CONFIG_HOME/nonDE-autostart:/etc/xdg/autostart &
 
 # Daemons 
 #pipewire-runner &

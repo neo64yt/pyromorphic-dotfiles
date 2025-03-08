@@ -1,0 +1,8 @@
+#!/bin/sh 
+# Just an automation script for clicking exit keybind
+
+wtype -M logo -M shift -P Q
+
+
+
+# vim: ft=sh

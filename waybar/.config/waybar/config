@@ -1,17 +1,18 @@
-{
-    "layer": "bottom", // Waybar at top layer
+[{
+    "name": "topbar",
+    "layer": "bottom", 
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height
     "mode": "dock",
     // "width": 120, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["custom/quickmenu", "river/tags", "wlr/taskbar"],
+    "modules-left": ["custom/quickmenu", "river/tags"],
     "modules-center": ["clock"],
-    "modules-right": ["idle_inhibitor", "temperature", "wireplumber", "backlight", "battery", "battery#bat2", "tray"],
+    "modules-right": ["cpu", "memory", "temperature", "wireplumber", "backlight", "battery", "battery#bat2"],
     // Modules configuration
     "custom/quickmenu": {
         "on-click": "quickmenu",
-        "format": "󱍕",
+        "format": "󰻀",
         "tooltip-format": "Quick access"
     },
 
@@ -27,18 +28,6 @@
          ],
      },
 
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "󰈈",
-            "deactivated": "󰈉"
-        }
-    },
-    "tray": {
-        "icon-size": 15,
-        "spacing": 10,
-        "show-passive-items": true
-    },
     "clock": {
         "timezone": "Asia/Kuala_Lumpur",
         "format": "󱑍 {:%H:%M}",
@@ -60,23 +49,17 @@
                 "on-scroll-down": "shift_down"
         }
     },
+
     "cpu": {
-        "format": "{usage}% "
+        "format": "󰘚 {usage}%"
     },
+
     "memory": {
-        "format": "{}% "
-    },
-    "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        "format-critical": "󱃂",
-        "format": "󰔏",
-        "tooltip-format": "{temperatureC}°C"
+        "format": "󰍛 {}%"
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon}",
+        "format": "{icon} {percent}%",
         "tooltip-format": "{icon} {percent}%",
         "states": [0,50],
         "format-icons": ["󰃚", "󰃠"]
@@ -103,13 +86,34 @@
         "interval" : 7
     },
     "wireplumber": {
-        "format": "{icon}",
+        "format": "{icon} {volume}%",
         "tooltip-format": "{icon} {volume}%",
         "format-muted": "󰝟",
         "format-icons": ["󰖀", "󰕾"],
         "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol"
     },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-icons": ["󰔏"], 
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "tooltip-format": "{temperatureC}°C"
+    },
+},
+
+{
+    "name": "sidebar",
+    "layer": "bottom",
+    "position": "left",
+    "width": 39,
+    "mode": "dock",
+    "modules-left": ["wlr/taskbar"],
+    "modules-right": ["idle_inhibitor", "tray"],
+
     "wlr/taskbar": {
         "format": "{icon}",
         "on-click": "activate",
@@ -117,4 +121,19 @@
         "on-click-right": "close"
     },
 
-}
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10,
+        "show-passive-items": true
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰈈",
+            "deactivated": "󰈉"
+        }
+    },
+
+
+}]

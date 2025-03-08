@@ -18,7 +18,7 @@ undex() {
 
 	# Finding user-specific autostart file
 	printf "Finding user-specific autostart file of \"${@}\" if it exists..."
-	[ -e $XDG_CONFIG_HOME/autostart/${@}.desktop ] && UN_AU_EXISTS=1 || UN_AU_EXISTS=0
+	[ -e $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop ] && UN_AU_EXISTS=1 || UN_AU_EXISTS=0
 
 	if [ $UN_AU_EXISTS -eq 1 ] ; then
 		# Creating a directory to store backups of autostart files
@@ -26,20 +26,20 @@ undex() {
 
 		# Checking if the autostart file is empty
 		printf "   Yes\nConfirming if the autostart file is not empty..."
-		[ -s $XDG_CONFIG_HOME/autostart/${@}.desktop ] && UN_AU_EMPTY=0 || UN_AU_EMPTY=1
+		[ -s $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop ] && UN_AU_EMPTY=0 || UN_AU_EMPTY=1
 		
 		# Backing up the original autostart file (if not empty)
-		[ $UN_AU_EMPTY -eq 0 ] && printf "   Not empty\nBacking up the existing autostart file...\n" && mv $XDG_CONFIG_HOME/autostart/${@}.desktop $XDG_DATA_HOME/undex/${@}.desktop.bak
+		[ $UN_AU_EMPTY -eq 0 ] && printf "   Not empty\nBacking up the existing autostart file...\n" && mv $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop $XDG_DATA_HOME/undex/${@}.desktop.bak
 
 		# Deleting the original autostart file (if empty)
-		[ $UN_AU_EMPTY -eq 1 ] && printf "   Empty\n" && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop
+		[ $UN_AU_EMPTY -eq 1 ] && printf "   Empty\n" && rm -rf $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop
 	else
 		# No existing autostart file
 		printf "   No\n"
 	fi
 	
 	# Creating an empty autostart file to fool dex
-	touch $XDG_CONFIG_HOME/autostart/${@}.desktop && printf "\"${@}\" was successfully removed from the autostart list.\n"
+	echo "Hidden=true" > $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop && printf "\"${@}\" was successfully removed from the autostart list.\n"
 	return 0
 }
 
@@ -47,32 +47,41 @@ undex() {
 ## Usage: redex [APP_NAME]
 redex() {
 	# Unsetting variables
-	unset RE_AU_EXISTS RE_BAK_AU_EXISTS RE_AU_EMPTY
+	unset RE_AU_EXISTS RE_BAK_AU_EXISTS RE_AU_EMPTY RE_AU_HIDDEN
 
-	[ -e $XDG_CONFIG_HOME/autostart/${@}.desktop ] && RE_AU_EXISTS=1 || RE_AU_EXISTS=0
+	[ -e $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop ] && RE_AU_EXISTS=1 || RE_AU_EXISTS=0
 	printf "Finding the backup of user-specific autostart file of '${@}' if it exists..."
 	[ -e $XDG_DATA_HOME/undex/${@}.desktop.bak ] && RE_BAK_AU_EXISTS=1 || RE_BAK_AU_EXISTS=0
 
 	if [ $RE_BAK_AU_EXISTS -eq 1 ] ; then
 		# Restoring backup of the original autostart file
 		printf "   Yes\nRestoring the backup...\n"
-		[ $RE_AU_EXISTS -eq 1 ] && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null
-		mv $XDG_DATA_HOME/undex/${@}.desktop.bak $XDG_CONFIG_HOME/autostart/${@}.desktop && printf "'${@}' was successfully re-added to the autostart list.\n"
+		[ $RE_AU_EXISTS -eq 1 ] && rm -rf $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop 2>/dev/null
+		mv $XDG_DATA_HOME/undex/${@}.desktop.bak $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop && printf "'${@}' was successfully re-added to the autostart list.\n"
 		return 0
 	else
 		printf "   No\n"
 
 		# Checking if the autostart file is not empty
-		[ $RE_AU_EXISTS -eq 1 ] && [ -s $XDG_CONFIG_HOME/autostart/${@}.desktop ] && RE_AU_EMPTY=0 || RE_AU_EMPTY=1
+		[ $RE_AU_EXISTS -eq 1 ] && [ -s $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop ] && RE_AU_EMPTY=0 || RE_AU_EMPTY=1
 
-		# The autostart file does not exist
+        # Checking if Hidden=true is set
+        [ $RE_AU_EMPTY -eq 0 ] && grep "Hidden=true" $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop && RE_AU_HIDDEN=1 || RE_AU_HIDDEN=0 
+		
+        # The autostart file does not exist
 		[ $RE_AU_EXISTS -eq 0 ] && printf "'${@}' does not exist.\n" && return 1
 
 		# Delete the autostart file if empty
-		[ $RE_AU_EMPTY -eq 1 ] && rm -rf $XDG_CONFIG_HOME/autostart/${@}.desktop 2>/dev/null && printf "'${@}' was successfully re-added to the autostart list.\n" && return 0
+		[ $RE_AU_EMPTY -eq 1 ] && rm -rf $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop 2>/dev/null && printf "'${@}' was successfully re-added to the autostart list.\n" && return 0
 
 		# The autostart file is not empty
-		[ $RE_AU_EMPTY -eq 0 ] && printf "'${@}' is already in the autostart list.\n" && return 1
+		if [ $RE_AU_EMPTY -eq 0 ]; then
+            if [ $RE_AU_HIDDEN -eq 1 ]; then 
+                rm -rf $XDG_CONFIG_HOME/nonDE-autostart/${@}.desktop 2>/dev/null && printf "'${@}' was successfully re-added to the autostart list.\n" && return 0
+            else
+                printf "'${@}' is already in the autostart list.\n" && return 1
+            fi
+        fi
 	fi
 }
 

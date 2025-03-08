@@ -61,7 +61,7 @@ export SCREENSHOOTER="screenshot"
 ## DEFAULT PROGRAMS ##
 export TERMINAL="kitty"
 export EDITOR="nvim"
-export BROWSER="firefox"
+export BROWSER="zen"
 #export LOCKER="xscreensaver-command -lock"
 
 ## SETTINGS MANAGER ##

@@ -153,14 +153,15 @@ browser = xdg-open
 
 # Align icons left/right/off
 icon_position = left
-#min_icon_size = 32
+#min_icon_size = 24
 #max_icon_size = 128
 
 # Paths to default icons.
 #icon_path = /usr/share/icons/Papirus-Dark/32x32/apps/:/usr/share/icons/Papirus-Dark/32x32/actions/:/usr/share/icons/Papirus-Dark/24x24/animations/:/usr/share/icons/Papirus-Dark/32x32/categories/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/emblems/:/usr/share/icons/Papirus-Dark/32x32/emotes/:/usr/share/icons/Papirus-Dark/32x32/places/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/24x24/panel/
 #enable_recursive_icon_lookup = true
-#icon_theme = "Tela-manjaro-dark, Tela-manjaro, Papirus-Dark, Papirus"
+#icon_theme = "Papirus-Light"
 icon_path = /usr/share/icons/Tela-manjaro-dark/24/panel/:/usr/share/icons/Tela-manjaro-dark/24/actions/:/usr/share/icons/Tela-manjaro-dark/32/:/usr/share/icons/Tela-manjaro-dark/scalable/apps/:/usr/share/icons/Tela-manjaro-dark/scalable/places/:/usr/share/icons/Tela-manjaro-dark/scalable/devices/:/usr/share/icons/Tela-manjaro-dark/scalable/mimetypes/:/usr/share/icons/Tela-manjaro-dark/22/emblems/:/usr/share/icons/Tela-manjaro-dark/32/status/:/usr/share/icons/Papirus-Dark/32x32/apps/:/usr/share/icons/Papirus-Dark/32x32/actions/:/usr/share/icons/Papirus-Dark/24x24/animations/:/usr/share/icons/Papirus-Dark/32x32/categories/:/usr/share/icons/Papirus-Dark/32x32/devices/:/usr/share/icons/Papirus-Dark/32x32/emblems/:/usr/share/icons/Papirus-Dark/32x32/emotes/:/usr/share/icons/Papirus-Dark/32x32/places/:/usr/share/icons/Papirus-Dark/32x32/status/:/usr/share/icons/Papirus-Dark/32x32/mimetypes/:/usr/share/icons/Papirus-Dark/24x24/panel/
+#icon_path = /usr/share/icons/Tela-manjaro-dark/24/panel/:/usr/share/icons/Tela-manjaro-dark/24/actions/:/usr/share/icons/Tela-manjaro-dark/32/:/usr/share/icons/Tela-manjaro-dark/scalable/apps/:/usr/share/icons/Tela-manjaro-dark/scalable/places/:/usr/share/icons/Tela-manjaro-dark/scalable/devices/:/usr/share/icons/Tela-manjaro-dark/scalable/mimetypes/:/usr/share/icons/Tela-manjaro-dark/22/emblems/:/usr/share/icons/Tela-manjaro-dark/32/status/
 max_icon_size = 48
 
 frame_width = 3

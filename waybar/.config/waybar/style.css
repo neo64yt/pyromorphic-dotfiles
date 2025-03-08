@@ -15,8 +15,13 @@ window#waybar.hidden {
     opacity: 0.0;
 }
 
-#custom-quickmenu, #idle_inhibitor {
+#custom-quickmenu {
     padding: 0 10px;
+    margin: 3px;
+}
+
+#idle_inhibitor {
+    padding: 10px 0;
     margin: 3px;
 }
 
@@ -27,14 +32,15 @@ window#waybar.hidden {
 }
 
 #taskbar {
-    padding: 0 10px;
+    padding: 10px 0;
     background: transparent;
 }
 
 #taskbar button {
     color: #cccccc;
+    padding: 10px 0;
     margin: 0;
-    border-bottom: 3px solid #cccccc;
+    border-right: 3px solid #cccccc;
 }
 
 #taskbar button.active {
@@ -42,7 +48,7 @@ window#waybar.hidden {
     color: #12846e;
     margin: 3px 0;
     border-radius: 10px;
-    border-bottom: 3px solid #12846e;
+    border-right: 3px solid #12846e;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
@@ -93,10 +99,16 @@ window#waybar.hidden {
     border-bottom: 3px solid #ffffff;
 }
 
-#battery, #cpu, #memory, #temperature, #backlight, #network, #wireplumber, #custom-media, #tray, #mode {
+#battery, #backlight, #network, #wireplumber, #custom-media, #cpu, #temperature, #memory, #mode {
     padding: 0 10px;
     margin: 0 5px;
     border-bottom: 3px solid;
+}
+
+#tray {
+    padding: 10px 0;
+    margin: 5px 0;
+    border-right: 3px solid;
 }
 
 #clock {
@@ -139,12 +151,13 @@ window#waybar.hidden {
 }
 
 #cpu {
-    background: #2ecc71;
-    color: #000000;
+    border-color: #2ecc71;
+    color: #2ecc71;
 }
 
 #memory {
-    background: #9b59b6;
+    border-color: #9b59b6;
+    color: #9b59b6;
 }
 
 #backlight {
