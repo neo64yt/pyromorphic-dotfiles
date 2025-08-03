@@ -1,0 +1,35 @@
+{
+    "name": "sidebar",
+    "layer": "top",
+    "position": "left",
+    "width": 39,
+    //"mode": "dock",
+    //"passthrough": true,
+    //"exclusive": false,
+    "modules-left": ["wlr/taskbar"],
+    "modules-right": ["idle_inhibitor", "tray"],
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-middle": "minimize",
+        "on-click-right": "close"
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 10,
+        "show-passive-items": true
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰈈",
+            "deactivated": "󰈉"
+        }
+    }
+
+
+}
+

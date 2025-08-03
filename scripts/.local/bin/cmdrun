@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# Defaults
+prompt="󰆍 Run:"
+lines=12
+
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    dmenu_run -l $lines -p "$prompt"
+else
+    rofi -show run 
+fi
+
+
+# vim: ft=sh

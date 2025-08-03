@@ -1,8 +1,12 @@
 #!/bin/sh
 
-#################################
-#           Aliases             #
-#################################
+#      █████  ██      ██  █████  ███████ ██████   ██████ 
+#     ██   ██ ██      ██ ██   ██ ██      ██   ██ ██      
+#     ███████ ██      ██ ███████ ███████ ██████  ██      
+#     ██   ██ ██      ██ ██   ██      ██ ██   ██ ██      
+#     ██   ██ ███████ ██ ██   ██ ███████ ██   ██  ██████
+#
+#                 pyromorphic-desktop
 
 alias rm="rm -rI" # Ask before deleting files recursively
 alias ls="ls -A --color=auto" # List all files including hidden ones
@@ -16,7 +20,6 @@ alias vim="nvim" # Assume Neovim as Vim
 alias commit="git commit" # Commiting Git changes
 alias push="git push" # Push Git commits to upstream repository
 alias pull="git pull" # Sync local Git repository with upstream
-alias scrcpy="scrcpy -m 1080" # Scrcpy
 alias :x="exit" # Vim-like exit :P
 alias musicdl="yt-dlp -x -f bestaudio/best --extract-audio --audio-format opus --audio-quality 0"
 

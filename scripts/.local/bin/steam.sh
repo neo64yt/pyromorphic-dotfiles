@@ -1,16 +1,14 @@
 #!/bin/sh 
-export KRITA_NO_STYLE_OVERRIDE=1  
-
 if [ -z "$DISPLAY" ]; then 
     export DISPLAY=:0
 fi
 
 if [ -n "$WAYLAND_DISPLAY" ]; then
     if pgrep -f "xwayland-satellite"; then
-        export QT_SCALE_FACTOR=0.875
-    else
+        steamscaleopts="-forcedesktopscaling=1.75"
+    else 
         export XCURSOR_SIZE=44
     fi
 fi
 
-krita $@
+/usr/bin/steam -system-composer $steamscaleopts $@

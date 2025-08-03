@@ -21,14 +21,16 @@ output_file="$HOME/Pictures/Screenshots/screenshot-of-$(date +%Y-%m-%d_%H.%M.%S)
 
 mkdir -p $HOME/Pictures/Screenshots
 
-case "$XDG_SESSION_TYPE" in
-    "x11")  scrot -p $output_file ;;
-    "wayland") grim -c - | wl-copy -t image/png && wl-paste > $output_file  ;;
-esac
+sleep 1
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    maim $output_file
+else
+    grim -c $output_file
+fi
 
 pgrep -x dunst > /dev/null && notify-send -u low -i camera Screenshooter "The screenshot has been saved into the Screenshots folder"
 
-paplay /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
+pw-play /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
 
 
 

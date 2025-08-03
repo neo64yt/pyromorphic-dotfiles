@@ -1,0 +1,22 @@
+/* For confirmation dialogs only; uses the same color scheme as "sidebar" but the window is centered instead */
+@import "sidebar"
+
+listview {
+    columns: 4;
+}
+
+element {
+    orientation: vertical;
+    padding: 7px;
+}
+
+element-icon {
+    size: 48px;
+    padding: 10px;
+}
+
+element-text {
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    font: "JetBrains Mono 10";
+}

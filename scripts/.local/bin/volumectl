@@ -3,9 +3,9 @@
 # Modified from https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a 
 
 # Usage:
-# - Increase volume by 5%:
+# - Increase volume by 1%:
 #   $ volumectl up
-# - Decrease volume by 5%:
+# - Decrease volume by 1%:
 #   $ volumectl down
 # - Toggle mute
 #   $ volumectl mute
@@ -41,7 +41,7 @@ case $1 in
     up)
 	# Set the volume on (if it was muted)
 	wpctl set-mute "$dev_id" 0 > /dev/null
-	# Up the volume (+ 5%)
+	# Up the volume (+ 1%)
 	wpctl set-volume "$dev_id" 1%+ > /dev/null
 	send_notification
 	;;

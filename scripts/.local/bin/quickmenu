@@ -1,23 +1,17 @@
 #!/bin/sh
 
-#    This file is part of Glorious-Dotfiles.
-#
-#    Glorious-Dotfiles is free software: you can redistribute it and/or modify it under
-#    the terms of the GNU General Public License as published by the
-#    Free Software Foundation, either version 3 of the License, or (at your
-#    option) any later version.
-#
-#    Glorious-Dotfiles is distributed in the hope that it will be useful, but
-#    WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-#    General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with this program. If not, see https://www.gnu.org/licenses/.
+################################
+#                              #
+#          QUICK MENU          #
+#                              #
+#      pyromorphic-desktop     #
+#                              #
+################################
+
 
 # Defaults
-prompt="󱍕 Quick access"
-message="󰌢 $(hostname)"
+prompt="󱍕 Quick access:"
+lines=8
 
 # List of choices (function)
 list_choices(){
@@ -26,19 +20,31 @@ list_choices(){
 󰆍 Run
 󰐦 System
 󰱨 Emojis
+󱘞 Clipboard
 󰪚 Calculator
 󱕴 Passwords
 󰢻 Settings
 EOF
 }
 
-choice=$(list_choices | rofi -dmenu -p "$prompt" -mesg "$message" -l 3)
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    menu_handler(){ 
+        dmenu -l $lines -p "$prompt" 
+    }
+else
+    menu_handler(){ 
+        rofi -dmenu -p "$prompt" -l $lines 
+    }
+fi
+
+choice=$(list_choices | menu_handler)
 
 case "$choice" in
-  	"󰀻 Applications") rofi -show drun ;;
-  	"󰆍 Run") rofi -show run ;;
+  	"󰀻 Applications") desktopmenu ;;
+  	"󰆍 Run") cmdrun ;;
   	"󰐦 System") sessionmgr ;;
   	"󰱨 Emojis") rofi -show emoji -modi emoji ;;
+    "󱘞 Clipboard") rofi -modi clipboard:${XDG_DATA_HOME}/rofi-modes/cliphist-rofi-img -show clipboard -show-icons ;;
     "󰪚 Calculator") rofi -show calc -modi calc ;;
     "󱕴 Passwords") rofi-rbw ;;
   	"󰢻 Settings") set-mgr ;;

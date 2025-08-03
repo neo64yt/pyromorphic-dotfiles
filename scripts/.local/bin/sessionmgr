@@ -19,8 +19,8 @@
 
 # Defaults
 set -x
-prompt="󰐦 System"
-message="󰞌 Uptime: $(uptime -p | sed 's/up //g')"
+prompt="󰐦 System (󰞌 $(uptime -p | sed 's/up //g')):"
+lines=6
 
 # List of choices
 poweroff="󰐥 Power off"
@@ -34,16 +34,27 @@ logout="󰍃 Exit session"
 yes="󰄬 Proceed"
 no="󰜺 Cancel"
 
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    menu_handler() {
+        dmenu -l $lines -p "$prompt"
+    }
+else
+    menu_handler() {
+        rofi -dmenu -p "$prompt" -l $lines
+    }
+fi
 
 # Ask for confirmation
 confirm_exit() {
     sleep 1
-	echo "$yes\n$no" | rofi -theme confirmask -dmenu -p "󰘥 Confirmation" -mesg "$chosen" -l 1  
+    prompt="󰘥 Confirmation:"
+    lines=2
+	echo "$yes\n$no" | menu_handler  
 }
 
-# Pass variables to rofi dmenu
-run_rofi() {
-	echo "$poweroff\n$reboot\n$sleep\n$hibernate\n$lockscr\n$logout" | rofi -theme sessionmgr -dmenu -p "$prompt" -mesg "$message" -l 2
+# Display menu
+run_menu() {
+	echo "$poweroff\n$reboot\n$sleep\n$hibernate\n$lockscr\n$logout" | menu_handler
 }
 
 # Execute command
@@ -63,7 +74,7 @@ run_cmd() {
 }
 
 # Actions
-chosen="$(run_rofi)"
+chosen="$(run_menu)"
 case ${chosen} in
     "$poweroff") run_cmd --shutdown ;;
     "$reboot") run_cmd --reboot ;;

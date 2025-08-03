@@ -27,7 +27,7 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         opts = {
-            ensure_installed = { "vim", "lua", "html", "css" ,"c", "go", },
+            ensure_installed = { "vim", "lua", "html", "css" ,"c", "go", "markdown" },
         },
     },
 

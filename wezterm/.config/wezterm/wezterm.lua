@@ -21,7 +21,7 @@ end
 
 wezterm.font 'JetBrainsMono Nerd Font'
 config.font_size = 11.0
-config.color_scheme = 'Google Dark (Gogh)'
+config.color_scheme = 'Everforest Dark (Gogh)'
 config.window_background_opacity = 0.90
 config.window_padding = {
   left = '35px',

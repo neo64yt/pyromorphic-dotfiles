@@ -1,0 +1,9 @@
+#!/bin/sh
+
+prompt="󱘞 Clipboard"
+
+rofi -modi clipboard:${XDG_DATA_HOME}/rofi-modes/cliphist-rofi-img -show clipboard -show-icons -p "$prompt"
+
+
+
+#vim: ft=sh

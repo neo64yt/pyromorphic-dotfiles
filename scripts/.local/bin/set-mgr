@@ -18,7 +18,8 @@
 # Settings manager
 
 # Defaults
-prompt="󰢻 Settings for $(whoami)"
+prompt="󰢻 Settings for $(whoami):"
+lines=9
 
 # For settings that need config file editing
 config_edit="$TERMINAL -e $EDITOR"
@@ -38,8 +39,18 @@ list_choices(){
 EOF
 }
 
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    menu_handler() {
+        dmenu -l $lines -p "$prompt"
+    }
+else
+    menu_handler() {
+        rofi -dmenu -p "$prompt" -l $lines
+    }
+fi
+
 # Command
-choice=$(list_choices | rofi -dmenu -p "$prompt" -l 5)
+choice=$(list_choices | menu_handler)
 
 case "$choice" in
     "󰏘 GTK") $LOOKS_GTK ;;

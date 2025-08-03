@@ -1,12 +1,12 @@
 #!/bin/sh
 
-# This is the example configuration file for river.
+#     ██████  ██ ██    ██ ███████ ██████  
+#     ██   ██ ██ ██    ██ ██      ██   ██ 
+#     ██████  ██ ██    ██ █████   ██████  
+#     ██   ██ ██  ██  ██  ██      ██   ██ 
+#     ██   ██ ██   ████   ███████ ██   ██ 
 #
-# If you wish to edit this, you will probably want to copy it to
-# $XDG_CONFIG_HOME/river/init or $HOME/.config/river/init first.
-#
-# See the river(1), riverctl(1), and rivertile(1) man pages for complete
-# documentation.
+#           pyromorphic-desktop
 
 $XDG_CONFIG_HOME/autostart-cmds/autostart.sh &
 $XDG_CONFIG_HOME/river/autostart.sh &
@@ -16,8 +16,8 @@ $XDG_CONFIG_HOME/river/autostart.sh &
 # Super+Shift+Return to start an instance of foot (https://codeberg.org/dnkl/foot)
 riverctl map normal Super+Shift Return spawn '/bin/sh -c $TERMINAL'
 
-riverctl map normal Super R spawn 'rofi -show drun'
-riverctl map normal Super P spawn 'rofi -show run'
+riverctl map normal Super R spawn 'desktopmenu'
+riverctl map normal Super P spawn 'cmdrun'
 riverctl map normal Super E spawn 'rofi -show emoji -modi emoji'
 riverctl map normal Super W spawn '/bin/sh -c $BROWSER'
 riverctl map normal Super+Shift M spawn '/bin/sh -c $QUICKMENU'
@@ -155,7 +155,7 @@ riverctl background-color 0x002b36
 #riverctl border-color-unfocused 0x272a34
 #riverctl border-width 3
 
-riverctl xcursor-theme Bibata-Modern-Classic 24
+riverctl xcursor-theme Bibata-Original-Ice 24
 
 # Set keyboard repeat rate
 riverctl set-repeat 50 300
@@ -166,7 +166,17 @@ riverctl rule-add -app-id 'float*' -title 'foo' float
 # Make all views with app-id "bar" and any title use client-side decorations
 riverctl rule-add -app-id "bar" csd
 
-riverctl rule-add ssd
+#riverctl rule-add ssd
+
+# Rule for browser
+brows_app_id="floorp"
+brows_tag_num=4
+brows_tag=$((1 << ($brows_tag_num - 1)))
+riverctl rule-add -app-id $brows_app_id tags $brows_tag
+riverctl rule-add -app-id $brows_app_id ssd
+
+
+riverctl rule-add -app-id gamescope float
 
 # Set the default layout generator to be rivertile and start it.
 # River will send the process group of the init executable SIGTERM on exit.
@@ -202,3 +212,5 @@ riverctl map normal Super I send-layout-cmd wideriver "--count +1"
 riverctl map normal Super M  send-layout-cmd wideriver "--layout monocle"
 riverctl map normal Super T  send-layout-cmd wideriver "--layout left"
 
+
+# vim: ft=sh

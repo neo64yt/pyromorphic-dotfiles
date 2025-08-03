@@ -1,7 +1,11 @@
 #!/bin/sh
 
 #################################
-#     Environment variables     #
+#                               #
+#     ENVIRONMENT VARIABLES     #
+#                               #
+#     pyromorphic-dotfiles      #
+#                               #
 #################################
 
 #################################
@@ -15,7 +19,7 @@ export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory (user)
 #################################
 #      GENERIC CONFIGURATION    #
 #################################
-export PATH="${HOME}/.local/bin:${PATH}" # Binaries path
+export PATH="${HOME}/.local/bin:${HOME}/Games/gamelaunch-scripts:${PATH}" # Binaries path
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/shell/zsh" # Zsh config
 export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/shell/zsh/zsh_history" # History file for zsh
 export HISTSIZE="5000" # Zsh history file size 
@@ -34,12 +38,16 @@ else
     export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship.toml"
 fi
 
-if [ -z "GPG_TTY" ]; then 
+if [ -z "$GPG_TTY" ]; then 
     export GPG_TTY="$(tty)"
     gpg-connect-agent updatestartuptty /bye>/dev/null
 fi
 
-export MOZ_ENABLE_WAYLAND=1 # Needed for running Thunderbird natively under Wayland
+# Wayland session
+if [ -n "$WAYLAND_DISPLAY" ]; then
+    export MOZ_ENABLE_WAYLAND=1 # Needed for running Thunderbird natively under Wayland
+fi
+
 export COWPATH="${XDG_DATA_HOME:-$HOME/.local/share}/cowsay/cows:${XDG_DATA_DIRS:-/usr/share}/cowsay/cows"
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file location
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
@@ -48,8 +56,9 @@ export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under til
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 export XCURSOR_PATH="/usr/share/icons"
-export XCURSOR_THEME="Bibata-Modern-Classic"
+export XCURSOR_THEME="Bibata-Original-Ice"
 #export XCURSOR_SIZE="48"
+export OSU_EXTERNAL_UPDATE_STREAM="lazer"
 
 ## SCRIPTS ##
 export QUICKMENU="quickmenu"
@@ -61,7 +70,7 @@ export SCREENSHOOTER="screenshot"
 ## DEFAULT PROGRAMS ##
 export TERMINAL="kitty"
 export EDITOR="nvim"
-export BROWSER="zen"
+export BROWSER="floorp"
 #export LOCKER="xscreensaver-command -lock"
 
 ## SETTINGS MANAGER ##

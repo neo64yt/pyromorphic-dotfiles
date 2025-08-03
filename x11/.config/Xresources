@@ -3,5 +3,5 @@
 #include "Xresources.d/xscreensaver"
 
 Xft.dpi: 192
-Xcursor.theme: Bibata-Modern-Classic
-Xcursor.size: 24
+Xcursor.theme: Bibata-Original-Ice
+Xcursor.size: 48

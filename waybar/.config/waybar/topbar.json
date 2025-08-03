@@ -1,32 +1,19 @@
-[{
+{
     "name": "topbar",
-    "layer": "bottom", 
+    "layer": "top", 
     "position": "top", // Waybar position (top|bottom|left|right)
     "height": 30, // Waybar height
-    "mode": "dock",
+    //"mode": "dock",
     // "width": 120, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["custom/quickmenu", "river/tags"],
     "modules-center": ["clock"],
     "modules-right": ["cpu", "memory", "temperature", "wireplumber", "backlight", "battery", "battery#bat2"],
     // Modules configuration
     "custom/quickmenu": {
-        "on-click": "quickmenu",
+        "on-click": "prerun-quickmenu",
         "format": "󰻀",
         "tooltip-format": "Quick access"
     },
-
-     "river/tags": {
-         "num-tags": 6,
-         "tag-labels": [ 
-            "  󰋜  ", 
-            "  󰺶  ",
-            "  󰆍  ",
-            "  󰆌  ",
-            "  󰐋  ",
-            "  󰠔  " 
-         ],
-     },
 
     "clock": {
         "timezone": "Asia/Kuala_Lumpur",
@@ -42,7 +29,7 @@
                 "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
                 "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
                 "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
-            },    
+            }    
         },
         "actions": {
                 "on-scroll-up": "shift_up",
@@ -102,38 +89,6 @@
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
         "tooltip-format": "{temperatureC}°C"
-    },
+    }
 },
 
-{
-    "name": "sidebar",
-    "layer": "bottom",
-    "position": "left",
-    "width": 39,
-    "mode": "dock",
-    "modules-left": ["wlr/taskbar"],
-    "modules-right": ["idle_inhibitor", "tray"],
-
-    "wlr/taskbar": {
-        "format": "{icon}",
-        "on-click": "activate",
-        "on-click-middle": "minimize",
-        "on-click-right": "close"
-    },
-
-    "tray": {
-        "icon-size": 15,
-        "spacing": 10,
-        "show-passive-items": true
-    },
-
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "󰈈",
-            "deactivated": "󰈉"
-        }
-    },
-
-
-}]

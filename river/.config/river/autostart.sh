@@ -7,12 +7,15 @@
 wlr-randr --output eDP-1 --scale 1.75
 dbus-update-activation-environment --all
 xprop -root -format _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
-xsetroot -xcf /usr/share/icons/Bibata-Modern-Classic/cursors/left_ptr 48
+xsetroot -xcf /usr/share/icons/Bibata-Modern-Classic/cursors/left_ptr 44
+echo "Xft.dpi : 196" | xrdb -merge
 xrdb -merge $XDG_CONFIG_HOME/Xresources
 swayidle -w &
 sway-audio-idle-inhibit &
-swaybg --image $HOME/Pictures/train_tracks_in_a_forest_with_tux.jpg --mode fit &
-waybar &
+wl-paste --type text --watch cliphist store &
+wl-paste --type image --watch cliphist store &
+swaybg --image $HOME/Pictures/winxp_bliss.jpg &
+waybar --config $XDG_CONFIG_HOME/waybar/river.config &
 #dwlb -ipc \
 #    -tags 6 " 󰋜 " " 󰺶 " " 󰆍 " " 󰆌 " " 󰐋 " " 󰠔 " \
 #    -active-bg-color "#272a34" \

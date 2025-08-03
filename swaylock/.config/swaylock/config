@@ -2,6 +2,8 @@ ignore-empty-password
 show-failed-attempts
 fade-in=5
 clock
-screenshots
-effect-blur=10x3
+image=~/Pictures/winxp_bliss.jpg
+#effect-blur=10x3
+effect-pixelate=50
+effect-greyscale
 inside-color=000000

@@ -1,0 +1,24 @@
+#!/bin/sh
+
+################################
+#                              #
+#          QUICK MENU          #
+#                              #
+#      pyromorphic-desktop     #
+#                              #
+################################
+
+
+# Defaults
+prompt="󰀻 Applications:"
+lines=12
+
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    j4-dmenu-desktop --no-generic --use-xdg-de --dmenu="dmenu -l $lines -p '$prompt'"
+else
+    rofi -show drun
+fi
+
+
+
+# vim: ft=sh
