@@ -1,0 +1,34 @@
+#!/bin/sh
+# This script depends on emoji data files by https://github.com/Mange/emoji-data, specifically all_emojis.json and categories.txt.
+# This script only handles sorting emojis into categories in separate files. It DOES NOT handle downloading the data files everytime a new version of Unicode is out.
+# To update your emoji list, either wait and download the data files from the releases, or generate them on your own with the project above.
+
+# Change these variables according to your own needs
+EMOJI_DIR="${XDG_DATA_HOME}/assets/emoji-data" # The directory where data files and sorted emoji list files reside. Put the required data files in here
+EMOJIS_FOLDER="${EMOJI_DIR}/emojis" # Sorted emoji list folder
+EMOJIS_RAW="${EMOJI_DIR}/all_emojis.json" # Raw emoji list (JSON)
+CATEGORIES="${EMOJI_DIR}/categories.txt" # List of categories
+
+if [ ! -f "$EMOJIS_RAW" ] || [ ! -f "$CATEGORIES" ]; then
+    echo "ERROR: Data files not found! Make sure the variables are set correctly and the data files actually exist."
+    exit 1
+fi
+
+# Create emojis folder if it does not exist
+[ -f "$EMOJIS_FOLDER" ] || mkdir -p $EMOJIS_FOLDER
+
+# Read list of categories 
+while read -r category; do
+    # File for holding sorted emojis
+    list_file="${EMOJIS_FOLDER}/$(echo "$category" | sed -e 's/[[:blank:]]/-/g' -e 's/\&/and/g' | tr '[:upper:]' '[:lower:]').txt"
+
+    # Sort and put it in the file
+    #echo "$list_file"
+    echo "Generating emoji list for ${category}..."
+    touch "$list_file"
+    echo "# List generated from emoji data files by https://github.com/Mange/emoji-data" > $list_file
+    echo "# ${category}" >> $list_file
+    jq -r ".[] | select(.category_name == \"$category\") | (\"[\" + .characters + \"] \" + .name)" $EMOJIS_RAW >> $list_file
+done < $CATEGORIES
+
+echo "Done!"

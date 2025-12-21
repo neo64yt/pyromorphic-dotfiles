@@ -64,11 +64,11 @@ export OSU_EXTERNAL_UPDATE_STREAM="lazer"
 export QUICKMENU="quickmenu"
 export SETTINGS_MGR="set-mgr"
 export SESSION_MGR="sessionmgr"
-export EMOJI_PICKER="rofi -modi emoji -show emoji"
+export EMOJI_PICKER="emojisel"
 export SCREENSHOOTER="screenshot"
 
 ## DEFAULT PROGRAMS ##
-export TERMINAL="kitty"
+export TERMINAL="wezterm"
 export EDITOR="nvim"
 export BROWSER="floorp"
 #export LOCKER="xscreensaver-command -lock"

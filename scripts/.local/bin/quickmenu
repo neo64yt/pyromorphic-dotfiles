@@ -20,9 +20,6 @@ list_choices(){
 󰆍 Run
 󰐦 System
 󰱨 Emojis
-󱘞 Clipboard
-󰪚 Calculator
-󱕴 Passwords
 󰢻 Settings
 EOF
 }
@@ -43,10 +40,7 @@ case "$choice" in
   	"󰀻 Applications") desktopmenu ;;
   	"󰆍 Run") cmdrun ;;
   	"󰐦 System") sessionmgr ;;
-  	"󰱨 Emojis") rofi -show emoji -modi emoji ;;
-    "󱘞 Clipboard") rofi -modi clipboard:${XDG_DATA_HOME}/rofi-modes/cliphist-rofi-img -show clipboard -show-icons ;;
-    "󰪚 Calculator") rofi -show calc -modi calc ;;
-    "󱕴 Passwords") rofi-rbw ;;
+  	"󰱨 Emojis") emojisel ;;
   	"󰢻 Settings") set-mgr ;;
 	*) exit 1 ;;
 esac

@@ -17,7 +17,7 @@ dex -a -s $XDG_CONFIG_HOME/nonDE-autostart:/etc/xdg/autostart &
 #/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 pgrep xsettingsd >/dev/null && pkill xsettingsd # Refresh XSettingd by killing it before starting it again
 if [ -z "$WAYLAND_DISPLAY" ]; then
-    xsettingsd -c $XDG_CONFIG_HOME/xsettingsd/xsettingsd-x11.conf &
+   xsettingsd -c $XDG_CONFIG_HOME/xsettingsd/xsettingsd-x11.conf &
 else
     xsettingsd -c $XDG_CONFIG_HOME/xsettingsd/xsettingsd.conf &
 fi
@@ -26,9 +26,8 @@ dunst &
 thunar --daemon &
 mpd &
 unclutter --start-hidden &
-
-# Systray
-sleep 1; kdeconnect-indicator &
+copyq &
+/usr/bin/kdeconnect-indicator &
 
 # Set backlight brightness to 50%
 brightnessctl set 50%

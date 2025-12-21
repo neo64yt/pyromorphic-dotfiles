@@ -1,0 +1,66 @@
+#!/bin/sh
+
+################################
+#                              #
+#        EMOJI SELECTOR        #
+#                              #
+#      pyromorphic-desktop     #
+#                              #
+################################
+
+
+# Defaults
+EMOJI_DIR="${XDG_DATA_HOME}/assets/emoji-data"
+CATEGORIES="${EMOJI_DIR}/categories.txt"
+EMOJIS_FOLDER="${EMOJI_DIR}/emojis"
+
+
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    menu_handler(){ 
+        dmenu -l $lines -p "$prompt" 
+    }
+else
+    menu_handler(){ 
+        rofi -dmenu -p "$prompt" -l $lines 
+    }
+fi
+
+select_category() {
+    prompt="󰱨 Select a category:"
+    lines=$(wc -l < $CATEGORIES)
+    category=$(cat $CATEGORIES | menu_handler)
+
+    if grep -Fxq "$category" $CATEGORIES; then
+        list_file="${EMOJIS_FOLDER}/$(echo "$category" | sed -e 's/[[:blank:]]/-/g' -e 's/\&/and/g' | tr '[:upper:]' '[:lower:]').txt"
+    else
+        exit 1
+    fi
+}
+
+select_emoji() {
+    select_category
+
+    prompt="󰱨 Select an emoji:"
+    lines=12
+    emoji=$(grep -v '^#' $list_file | menu_handler | awk -F '[][]' '{printf "%s", $2} END {print ""}')
+}
+
+copy_emoji() {
+    select_emoji
+
+    if [ -n "$emoji" ]; then
+        if [ -z "$WAYLAND_DISPLAY" ]; then
+            echo "$emoji" | xclip -selection clipboard
+        else
+            wl-copy "$emoji"
+        fi
+    else
+        exit 1
+    fi
+}
+
+copy_emoji && notify-send --icon="face-smile" "Emoji Selector" "Selected emoji has been copied to your clipboard."   
+
+
+
+# vim: ft=sh

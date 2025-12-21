@@ -60,3 +60,5 @@ case $1 in
 	fi
 	;;
 esac
+
+pkill -RTMIN+10 dwmblocks

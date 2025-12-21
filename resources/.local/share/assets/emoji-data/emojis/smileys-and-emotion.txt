@@ -1,0 +1,187 @@
+# List generated from emoji data files by https://github.com/Mange/emoji-data
+# Smileys & Emotion
+[😀] grinning face
+[😃] grinning face with big eyes
+[😄] grinning face with smiling eyes
+[😁] beaming face with smiling eyes
+[😆] grinning squinting face
+[😅] grinning face with sweat
+[🤣] rolling on the floor laughing
+[😂] face with tears of joy
+[🙂] slightly smiling face
+[🙃] upside-down face
+[🫠] melting face
+[😉] winking face
+[😊] smiling face with smiling eyes
+[😇] smiling face with halo
+[🥰] smiling face with hearts
+[😍] smiling face with heart-eyes
+[🤩] star-struck
+[😘] face blowing a kiss
+[😗] kissing face
+[☺️] smiling face
+[☺] smiling face
+[😚] kissing face with closed eyes
+[😙] kissing face with smiling eyes
+[🥲] smiling face with tear
+[😋] face savoring food
+[😛] face with tongue
+[😜] winking face with tongue
+[🤪] zany face
+[😝] squinting face with tongue
+[🤑] money-mouth face
+[🤗] smiling face with open hands
+[🤭] face with hand over mouth
+[🫢] face with open eyes and hand over mouth
+[🫣] face with peeking eye
+[🤫] shushing face
+[🤔] thinking face
+[🫡] saluting face
+[🤐] zipper-mouth face
+[🤨] face with raised eyebrow
+[😐] neutral face
+[😑] expressionless face
+[😶] face without mouth
+[🫥] dotted line face
+[😶‍🌫️] face in clouds
+[😶‍🌫] face in clouds
+[😏] smirking face
+[😒] unamused face
+[🙄] face with rolling eyes
+[😬] grimacing face
+[😮‍💨] face exhaling
+[🤥] lying face
+[🫨] shaking face
+[🙂‍↔️] head shaking horizontally
+[🙂‍↔] head shaking horizontally
+[🙂‍↕️] head shaking vertically
+[🙂‍↕] head shaking vertically
+[😌] relieved face
+[😔] pensive face
+[😪] sleepy face
+[🤤] drooling face
+[😴] sleeping face
+[🫩] face with bags under eyes
+[😷] face with medical mask
+[🤒] face with thermometer
+[🤕] face with head-bandage
+[🤢] nauseated face
+[🤮] face vomiting
+[🤧] sneezing face
+[🥵] hot face
+[🥶] cold face
+[🥴] woozy face
+[😵] face with crossed-out eyes
+[😵‍💫] face with spiral eyes
+[🤯] exploding head
+[🤠] cowboy hat face
+[🥳] partying face
+[🥸] disguised face
+[😎] smiling face with sunglasses
+[🤓] nerd face
+[🧐] face with monocle
+[😕] confused face
+[🫤] face with diagonal mouth
+[😟] worried face
+[🙁] slightly frowning face
+[☹️] frowning face
+[☹] frowning face
+[😮] face with open mouth
+[😯] hushed face
+[😲] astonished face
+[😳] flushed face
+[🥺] pleading face
+[🥹] face holding back tears
+[😦] frowning face with open mouth
+[😧] anguished face
+[😨] fearful face
+[😰] anxious face with sweat
+[😥] sad but relieved face
+[😢] crying face
+[😭] loudly crying face
+[😱] face screaming in fear
+[😖] confounded face
+[😣] persevering face
+[😞] disappointed face
+[😓] downcast face with sweat
+[😩] weary face
+[😫] tired face
+[🥱] yawning face
+[😤] face with steam from nose
+[😡] enraged face
+[😠] angry face
+[🤬] face with symbols on mouth
+[😈] smiling face with horns
+[👿] angry face with horns
+[💀] skull
+[☠️] skull and crossbones
+[☠] skull and crossbones
+[💩] pile of poo
+[🤡] clown face
+[👹] ogre
+[👺] goblin
+[👻] ghost
+[👽] alien
+[👾] alien monster
+[🤖] robot
+[😺] grinning cat
+[😸] grinning cat with smiling eyes
+[😹] cat with tears of joy
+[😻] smiling cat with heart-eyes
+[😼] cat with wry smile
+[😽] kissing cat
+[🙀] weary cat
+[😿] crying cat
+[😾] pouting cat
+[🙈] see-no-evil monkey
+[🙉] hear-no-evil monkey
+[🙊] speak-no-evil monkey
+[💌] love letter
+[💘] heart with arrow
+[💝] heart with ribbon
+[💖] sparkling heart
+[💗] growing heart
+[💓] beating heart
+[💞] revolving hearts
+[💕] two hearts
+[💟] heart decoration
+[❣️] heart exclamation
+[❣] heart exclamation
+[💔] broken heart
+[❤️‍🔥] heart on fire
+[❤‍🔥] heart on fire
+[❤️‍🩹] mending heart
+[❤‍🩹] mending heart
+[❤️] red heart
+[❤] red heart
+[🩷] pink heart
+[🧡] orange heart
+[💛] yellow heart
+[💚] green heart
+[💙] blue heart
+[🩵] light blue heart
+[💜] purple heart
+[🤎] brown heart
+[🖤] black heart
+[🩶] grey heart
+[🤍] white heart
+[💋] kiss mark
+[💯] hundred points
+[💢] anger symbol
+[💥] collision
+[💫] dizzy
+[💦] sweat droplets
+[💨] dashing away
+[🕳️] hole
+[🕳] hole
+[💬] speech balloon
+[👁️‍🗨️] eye in speech bubble
+[👁‍🗨️] eye in speech bubble
+[👁️‍🗨] eye in speech bubble
+[👁‍🗨] eye in speech bubble
+[🗨️] left speech bubble
+[🗨] left speech bubble
+[🗯️] right anger bubble
+[🗯] right anger bubble
+[💭] thought balloon
+[💤] ZZZ

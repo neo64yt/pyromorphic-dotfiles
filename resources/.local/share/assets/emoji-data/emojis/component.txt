@@ -1,0 +1,11 @@
+# List generated from emoji data files by https://github.com/Mange/emoji-data
+# Component
+[🏻] light skin tone
+[🏼] medium-light skin tone
+[🏽] medium skin tone
+[🏾] medium-dark skin tone
+[🏿] dark skin tone
+[🦰] red hair
+[🦱] curly hair
+[🦳] white hair
+[🦲] bald

@@ -3,7 +3,7 @@ local M = {
 
     base46 = {
         theme = "everblush",
-        transparency = false,
+        transparency = true,
     },
 
     nvdash = {
@@ -33,6 +33,12 @@ local M = {
                 "▀▀▀▀▀▀▀▀▀▀▀     ▀▀▀▀▀▀▀▀▀▀▀",
                 "                           ",
                 "                           ",
+        },
+    },
+
+    ui = {
+        statusline = {
+            theme = "vscode_colored",
         },
     },
 }

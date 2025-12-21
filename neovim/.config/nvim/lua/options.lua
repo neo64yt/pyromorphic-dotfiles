@@ -18,6 +18,14 @@ o.smarttab = true
 o.tabstop = 4
 o.shiftwidth = 4
 o.updatetime = 100
+o.arabicshape = false
+
+if g.neovide then
+    o.guifont = "JetBrainsMono Nerd Font:h11"
+    g.neovide_opacity = 0.9
+    g.neovide_normal_opacity = 0.9
+    g.neovide_confirm_quit = true
+end
 
 --------------
 -- Autocmds --

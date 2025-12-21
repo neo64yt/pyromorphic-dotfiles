@@ -14,7 +14,7 @@ prompt="󰀻 Applications:"
 lines=12
 
 if [ -z "$WAYLAND_DISPLAY" ]; then
-    j4-dmenu-desktop --no-generic --use-xdg-de --dmenu="dmenu -l $lines -p '$prompt'"
+    j4-dmenu-desktop --no-generic --use-xdg-de --dmenu="dmenu -l $lines -p '$prompt'" --term="wezterm"
 else
     rofi -show drun
 fi

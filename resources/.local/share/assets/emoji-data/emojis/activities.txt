@@ -1,0 +1,98 @@
+# List generated from emoji data files by https://github.com/Mange/emoji-data
+# Activities
+[🎃] jack-o-lantern
+[🎄] Christmas tree
+[🎆] fireworks
+[🎇] sparkler
+[🧨] firecracker
+[✨] sparkles
+[🎈] balloon
+[🎉] party popper
+[🎊] confetti ball
+[🎋] tanabata tree
+[🎍] pine decoration
+[🎎] Japanese dolls
+[🎏] carp streamer
+[🎐] wind chime
+[🎑] moon viewing ceremony
+[🧧] red envelope
+[🎀] ribbon
+[🎁] wrapped gift
+[🎗️] reminder ribbon
+[🎗] reminder ribbon
+[🎟️] admission tickets
+[🎟] admission tickets
+[🎫] ticket
+[🎖️] military medal
+[🎖] military medal
+[🏆] trophy
+[🏅] sports medal
+[🥇] 1st place medal
+[🥈] 2nd place medal
+[🥉] 3rd place medal
+[⚽] soccer ball
+[⚾] baseball
+[🥎] softball
+[🏀] basketball
+[🏐] volleyball
+[🏈] american football
+[🏉] rugby football
+[🎾] tennis
+[🥏] flying disc
+[🎳] bowling
+[🏏] cricket game
+[🏑] field hockey
+[🏒] ice hockey
+[🥍] lacrosse
+[🏓] ping pong
+[🏸] badminton
+[🥊] boxing glove
+[🥋] martial arts uniform
+[🥅] goal net
+[⛳] flag in hole
+[⛸️] ice skate
+[⛸] ice skate
+[🎣] fishing pole
+[🤿] diving mask
+[🎽] running shirt
+[🎿] skis
+[🛷] sled
+[🥌] curling stone
+[🎯] bullseye
+[🪀] yo-yo
+[🪁] kite
+[🔫] water pistol
+[🎱] pool 8 ball
+[🔮] crystal ball
+[🪄] magic wand
+[🎮] video game
+[🕹️] joystick
+[🕹] joystick
+[🎰] slot machine
+[🎲] game die
+[🧩] puzzle piece
+[🧸] teddy bear
+[🪅] piñata
+[🪩] mirror ball
+[🪆] nesting dolls
+[♠️] spade suit
+[♠] spade suit
+[♥️] heart suit
+[♥] heart suit
+[♦️] diamond suit
+[♦] diamond suit
+[♣️] club suit
+[♣] club suit
+[♟️] chess pawn
+[♟] chess pawn
+[🃏] joker
+[🀄] mahjong red dragon
+[🎴] flower playing cards
+[🎭] performing arts
+[🖼️] framed picture
+[🖼] framed picture
+[🎨] artist palette
+[🧵] thread
+[🪡] sewing needle
+[🧶] yarn
+[🪢] knot

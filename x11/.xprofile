@@ -2,15 +2,17 @@
 
 # Set environment variables and execute autostart programs
 [ -f ~/.zshenv ] && . ~/.zshenv
-eval $(ssh-agent)
+eval $(ssh-agent -s)
 xrandr --output eDP-1 --scale 1.143x1.143 --dpi 192
 #export GDK_DPI_SCALE=0.5
 export XCURSOR_SIZE=48
 export MOZ_USE_XINPUT2=1
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export QT_ENABLE_HIGHDPI_SCALING=1
+xrdb -merge ~/.config/Xresources
 xinput set-prop "YICHIP Wireless Device Mouse" "libinput Middle Emulation Enabled" 1 # Enable middle click
-xset r rate 300 50 
+#xset r rate 300 50 
+xautocfg &
 sh $AUTOSTART & 
 
 

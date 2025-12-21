@@ -1,0 +1,307 @@
+# List generated from emoji data files by https://github.com/Mange/emoji-data
+# Symbols
+[🏧] ATM sign
+[🚮] litter in bin sign
+[🚰] potable water
+[♿] wheelchair symbol
+[🚹] men’s room
+[🚺] women’s room
+[🚻] restroom
+[🚼] baby symbol
+[🚾] water closet
+[🛂] passport control
+[🛃] customs
+[🛄] baggage claim
+[🛅] left luggage
+[⚠️] warning
+[⚠] warning
+[🚸] children crossing
+[⛔] no entry
+[🚫] prohibited
+[🚳] no bicycles
+[🚭] no smoking
+[🚯] no littering
+[🚱] non-potable water
+[🚷] no pedestrians
+[📵] no mobile phones
+[🔞] no one under eighteen
+[☢️] radioactive
+[☢] radioactive
+[☣️] biohazard
+[☣] biohazard
+[⬆️] up arrow
+[⬆] up arrow
+[↗️] up-right arrow
+[↗] up-right arrow
+[➡️] right arrow
+[➡] right arrow
+[↘️] down-right arrow
+[↘] down-right arrow
+[⬇️] down arrow
+[⬇] down arrow
+[↙️] down-left arrow
+[↙] down-left arrow
+[⬅️] left arrow
+[⬅] left arrow
+[↖️] up-left arrow
+[↖] up-left arrow
+[↕️] up-down arrow
+[↕] up-down arrow
+[↔️] left-right arrow
+[↔] left-right arrow
+[↩️] right arrow curving left
+[↩] right arrow curving left
+[↪️] left arrow curving right
+[↪] left arrow curving right
+[⤴️] right arrow curving up
+[⤴] right arrow curving up
+[⤵️] right arrow curving down
+[⤵] right arrow curving down
+[🔃] clockwise vertical arrows
+[🔄] counterclockwise arrows button
+[🔙] BACK arrow
+[🔚] END arrow
+[🔛] ON! arrow
+[🔜] SOON arrow
+[🔝] TOP arrow
+[🛐] place of worship
+[⚛️] atom symbol
+[⚛] atom symbol
+[🕉️] om
+[🕉] om
+[✡️] star of David
+[✡] star of David
+[☸️] wheel of dharma
+[☸] wheel of dharma
+[☯️] yin yang
+[☯] yin yang
+[✝️] latin cross
+[✝] latin cross
+[☦️] orthodox cross
+[☦] orthodox cross
+[☪️] star and crescent
+[☪] star and crescent
+[☮️] peace symbol
+[☮] peace symbol
+[🕎] menorah
+[🔯] dotted six-pointed star
+[🪯] khanda
+[♈] Aries
+[♉] Taurus
+[♊] Gemini
+[♋] Cancer
+[♌] Leo
+[♍] Virgo
+[♎] Libra
+[♏] Scorpio
+[♐] Sagittarius
+[♑] Capricorn
+[♒] Aquarius
+[♓] Pisces
+[⛎] Ophiuchus
+[🔀] shuffle tracks button
+[🔁] repeat button
+[🔂] repeat single button
+[▶️] play button
+[▶] play button
+[⏩] fast-forward button
+[⏭️] next track button
+[⏭] next track button
+[⏯️] play or pause button
+[⏯] play or pause button
+[◀️] reverse button
+[◀] reverse button
+[⏪] fast reverse button
+[⏮️] last track button
+[⏮] last track button
+[🔼] upwards button
+[⏫] fast up button
+[🔽] downwards button
+[⏬] fast down button
+[⏸️] pause button
+[⏸] pause button
+[⏹️] stop button
+[⏹] stop button
+[⏺️] record button
+[⏺] record button
+[⏏️] eject button
+[⏏] eject button
+[🎦] cinema
+[🔅] dim button
+[🔆] bright button
+[📶] antenna bars
+[🛜] wireless
+[📳] vibration mode
+[📴] mobile phone off
+[♀️] female sign
+[♀] female sign
+[♂️] male sign
+[♂] male sign
+[⚧️] transgender symbol
+[⚧] transgender symbol
+[✖️] multiply
+[✖] multiply
+[➕] plus
+[➖] minus
+[➗] divide
+[🟰] heavy equals sign
+[♾️] infinity
+[♾] infinity
+[‼️] double exclamation mark
+[‼] double exclamation mark
+[⁉️] exclamation question mark
+[⁉] exclamation question mark
+[❓] red question mark
+[❔] white question mark
+[❕] white exclamation mark
+[❗] red exclamation mark
+[〰️] wavy dash
+[〰] wavy dash
+[💱] currency exchange
+[💲] heavy dollar sign
+[⚕️] medical symbol
+[⚕] medical symbol
+[♻️] recycling symbol
+[♻] recycling symbol
+[⚜️] fleur-de-lis
+[⚜] fleur-de-lis
+[🔱] trident emblem
+[📛] name badge
+[🔰] Japanese symbol for beginner
+[⭕] hollow red circle
+[✅] check mark button
+[☑️] check box with check
+[☑] check box with check
+[✔️] check mark
+[✔] check mark
+[❌] cross mark
+[❎] cross mark button
+[➰] curly loop
+[➿] double curly loop
+[〽️] part alternation mark
+[〽] part alternation mark
+[✳️] eight-spoked asterisk
+[✳] eight-spoked asterisk
+[✴️] eight-pointed star
+[✴] eight-pointed star
+[❇️] sparkle
+[❇] sparkle
+[©️] copyright
+[©] copyright
+[®️] registered
+[®] registered
+[™️] trade mark
+[™] trade mark
+[🫟] splatter
+[#️⃣] keycap: #
+[#⃣] keycap: #
+[*️⃣] keycap: *
+[*⃣] keycap: *
+[0️⃣] keycap: 0
+[0⃣] keycap: 0
+[1️⃣] keycap: 1
+[1⃣] keycap: 1
+[2️⃣] keycap: 2
+[2⃣] keycap: 2
+[3️⃣] keycap: 3
+[3⃣] keycap: 3
+[4️⃣] keycap: 4
+[4⃣] keycap: 4
+[5️⃣] keycap: 5
+[5⃣] keycap: 5
+[6️⃣] keycap: 6
+[6⃣] keycap: 6
+[7️⃣] keycap: 7
+[7⃣] keycap: 7
+[8️⃣] keycap: 8
+[8⃣] keycap: 8
+[9️⃣] keycap: 9
+[9⃣] keycap: 9
+[🔟] keycap: 10
+[🔠] input latin uppercase
+[🔡] input latin lowercase
+[🔢] input numbers
+[🔣] input symbols
+[🔤] input latin letters
+[🅰️] A button (blood type)
+[🅰] A button (blood type)
+[🆎] AB button (blood type)
+[🅱️] B button (blood type)
+[🅱] B button (blood type)
+[🆑] CL button
+[🆒] COOL button
+[🆓] FREE button
+[ℹ️] information
+[ℹ] information
+[🆔] ID button
+[Ⓜ️] circled M
+[Ⓜ] circled M
+[🆕] NEW button
+[🆖] NG button
+[🅾️] O button (blood type)
+[🅾] O button (blood type)
+[🆗] OK button
+[🅿️] P button
+[🅿] P button
+[🆘] SOS button
+[🆙] UP! button
+[🆚] VS button
+[🈁] Japanese “here” button
+[🈂️] Japanese “service charge” button
+[🈂] Japanese “service charge” button
+[🈷️] Japanese “monthly amount” button
+[🈷] Japanese “monthly amount” button
+[🈶] Japanese “not free of charge” button
+[🈯] Japanese “reserved” button
+[🉐] Japanese “bargain” button
+[🈹] Japanese “discount” button
+[🈚] Japanese “free of charge” button
+[🈲] Japanese “prohibited” button
+[🉑] Japanese “acceptable” button
+[🈸] Japanese “application” button
+[🈴] Japanese “passing grade” button
+[🈳] Japanese “vacancy” button
+[㊗️] Japanese “congratulations” button
+[㊗] Japanese “congratulations” button
+[㊙️] Japanese “secret” button
+[㊙] Japanese “secret” button
+[🈺] Japanese “open for business” button
+[🈵] Japanese “no vacancy” button
+[🔴] red circle
+[🟠] orange circle
+[🟡] yellow circle
+[🟢] green circle
+[🔵] blue circle
+[🟣] purple circle
+[🟤] brown circle
+[⚫] black circle
+[⚪] white circle
+[🟥] red square
+[🟧] orange square
+[🟨] yellow square
+[🟩] green square
+[🟦] blue square
+[🟪] purple square
+[🟫] brown square
+[⬛] black large square
+[⬜] white large square
+[◼️] black medium square
+[◼] black medium square
+[◻️] white medium square
+[◻] white medium square
+[◾] black medium-small square
+[◽] white medium-small square
+[▪️] black small square
+[▪] black small square
+[▫️] white small square
+[▫] white small square
+[🔶] large orange diamond
+[🔷] large blue diamond
+[🔸] small orange diamond
+[🔹] small blue diamond
+[🔺] red triangle pointed up
+[🔻] red triangle pointed down
+[💠] diamond with a dot
+[🔘] radio button
+[🔳] white square button
+[🔲] black square button

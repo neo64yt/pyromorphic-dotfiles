@@ -1,0 +1,63 @@
+unbind-key all
+unbind-mouse all
+
+fontname "sans-serif:size=11"
+borderwidth 6
+color activeborder "#12846e"
+color inactiveborder "#272a34"
+color menubg "#000000"
+color font "#ffffff"
+color menufg "#272a34"
+color selfont "#12846e"
+sticky yes
+gap 50 0 0 0
+
+###############
+# Keybindings #
+###############
+
+# Window & workspace management
+bind-key 4-m window-maximize
+bind-key 4-x window-hide
+bind-key 4S-f window-fullscreen
+bind-key 4S-x window-close
+bind-key 4S-q quit
+bind-key 4CS-q restart
+bind-key 4-1 group-only-1
+bind-key 4-2 group-only-2
+bind-key 4-3 group-only-3
+bind-key 4-4 group-only-4
+bind-key 4-5 group-only-5
+bind-key 4-6 group-only-6
+bind-key 4-0 group-toggle-all
+bind-key 4S-1 window-movetogroup-1
+bind-key 4S-2 window-movetogroup-2
+bind-key 4S-3 window-movetogroup-3
+bind-key 4S-4 window-movetogroup-4
+bind-key 4S-5 window-movetogroup-5
+bind-key 4S-6 window-movetogroup-6
+
+bind-key 4-r "desktopmenu"
+bind-key 4-p "cmdrun"
+bind-key 4-e "emojisel"
+bind-key 4S-Return "sh -c $TERMINAL"
+bind-key 4-w "sh -c $BROWSER"
+bind-key 4S-s "sh -c $SETTINGS_MGR"
+bind-key 4S-m "sh -c $QUICKMENU"
+
+
+bind-key XF86PowerOff "sh -c $SESSION_MGR"
+bind-key XF86AudioRaiseVolume "volumectl up"
+bind-key XF86AudioLowerVolume "volumectl down"
+bind-key XF86AudioMute "volumectl mute"
+bind-key XF86MonBrightnessUp "blctl up"
+bind-key XF86MonBrightnessDown "blctl down"
+bind-key Print "sh -c $SCREENSHOOTER"
+
+##################
+# Mouse bindings #
+##################
+
+bind-mouse 4-1 window-move
+bind-mouse 4-3 window-resize
+bind-mouse 3 menu-window

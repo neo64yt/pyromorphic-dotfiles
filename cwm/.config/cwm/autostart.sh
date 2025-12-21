@@ -4,8 +4,6 @@
 #        Autostart (dwm)        #
 #################################
 
-wmbar="slstatus"
-
 eww daemon
 eww open tray
 hsetroot -fill $HOME/Pictures/oneshot-twm-courtyard.png
@@ -14,7 +12,7 @@ hsetroot -fill $HOME/Pictures/oneshot-twm-courtyard.png
 picom &
 xidlehook --detect-sleep --not-when-audio --timer 1200 'loginctl suspend' '' &
 xscreensaver -nosplash &
-$wmbar 2> /dev/null &
+polybar &
 
 
 

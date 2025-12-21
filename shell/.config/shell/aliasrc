@@ -10,7 +10,7 @@
 
 alias rm="rm -rI" # Ask before deleting files recursively
 alias ls="ls -A --color=auto" # List all files including hidden ones
-alias grep="rg -p --vimgrep -i" # Grep
+alias grep="grep -i" # Grep
 alias clean-cache="rm -rf $XDG_CACHE_HOME/*" # Clean home directory cache
 alias cp="cp -r" # Copy files
 alias ..="cd .." # Go to parent directory 
@@ -22,6 +22,7 @@ alias push="git push" # Push Git commits to upstream repository
 alias pull="git pull" # Sync local Git repository with upstream
 alias :x="exit" # Vim-like exit :P
 alias musicdl="yt-dlp -x -f bestaudio/best --extract-audio --audio-format opus --audio-quality 0"
+alias swallow="devour"
 
 
 

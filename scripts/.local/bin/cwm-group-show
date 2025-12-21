@@ -1,0 +1,16 @@
+#!/bin/sh
+
+trap 'exec $0' HUP
+
+group_id() {
+    GROUP_ID=$(xprop -root 32c '\t$0' _NET_CURRENT_DESKTOP | cut -f 2)
+}
+
+while true; do 
+    group_id
+    printf "[${GROUP_ID}]"
+done
+
+
+
+# vim: ft=sh

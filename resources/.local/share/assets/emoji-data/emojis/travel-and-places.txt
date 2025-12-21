@@ -1,0 +1,269 @@
+# List generated from emoji data files by https://github.com/Mange/emoji-data
+# Travel & Places
+[🌍] globe showing Europe-Africa
+[🌎] globe showing Americas
+[🌏] globe showing Asia-Australia
+[🌐] globe with meridians
+[🗺️] world map
+[🗺] world map
+[🗾] map of Japan
+[🧭] compass
+[🏔️] snow-capped mountain
+[🏔] snow-capped mountain
+[⛰️] mountain
+[⛰] mountain
+[🌋] volcano
+[🗻] mount fuji
+[🏕️] camping
+[🏕] camping
+[🏖️] beach with umbrella
+[🏖] beach with umbrella
+[🏜️] desert
+[🏜] desert
+[🏝️] desert island
+[🏝] desert island
+[🏞️] national park
+[🏞] national park
+[🏟️] stadium
+[🏟] stadium
+[🏛️] classical building
+[🏛] classical building
+[🏗️] building construction
+[🏗] building construction
+[🧱] brick
+[🪨] rock
+[🪵] wood
+[🛖] hut
+[🏘️] houses
+[🏘] houses
+[🏚️] derelict house
+[🏚] derelict house
+[🏠] house
+[🏡] house with garden
+[🏢] office building
+[🏣] Japanese post office
+[🏤] post office
+[🏥] hospital
+[🏦] bank
+[🏨] hotel
+[🏩] love hotel
+[🏪] convenience store
+[🏫] school
+[🏬] department store
+[🏭] factory
+[🏯] Japanese castle
+[🏰] castle
+[💒] wedding
+[🗼] Tokyo tower
+[🗽] Statue of Liberty
+[⛪] church
+[🕌] mosque
+[🛕] hindu temple
+[🕍] synagogue
+[⛩️] shinto shrine
+[⛩] shinto shrine
+[🕋] kaaba
+[⛲] fountain
+[⛺] tent
+[🌁] foggy
+[🌃] night with stars
+[🏙️] cityscape
+[🏙] cityscape
+[🌄] sunrise over mountains
+[🌅] sunrise
+[🌆] cityscape at dusk
+[🌇] sunset
+[🌉] bridge at night
+[♨️] hot springs
+[♨] hot springs
+[🎠] carousel horse
+[🛝] playground slide
+[🎡] ferris wheel
+[🎢] roller coaster
+[💈] barber pole
+[🎪] circus tent
+[🚂] locomotive
+[🚃] railway car
+[🚄] high-speed train
+[🚅] bullet train
+[🚆] train
+[🚇] metro
+[🚈] light rail
+[🚉] station
+[🚊] tram
+[🚝] monorail
+[🚞] mountain railway
+[🚋] tram car
+[🚌] bus
+[🚍] oncoming bus
+[🚎] trolleybus
+[🚐] minibus
+[🚑] ambulance
+[🚒] fire engine
+[🚓] police car
+[🚔] oncoming police car
+[🚕] taxi
+[🚖] oncoming taxi
+[🚗] automobile
+[🚘] oncoming automobile
+[🚙] sport utility vehicle
+[🛻] pickup truck
+[🚚] delivery truck
+[🚛] articulated lorry
+[🚜] tractor
+[🏎️] racing car
+[🏎] racing car
+[🏍️] motorcycle
+[🏍] motorcycle
+[🛵] motor scooter
+[🦽] manual wheelchair
+[🦼] motorized wheelchair
+[🛺] auto rickshaw
+[🚲] bicycle
+[🛴] kick scooter
+[🛹] skateboard
+[🛼] roller skate
+[🚏] bus stop
+[🛣️] motorway
+[🛣] motorway
+[🛤️] railway track
+[🛤] railway track
+[🛢️] oil drum
+[🛢] oil drum
+[⛽] fuel pump
+[🛞] wheel
+[🚨] police car light
+[🚥] horizontal traffic light
+[🚦] vertical traffic light
+[🛑] stop sign
+[🚧] construction
+[⚓] anchor
+[🛟] ring buoy
+[⛵] sailboat
+[🛶] canoe
+[🚤] speedboat
+[🛳️] passenger ship
+[🛳] passenger ship
+[⛴️] ferry
+[⛴] ferry
+[🛥️] motor boat
+[🛥] motor boat
+[🚢] ship
+[✈️] airplane
+[✈] airplane
+[🛩️] small airplane
+[🛩] small airplane
+[🛫] airplane departure
+[🛬] airplane arrival
+[🪂] parachute
+[💺] seat
+[🚁] helicopter
+[🚟] suspension railway
+[🚠] mountain cableway
+[🚡] aerial tramway
+[🛰️] satellite
+[🛰] satellite
+[🚀] rocket
+[🛸] flying saucer
+[🛎️] bellhop bell
+[🛎] bellhop bell
+[🧳] luggage
+[⌛] hourglass done
+[⏳] hourglass not done
+[⌚] watch
+[⏰] alarm clock
+[⏱️] stopwatch
+[⏱] stopwatch
+[⏲️] timer clock
+[⏲] timer clock
+[🕰️] mantelpiece clock
+[🕰] mantelpiece clock
+[🕛] twelve o’clock
+[🕧] twelve-thirty
+[🕐] one o’clock
+[🕜] one-thirty
+[🕑] two o’clock
+[🕝] two-thirty
+[🕒] three o’clock
+[🕞] three-thirty
+[🕓] four o’clock
+[🕟] four-thirty
+[🕔] five o’clock
+[🕠] five-thirty
+[🕕] six o’clock
+[🕡] six-thirty
+[🕖] seven o’clock
+[🕢] seven-thirty
+[🕗] eight o’clock
+[🕣] eight-thirty
+[🕘] nine o’clock
+[🕤] nine-thirty
+[🕙] ten o’clock
+[🕥] ten-thirty
+[🕚] eleven o’clock
+[🕦] eleven-thirty
+[🌑] new moon
+[🌒] waxing crescent moon
+[🌓] first quarter moon
+[🌔] waxing gibbous moon
+[🌕] full moon
+[🌖] waning gibbous moon
+[🌗] last quarter moon
+[🌘] waning crescent moon
+[🌙] crescent moon
+[🌚] new moon face
+[🌛] first quarter moon face
+[🌜] last quarter moon face
+[🌡️] thermometer
+[🌡] thermometer
+[☀️] sun
+[☀] sun
+[🌝] full moon face
+[🌞] sun with face
+[🪐] ringed planet
+[⭐] star
+[🌟] glowing star
+[🌠] shooting star
+[🌌] milky way
+[☁️] cloud
+[☁] cloud
+[⛅] sun behind cloud
+[⛈️] cloud with lightning and rain
+[⛈] cloud with lightning and rain
+[🌤️] sun behind small cloud
+[🌤] sun behind small cloud
+[🌥️] sun behind large cloud
+[🌥] sun behind large cloud
+[🌦️] sun behind rain cloud
+[🌦] sun behind rain cloud
+[🌧️] cloud with rain
+[🌧] cloud with rain
+[🌨️] cloud with snow
+[🌨] cloud with snow
+[🌩️] cloud with lightning
+[🌩] cloud with lightning
+[🌪️] tornado
+[🌪] tornado
+[🌫️] fog
+[🌫] fog
+[🌬️] wind face
+[🌬] wind face
+[🌀] cyclone
+[🌈] rainbow
+[🌂] closed umbrella
+[☂️] umbrella
+[☂] umbrella
+[☔] umbrella with rain drops
+[⛱️] umbrella on ground
+[⛱] umbrella on ground
+[⚡] high voltage
+[❄️] snowflake
+[❄] snowflake
+[☃️] snowman
+[☃] snowman
+[⛄] snowman without snow
+[☄️] comet
+[☄] comet
+[🔥] fire
+[💧] droplet
+[🌊] water wave

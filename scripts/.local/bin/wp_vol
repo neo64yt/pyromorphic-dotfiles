@@ -1,0 +1,36 @@
+#!/bin/sh
+
+case "$BUTTON" in 
+    1) volumectl mute ;;
+    3) pavucontrol ;;
+esac
+
+dev_id="@DEFAULT_SINK@"
+
+get_volume() {
+    wpctl get-volume "$dev_id" | sed 's/Volume: //' | awk '{print $1*100}'
+}
+
+is_mute() {
+    wpctl get-volume "$dev_id" | grep "MUTED" > /dev/null
+}
+
+volume_print() {
+    volume="$(get_volume)"
+
+    if [ "$volume" -lt 50 ]; then
+        icon="󰕿"
+    elif [ "$volume" -ge 50 ] && [ "$volume" -lt 80 ]; then
+        icon="󰖀"
+    else
+        icon="󰕾"
+    fi
+
+    echo "$icon $volume%"
+}
+
+if is_mute; then
+    echo "󰸈 [MUTED]"
+else
+    volume_print
+fi

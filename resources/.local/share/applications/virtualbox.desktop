@@ -22,6 +22,7 @@ Comment[ko]=가상 머신
 Comment[pl]=Uruchamianie wielu systemów wirtualnych na jednym komputerze gospodarza
 Comment[ru]=Запуск нескольких виртуальных машин на одном компьютере
 Comment[sv]=Kör flera virtuella system på en enda värddator
+Hidden=true
 
 [Desktop Action Manager]
 Exec=vbox.sh
