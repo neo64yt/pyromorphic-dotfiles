@@ -61,4 +61,7 @@ case $1 in
 	;;
 esac
 
-pkill -RTMIN+10 dwmblocks
+pgrep polybar > /dev/null && polybar-msg action "#volume.hook.0"
+
+
+# vim: ft=sh

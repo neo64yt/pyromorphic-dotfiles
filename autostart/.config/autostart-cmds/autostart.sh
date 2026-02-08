@@ -14,7 +14,7 @@ dex -a -s $XDG_CONFIG_HOME/nonDE-autostart:/etc/xdg/autostart &
 
 # Daemons 
 #pipewire-runner &
-#/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 pgrep xsettingsd >/dev/null && pkill xsettingsd # Refresh XSettingd by killing it before starting it again
 if [ -z "$WAYLAND_DISPLAY" ]; then
    xsettingsd -c $XDG_CONFIG_HOME/xsettingsd/xsettingsd-x11.conf &

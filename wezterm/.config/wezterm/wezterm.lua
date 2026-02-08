@@ -25,6 +25,10 @@ config.font = wezterm.font_with_fallback {
     'Noto Sans Mono CJK JP',
     'Twemoji'
 }
+config.tiling_desktop_environments = {
+    'X11 dwm',
+    'Wayland'
+}
 config.font_size = 11.0
 config.bidi_enabled = true
 config.bidi_direction = "LeftToRight"

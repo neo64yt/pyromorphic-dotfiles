@@ -70,7 +70,7 @@ export SCREENSHOOTER="screenshot"
 ## DEFAULT PROGRAMS ##
 export TERMINAL="wezterm"
 export EDITOR="nvim"
-export BROWSER="floorp"
+#export BROWSER="chromium"
 #export LOCKER="xscreensaver-command -lock"
 
 ## SETTINGS MANAGER ##

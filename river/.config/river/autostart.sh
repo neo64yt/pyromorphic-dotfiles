@@ -15,7 +15,6 @@ sway-audio-idle-inhibit &
 wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
 swaybg --image $HOME/Pictures/winxp_bliss.jpg &
-waybar --config $XDG_CONFIG_HOME/waybar/river.config &
 #dwlb -ipc \
 #    -tags 6 " 󰋜 " " 󰺶 " " 󰆍 " " 󰆌 " " 󰐋 " " 󰠔 " \
 #    -active-bg-color "#272a34" \
