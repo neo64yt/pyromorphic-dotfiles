@@ -8,6 +8,7 @@
 #                              #
 ################################
 
+set -x
 
 # Defaults
 prompt="󱍕 Quick access:"
@@ -20,19 +21,20 @@ list_choices(){
 󰆍 Run
 󰐦 System
 󰱨 Emojis
+󱕴 Passwords
 󰢻 Settings
 EOF
 }
 
 if [ -z "$WAYLAND_DISPLAY" ]; then
-    menu_handler(){ 
-        dmenu -l $lines -p "$prompt" 
-    }
+    ROFI_EXTRA_OPTS="-dpi 0 -theme dmenu-x11" 
 else
-    menu_handler(){ 
-        rofi -dmenu -p "$prompt" -l $lines 
-    }
+    ROFI_EXTRA_OPTS="" 
 fi
+
+menu_handler() {
+    rofi -dmenu -p "$prompt" -l $lines $ROFI_EXTRA_OPTS
+}
 
 choice=$(list_choices | menu_handler)
 
@@ -41,6 +43,7 @@ case "$choice" in
   	"󰆍 Run") cmdrun ;;
   	"󰐦 System") sessionmgr ;;
   	"󰱨 Emojis") emojisel ;;
+    "󱕴 Passwords") rofi-rbw-wrap ;;
   	"󰢻 Settings") set-mgr ;;
 	*) exit 1 ;;
 esac

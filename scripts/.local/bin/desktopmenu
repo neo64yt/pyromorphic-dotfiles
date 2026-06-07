@@ -10,15 +10,16 @@
 
 
 # Defaults
-prompt="󰀻 Applications:"
-lines=12
+#prompt="󰀻 Applications:"
+#lines=12
 
 if [ -z "$WAYLAND_DISPLAY" ]; then
-    j4-dmenu-desktop --no-generic --use-xdg-de --dmenu="dmenu -l $lines -p '$prompt'" --term="wezterm"
+    ROFI_EXTRA_OPTS="-dpi 0 -theme dmenu-x11" 
 else
-    rofi -show drun
+    ROFI_EXTRA_OPTS="" 
 fi
 
+rofi -show drun $ROFI_EXTRA_OPTS
 
 
 # vim: ft=sh

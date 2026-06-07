@@ -38,6 +38,11 @@ else
     export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship.toml"
 fi
 
+if [ -z "$SSH_AUTH_SOCK" ] || [ -z "$SSH_AGENT_PID" ]; then 
+    #eval $(ssh-agent -s)
+    export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/rbw/ssh-agent-socket"
+fi
+
 if [ -z "$GPG_TTY" ]; then 
     export GPG_TTY="$(tty)"
     gpg-connect-agent updatestartuptty /bye>/dev/null
@@ -56,7 +61,7 @@ export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under til
 export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 export XCURSOR_PATH="/usr/share/icons"
-export XCURSOR_THEME="Bibata-Original-Ice"
+export XCURSOR_THEME="breeze_cursors"
 #export XCURSOR_SIZE="48"
 export OSU_EXTERNAL_UPDATE_STREAM="lazer"
 
@@ -68,7 +73,7 @@ export EMOJI_PICKER="emojisel"
 export SCREENSHOOTER="screenshot"
 
 ## DEFAULT PROGRAMS ##
-export TERMINAL="wezterm"
+export TERMINAL="kitty"
 export EDITOR="nvim"
 #export BROWSER="chromium"
 #export LOCKER="xscreensaver-command -lock"

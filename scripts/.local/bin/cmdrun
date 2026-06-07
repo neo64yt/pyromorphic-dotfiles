@@ -1,14 +1,15 @@
 #!/bin/sh
 
 # Defaults
-prompt="󰆍 Run:"
-lines=12
+#prompt="󰆍 Run:"
+#lines=12
 
 if [ -z "$WAYLAND_DISPLAY" ]; then
-    dmenu_run -l $lines -p "$prompt"
+    ROFI_EXTRA_OPTS="-dpi 0 -theme dmenu-x11"
 else
-    rofi -show run 
+    ROFI_EXTRA_OPTS=""
 fi
 
+rofi -show run $ROFI_EXTRA_OPTS
 
 # vim: ft=sh

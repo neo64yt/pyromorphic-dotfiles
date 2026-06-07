@@ -6,13 +6,38 @@
     //"mode": "dock",
     // "width": 120, // Waybar width
     // Choose the order of the modules
-    "modules-center": ["clock"],
-    "modules-right": ["cpu", "memory", "temperature", "wireplumber", "backlight", "battery", "battery#bat2"],
+    "on-sigusr1": "noop",
+    "on-sigusr2": "noop",
+    "reload_style_on_change": true,
+    "modules-left": [ "custom/quickmenu", "wlr/taskbar" ],
+    "modules-center": ["ext/workspaces", "clock"],
+    "modules-right": ["wireplumber", "backlight", "battery", "tray" ],
     // Modules configuration
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-middle": "minimize",
+        "on-click-right": "close",
+        "icon-size": 18
+    },
+
     "custom/quickmenu": {
         "on-click": "prerun-quickmenu",
         "format": "󰻀",
         "tooltip-format": "Quick access"
+    },
+
+    "custom/sb-toggle": {
+        "on-click": "killall -SIGUSR1 waybar",
+        "format": "󰛽",
+        "tooltip-format": "Toggle sidebar"
+    },
+
+    "ext/workspaces": {
+        "format": "",
+        "on-click": "activate",
+        "sort-by-id": true,
+        "active-only": true
     },
 
     "clock": {
@@ -58,9 +83,10 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
-        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"]
+        "format-icons": {
+            "default": ["󰁺", "󰁼", "󰁾", "󰂀", "󰁹"],
+            "charging": ["󱐋󰁺", "󱐋󰁼", "󱐋󰁾", "󱐋󰂀", "󱐋󰁹"]
+        }
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -75,7 +101,7 @@
     "wireplumber": {
         "format": "{icon} {volume}%",
         "tooltip-format": "{icon} {volume}%",
-        "format-muted": "󰝟",
+        "format-muted": "󰝟 [MUTED]",
         "format-icons": ["󰖀", "󰕾"],
         "on-click": "wpctl set-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol"
@@ -89,6 +115,13 @@
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
         "tooltip-format": "{temperatureC}°C"
+    },
+
+    "tray": {
+        "icon-size": 15,
+        "spacing": 3,
+        "show-passive-items": true
     }
-},
+
+}
 

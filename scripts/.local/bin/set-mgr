@@ -40,14 +40,14 @@ EOF
 }
 
 if [ -z "$WAYLAND_DISPLAY" ]; then
-    menu_handler() {
-        dmenu -l $lines -p "$prompt"
-    }
+    ROFI_EXTRA_OPTS="-dpi 0 -theme dmenu-x11"
 else
-    menu_handler() {
-        rofi -dmenu -p "$prompt" -l $lines
-    }
+    ROFI_EXTRA_OPTS=""
 fi
+
+menu_handler() {
+    rofi -dmenu -p "$prompt" -l $lines $ROFI_EXTRA_OPTS
+}
 
 # Command
 choice=$(list_choices | menu_handler)

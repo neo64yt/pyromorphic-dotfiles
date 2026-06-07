@@ -1,5 +1,11 @@
 #!/bin/sh 
 
+status_file="/tmp/screen_status"
+
+if [ -f "$status_file" ] && ! grep "off" $status_file; then
+    rm $status_file
+fi
+
 if [ "$XDG_CURRENT_DESKTOP" = "niri" ]; then
     case "$@" in 
         "on") niri msg output eDP-1 on ;;
@@ -14,5 +20,15 @@ else
     esac
 fi
 
+case "$@" in 
+    "on")
+        echo "on" > $status_file
+    ;;
+    "off")
+        pgrep -f linux-wallpaperengine >/dev/null && killall linux-wallpaperengine
+        touch $status_file
+        echo "off" > $status_file
+    ;;
+esac
 
 # vim: ft=sh

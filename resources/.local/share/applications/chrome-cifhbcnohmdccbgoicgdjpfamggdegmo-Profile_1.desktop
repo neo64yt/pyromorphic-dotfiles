@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Microsoft Teams (PWA)
+Exec=/usr/bin/chromium "--profile-directory=Profile 1" --app-id=cifhbcnohmdccbgoicgdjpfamggdegmo
+Icon=chrome-cifhbcnohmdccbgoicgdjpfamggdegmo-Profile_1
+StartupWMClass=crx_cifhbcnohmdccbgoicgdjpfamggdegmo

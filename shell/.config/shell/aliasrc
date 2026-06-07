@@ -24,6 +24,9 @@ alias :x="exit" # Vim-like exit :P
 alias musicdl="yt-dlp -x -f bestaudio/best --extract-audio --audio-format opus --audio-quality 0"
 alias swallow="devour"
 
+if [ "$TERM" = "xterm-kitty" ]; then
+    alias ssh="kitten ssh"
+fi
 
 
 # vim: ft=sh

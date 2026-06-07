@@ -21,3 +21,4 @@ resources/.local/share/applications/waydroid*.desktop
 resources/.local/share/applications/Waydroid.desktop
 
 shell/.config/shell/zsh/.zdirs
+shell/.config/shell/zsh/plugins/*

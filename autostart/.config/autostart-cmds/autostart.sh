@@ -22,12 +22,17 @@ else
     xsettingsd -c $XDG_CONFIG_HOME/xsettingsd/xsettingsd.conf &
 fi
 
+/usr/bin/gnome-keyring-daemon --start --components=secrets &
+/usr/bin/gnome-keyring-daemon --start --components=pkcs11 &
+
 dunst &
 thunar --daemon &
 mpd &
 unclutter --start-hidden &
 copyq &
 /usr/bin/kdeconnect-indicator &
+netbird-ui &
+rbw-agent
 
 # Set backlight brightness to 50%
 brightnessctl set 50%

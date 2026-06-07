@@ -1,7 +1,7 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: 'Material Design Icons', 'JetBrainsMono Nerd Font';  
+    font-family: 'Material Design Icons', 'JetBrains Mono';  
     font-size: 13px;
     min-height: 0;
 }
@@ -15,58 +15,67 @@ window#waybar.hidden {
     opacity: 0.0;
 }
 
-#custom-quickmenu {
+#custom-quickmenu, #idle_inhibitor {
     padding: 0 10px;
     margin: 3px;
 }
 
-#idle_inhibitor {
-    padding: 10px 0;
+#custom-sb-toggle {
+    padding: 0 10px;
     margin: 3px;
 }
 
-#custom-quickmenu:hover, #idle_inhibitor:hover {
+#custom-quickmenu:hover, #custom-sb-toggle:hover, #idle_inhibitor:hover, #taskbar button:hover {
     background: #272a34;
     color: #12846e;
     border-radius: 10px;
 }
 
 #taskbar {
-    padding: 10px 0;
+    padding: 3px 0;
     background: transparent;
 }
 
 #taskbar button {
     color: #cccccc;
-    padding: 10px 0;
-    margin: 0;
-    border-right: 3px solid #cccccc;
+    padding: 3px;
+    margin: 1px;
 }
 
 #taskbar button.active {
     background: #272A34;
     color: #12846e;
-    margin: 3px 0;
+    margin: 1px 0;
     border-radius: 10px;
-    border-right: 3px solid #12846e;
+    border: 1px solid #12846e;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-#workspaces button {
-    padding: 0 5px;
+#workspaces {
+    padding: 7px 1px;
+    margin: 0px;
     background: transparent;
-    color: #ffffff;
-    border-bottom: 3px solid #ffffff;
 }
 
-#workspaces button.empty {
-    border-bottom: hidden;
-}
-
-#workspaces button.focused {
+#workspaces button {
+    padding: 3px;
     background: #272a34;
-    color: #12846e;
-    border-bottom: 3px solid #12846e;
+    color: #ffffff;
+    border-radius: 100px;
+}
+
+#workspaces button.active {
+    background: #12846e;
+    color: #272a34;
+    padding: 3px 10px;
+}
+
+#workspaces button#niri-workspace-7, #workspaces button#niri-workspace-7 label {
+    background: none;
+    border: none;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
 }
 
 #workspaces button.urgent {
@@ -99,37 +108,33 @@ window#waybar.hidden {
 }
 
 #battery, #backlight, #network, #wireplumber, #custom-media, #cpu, #temperature, #memory, #mode {
-    padding: 0 10px;
+    padding: 0 1px;
     margin: 0 5px;
-    border-bottom: 3px solid;
 }
 
 #tray {
-    padding: 10px 0;
+    padding: 0 1px;
     margin: 5px 0;
     border-right: 3px solid;
 }
 
 #clock {
-    padding: 5px 10px;
+    padding: 1px 10px;
     margin: 5px;
     color: #ffffff;
     border-radius: 15px;
 }
 
 #clock:hover {
-    border-color: #12846E;
     background: #12846E;
 }
 
 #battery {
-    border-color: #ffffff;
-    color: #ffffff;
+    color: #0fbdd1;
 }
 
 #battery.charging {
-    border-color: #26A65B;
-    color: #26A65B;
+    color: #2a9c5f;
 }
 
 @keyframes blink {
@@ -140,8 +145,7 @@ window#waybar.hidden {
 }
 
 #battery.critical:not(.charging) {
-    border-color: #f53c3c;
-    color: #f53c3c;
+    color: #ed0c1f;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -150,18 +154,15 @@ window#waybar.hidden {
 }
 
 #cpu {
-    border-color: #2ecc71;
-    color: #2ecc71;
+    color: #ede20c;
 }
 
 #memory {
-    border-color: #9b59b6;
-    color: #9b59b6;
+    color: #a718db;
 }
 
 #backlight {
-    border-color: yellow;
-    color: yellow;
+    color: #85e21b;
 }
 
 #network {
@@ -173,12 +174,10 @@ window#waybar.hidden {
 }
 
 #wireplumber {
-    border-color: #f1c40f;
-    color: #f1c40f;
+    color: #1075e8;
 }
 
 #wireplumber.muted {
-    border-color: #f53c3c;
     color: #f53c3c;
 }
 
@@ -196,12 +195,10 @@ window#waybar.hidden {
 }
 
 #temperature {
-    border-color: #f0932b;
     color: #f0932b;
 }
 
 #temperature.critical {
-    border-color: #eb4d4b;
     color: #eb4d4b;
 }
 

@@ -1,0 +1,38 @@
+#!/bin/sh
+
+#    This file is part of Glorious-Dotfiles.
+#
+#    Glorious-Dotfiles is free software: you can redistribute it and/or modify it under
+#    the terms of the GNU General Public License as published by the
+#    Free Software Foundation, either version 3 of the License, or (at your
+#    option) any later version.
+#
+#    Glorious-Dotfiles is distributed in the hope that it will be useful, but
+#    WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+#    General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program. If not, see https://www.gnu.org/licenses/.
+
+# Managing sessions
+
+# Defaults
+prompt="Dunst Action Handler:"
+lines=5
+
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    ROFI_EXTRA_OPTS="-dpi 0 -theme dmenu-x11"
+else
+    ROFI_EXTRA_OPTS=""
+fi
+
+menu_handler() {
+    rofi -dmenu -p "$prompt" -l $lines $ROFI_EXTRA_OPTS
+}
+
+menu_handler
+
+
+
+# vim: ft=sh

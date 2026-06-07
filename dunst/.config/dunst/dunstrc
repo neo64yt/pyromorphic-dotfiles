@@ -146,7 +146,7 @@ separator_color = frame
 startup_notification = false
 
 # dmenu path.
-dmenu = dmenu -l 5 -p dunst:
+dmenu = dunstmenu
 
 # Browser for opening urls in context menu.
 browser = xdg-open

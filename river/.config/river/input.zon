@@ -1,0 +1,5 @@
+.{
+    .input_device_rules = .{
+        .{ .repeat_info = .{ .rate = 50, .delay = 300 } },
+    },
+}

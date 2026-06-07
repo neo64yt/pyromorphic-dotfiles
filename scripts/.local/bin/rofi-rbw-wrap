@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Defaults
+prompt="󱕴 Passwords:"
+#lines=12
+
+if [ -z "$WAYLAND_DISPLAY" ]; then
+    ROFI_EXTRA_OPTS="-dpi 0 -theme dmenu-x11"
+else
+    ROFI_EXTRA_OPTS=""
+fi
+
+rofi-rbw -r "$prompt" --selector-args "$ROFI_EXTRA_OPTS"
+
+# vim: ft=sh

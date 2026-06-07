@@ -1,0 +1,16 @@
+#!/bin/sh 
+
+screen_status_file="/tmp/screen_status"
+
+linux-wallpaperengine "$@"
+
+while [ -f "$screen_status_file" ] && grep "off" $screen_status_file >/dev/null; do 
+    sleep 1
+    if [ -f "$screen_status_file" ] && grep "on" $screen_status_file >/dev/null; then
+        exec "$0" "$@"
+    fi 
+done
+
+
+
+# vim: ft=sh
