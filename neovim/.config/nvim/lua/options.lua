@@ -18,6 +18,8 @@ o.smarttab = true
 o.tabstop = 4
 o.shiftwidth = 4
 o.updatetime = 100
+o.spell = true
+vim.opt.spelllang = { 'en', 'ms' }
 o.arabicshape = false
 
 if g.neovide then

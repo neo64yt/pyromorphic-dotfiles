@@ -7,27 +7,14 @@
 wlr-randr --output eDP-1 --scale 1.75
 dbus-update-activation-environment --all
 xprop -root -format _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
-xsetroot -xcf /usr/share/icons/Bibata-Original-Ice/cursors/left_ptr 44
 echo "Xft.dpi: 192" | xrdb -merge
 swayidle -w &
-sway-audio-idle-inhibit &
-swaybg --image $HOME/Pictures/winxp_bliss.jpg &
+wayland-pipewire-idle-inhibit &
+swaybg --image $HOME/Pictures/neurofumo-swarm-attack.jpg --mode fit --color 02231c &
 wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
 #waybar --config $XDG_CONFIG_HOME/waybar/river.config &
-#dwlb -ipc \
-#    -tags 6 " 󰋜 " " 󰺶 " " 󰆍 " " 󰆌 " " 󰐋 " " 󰠔 " \
-#    -active-bg-color "#272a34" \
-#    -active-fg-color "#12846e" \
-#    -inactive-bg-color "#000000" \
-#    -inactive-fg-color "#ffffff" \
-#    -occupied-bg-color "#000000" \
-#    -occupied-fg-color "#ffffff" \
-#    -middle-bg-color "#000000" \
-#    -middle-bg-color-selected "#272a34" \
-#    -vertical-padding 3 \
-#    -font "JetBrainsMono Nerd Font:size=11" &
-#slstatus -s | dwlb -status-stdin all &
+
 
 
 # vim: ft=sh

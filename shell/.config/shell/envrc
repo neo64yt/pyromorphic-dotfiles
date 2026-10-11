@@ -19,7 +19,12 @@ export XDG_STATE_HOME="${HOME}/.local/state" # XDG state directory (user)
 #################################
 #      GENERIC CONFIGURATION    #
 #################################
-export PATH="${HOME}/.local/bin:${HOME}/Games/gamelaunch-scripts:${PATH}" # Binaries path
+export ANDROID_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/dev-sdk/android"
+#export ANDROID_HOME="${HOME}/Android/Sdk"
+export ANDROID_USER_HOME="${XDG_CONFIG_HOME}/android"
+export ANDROID_EMULATOR_HOME="$ANDROID_USER_HOME"
+export ANDROID_AVD_HOME="$ANDROID_USER_HOME"
+export PATH="${HOME}/.local/bin:${HOME}/Games/gamelaunch-scripts:${XDG_DATA_HOME}/dev-sdk/flutter/bin:${ANDROID_HOME}/cmdline-tools/latest/bin:${ANDROID_HOME}/platform-tools:${ANDROID_HOME}/emulator:${PATH}" # Binaries path
 export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/shell/zsh" # Zsh config
 export HISTFILE="${XDG_STATE_HOME:-$HOME/.local/state}/shell/zsh/zsh_history" # History file for zsh
 export HISTSIZE="5000" # Zsh history file size 
@@ -32,11 +37,11 @@ export MANPAGER="${PAGER}" # Use default pager
 export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg" # GnuPG directory
 export VISUAL="nvim"
 
-if tty | grep "/dev/tty" > /dev/null ; then
-    export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship-tty.toml"
-else
-    export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship.toml"
-fi
+#if tty | grep "/dev/tty" > /dev/null ; then
+#    export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship-tty.toml"
+#else
+#    export STARSHIP_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/shell/starship.toml"
+#fi
 
 if [ -z "$SSH_AUTH_SOCK" ] || [ -z "$SSH_AGENT_PID" ]; then 
     #eval $(ssh-agent -s)
@@ -58,7 +63,7 @@ export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc" # Wget config file
 export NPM_CONFIG_CACHE="${XDG_CACHE_HOME:-$HOME/.cache}/npm"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export _JAVA_AWT_WM_NONREPARENTING="1" # Fix Java applications running under tiling WMs 
-export QT_QPA_PLATFORMTHEME="qt5ct"
+#export QT_QPA_PLATFORMTHEME="qt5ct"
 export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default" # Default Wine prefix
 export XCURSOR_PATH="/usr/share/icons"
 export XCURSOR_THEME="breeze_cursors"

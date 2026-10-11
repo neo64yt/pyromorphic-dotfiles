@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Microsoft Teams (PWA) (Work)
+Comment=Teams (PWA)
+Exec=/usr/lib/floorp/floorp --name floorp-99b9ea3d-671d-435a-bd5b-ec78bf7511c1 --profile /home/neo64yt/.floorp/cy38v3a4.default-nightly --start-ssb "{99b9ea3d-671d-435a-bd5b-ec78bf7511c1}"
+Icon=/home/neo64yt/.local/share/icons/hicolor/512x512/apps/floorp-99b9ea3d-671d-435a-bd5b-ec78bf7511c1.png
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
+StartupWMClass=floorp-99b9ea3d-671d-435a-bd5b-ec78bf7511c1
+X-MultipleArgs=false
+X-Floorp-StartUrl=https://teams.microsoft.com/v2/?clientType=pwa
+X-Floorp-Id={99b9ea3d-671d-435a-bd5b-ec78bf7511c1}

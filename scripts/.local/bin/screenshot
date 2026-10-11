@@ -25,10 +25,11 @@ sleep 1
 if [ -z "$WAYLAND_DISPLAY" ]; then
     maim $output_file
 else
-    grim -c $output_file
+    grim -g "$(slurp -o)" -c $output_file
+    wl-copy -t image/png < $output_file
 fi
 
-pgrep -x dunst > /dev/null && notify-send -u low -i camera Screenshooter "The screenshot has been saved into the Screenshots folder"
+pgrep -x dunst > /dev/null && notify-send -u low -i $output_file Screenshooter "The screenshot has been saved into the Screenshots folder and copied to your clipboard"
 
 pw-play /usr/share/sounds/freedesktop/stereo/camera-shutter.oga
 

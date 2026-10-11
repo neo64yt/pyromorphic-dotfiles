@@ -112,6 +112,15 @@ stshare() {
 	printf "Here's the link!\n-> $SHARE_URL\n"
 }
 
+# Download music
+musicdl () {
+    yt-dlp -x -f bestaudio/best \
+        --extract-audio --audio-format opus --audio-quality 0 \
+        --embed-thumbnail --convert-thumbnail jpg \
+        --ppa "ThumbnailsConvertor:-vf crop=\"'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\"" \
+        ${@}
+}
+
 # doas (with warning message)
 #doas() {
 #    cat $XDG_DATA_HOME/assets/sudo-lecture | cowsay -n -f sudowoodo

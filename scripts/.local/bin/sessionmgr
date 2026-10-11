@@ -83,7 +83,7 @@ case ${chosen} in
     "$lockscr")
 		 case "$XDG_SESSION_TYPE" in
              "x11") xscreensaver-command -lock ;;
-             "wayland") swaylock -f ;;
+             "wayland") gtklock -d ;;
          esac
         ;;
     "$logout") run_cmd --logout ;;

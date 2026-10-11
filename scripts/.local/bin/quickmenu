@@ -21,6 +21,7 @@ list_choices(){
 󰆍 Run
 󰐦 System
 󰱨 Emojis
+󱘞 Clipboard
 󱕴 Passwords
 󰢻 Settings
 EOF
@@ -43,6 +44,7 @@ case "$choice" in
   	"󰆍 Run") cmdrun ;;
   	"󰐦 System") sessionmgr ;;
   	"󰱨 Emojis") emojisel ;;
+    "󱘞 Clipboard") rofi-clipboard ;;
     "󱕴 Passwords") rofi-rbw-wrap ;;
   	"󰢻 Settings") set-mgr ;;
 	*) exit 1 ;;

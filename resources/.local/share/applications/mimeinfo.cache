@@ -19,6 +19,7 @@ x-scheme-handler/ftp=wine-protocol-ftp.desktop;
 x-scheme-handler/http=wine-protocol-http.desktop;
 x-scheme-handler/https=wine-protocol-https.desktop;
 x-scheme-handler/rlogin=wine-protocol-rlogin.desktop;
+x-scheme-handler/rpi-imager=com.raspberrypi.rpi-imager-uri-handler.desktop;
 x-scheme-handler/steam=steam.desktop;
 x-scheme-handler/steamlink=steam.desktop;
 x-scheme-handler/telnet=wine-protocol-telnet.desktop;

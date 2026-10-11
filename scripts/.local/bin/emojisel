@@ -59,7 +59,7 @@ copy_emoji() {
     fi
 }
 
-copy_emoji && notify-send --icon="face-smile" "Emoji Selector" "Selected emoji has been copied to your clipboard."   
+copy_emoji && notify-send --icon="face-smile" "Emoji Selector" "Selected emoji ($emoji) has been copied to your clipboard."   
 
 
 

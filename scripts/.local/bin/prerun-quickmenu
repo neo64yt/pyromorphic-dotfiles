@@ -1,10 +1,10 @@
 #!/bin/sh
 
-if pgrep rofi; then
-    if pgrep quickmenu; then
-        pkill rofi           # kill quickmenu if running
+if pgrep -x rofi; then
+    if pgrep -x quickmenu; then
+        pkill -x rofi           # kill quickmenu if running
     else
-        pkill rofi && quickmenu     # replace running instance of other rofi menu with quickmenu
+        pkill -x rofi && quickmenu     # replace running instance of other rofi menu with quickmenu
     fi
 else
     quickmenu  # just run quickmenu if no rofi instance is running

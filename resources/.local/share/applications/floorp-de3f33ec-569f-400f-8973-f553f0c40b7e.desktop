@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=WhatsApp Web
+Comment=WhatsApp Web
+Exec=/usr/lib/floorp/floorp --name floorp-de3f33ec-569f-400f-8973-f553f0c40b7e --profile /home/neo64yt/.floorp/cy38v3a4.default-nightly --start-ssb "{de3f33ec-569f-400f-8973-f553f0c40b7e}"
+Icon=/home/neo64yt/.local/share/icons/hicolor/512x512/apps/floorp-de3f33ec-569f-400f-8973-f553f0c40b7e.png
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
+StartupWMClass=floorp-de3f33ec-569f-400f-8973-f553f0c40b7e
+X-MultipleArgs=false
+X-Floorp-StartUrl=https://web.whatsapp.com/
+X-Floorp-Id={de3f33ec-569f-400f-8973-f553f0c40b7e}

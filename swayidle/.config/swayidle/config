@@ -1,4 +1,4 @@
-lock 'swaylock -f'
+lock 'gtklock -d'
 timeout 300 'wl-screen-switch off' resume 'wl-screen-switch on'
-before-sleep 'swaylock -f'
+before-sleep 'gtklock -d'
 timeout 1200 'loginctl suspend'

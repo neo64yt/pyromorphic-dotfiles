@@ -2,8 +2,9 @@
 Type=Application
 Icon=ventoy
 Name=Ventoy
-Exec=sh -c ventoygui
+Exec=ventoygui --qt5
 Terminal=false
 Hidden=false
 Categories=Utility
 Comment=Ventoy2Disk GUI
+StartupWMClass=Ventoy2Disk.qt5

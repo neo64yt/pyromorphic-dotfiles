@@ -1,2 +1,0 @@
-#!/bin/bash
-startx ${XDG_CONFIG_HOME:-$HOME/.config}/tbsm/xsetup.sh $@

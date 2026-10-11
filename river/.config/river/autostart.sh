@@ -1,22 +1,19 @@
 #!/bin/sh
 
 ##############################
-#       Autostart (mango)      #
+#       Autostart (dwl)      #
 ##############################
 
 wlr-randr --output eDP-1 --scale 1.75
 dbus-update-activation-environment --all
-xsetroot -xcf /usr/share/icons/Bibata-Original-Ice/cursors/left_ptr 44
-echo "Xft.dpi : 196" | xrdb -merge
-xrdb -merge $XDG_CONFIG_HOME/Xresources
+xprop -root -format _XWAYLAND_GLOBAL_OUTPUT_SCALE 32c -set _XWAYLAND_GLOBAL_OUTPUT_SCALE 2
+echo "Xft.dpi: 192" | xrdb -merge
 swayidle -w &
-sway-audio-idle-inhibit &
+wayland-pipewire-idle-inhibit &
+swaybg --image $HOME/Pictures/neurofumo-swarm-attack.jpg --mode fit --color 02231c &
 wl-paste --type text --watch cliphist store &
 wl-paste --type image --watch cliphist store &
-swaybg --image $HOME/Pictures/oneshot-twm-courtyard.png &
-eww daemon
-eww open tray-wl
-#waybar --config ~/.config/waybar/niri.config &
+#waybar --config $XDG_CONFIG_HOME/waybar/river.config &
 
 
 

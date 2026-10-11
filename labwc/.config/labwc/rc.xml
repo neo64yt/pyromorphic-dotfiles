@@ -1,0 +1,101 @@
+<labwc_config>
+  <core>
+    <decoration>server</decoration>
+  </core>
+  <keyboard>
+    <keybind key="W-S-Return">
+      <action name="Execute" command="sh -c '$TERMINAL'" />
+    </keybind>
+    <keybind key="W-r">
+      <action name="Execute" command="desktopmenu" />
+    </keybind>
+    <keybind key="W-p">
+      <action name="Execute" command="cmdrun" />
+    </keybind>
+    <keybind key="W-S-m">
+      <action name="Execute" command="quickmenu" />
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute" command="rofi -show emoji -modi emoji" />
+    </keybind>
+    <keybind key="W-1">
+      <action name="GoToDesktop" to="Workspace 1" />
+    </keybind>
+    <keybind key="W-2">
+      <action name="GoToDesktop" to="Workspace 2" />
+    </keybind>
+    <keybind key="W-3">
+      <action name="GoToDesktop" to="Workspace 3" />
+    </keybind>
+    <keybind key="W-4">
+      <action name="GoToDesktop" to="Workspace 4" />
+    </keybind>
+    <keybind key="W-5">
+      <action name="GoToDesktop" to="Workspace 5" />
+    </keybind>
+    <keybind key="W-6">
+      <action name="GoToDesktop" to="Workspace 6" />
+    </keybind>
+    <keybind key="W-S-1">
+      <action name="SendToDesktop" to="Workspace 1" />
+    </keybind>
+    <keybind key="W-S-2">
+      <action name="SendToDesktop" to="Workspace 2" />
+    </keybind>
+    <keybind key="W-S-3">
+      <action name="SendToDesktop" to="Workspace 3" />
+    </keybind>
+    <keybind key="W-S-4">
+      <action name="SendToDesktop" to="Workspace 4" />
+    </keybind>
+    <keybind key="W-S-5">
+      <action name="SendToDesktop" to="Workspace 5" />
+    </keybind>
+    <keybind key="W-S-6">
+      <action name="SendToDesktop" to="Workspace 6" />
+    </keybind>
+    <keybind key="W-S-q">
+      <action name="Exit" />
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute" command="volumectl up" />
+    </keybind>
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute" command="volumectl down" />
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute" command="volumectl mute" />
+    </keybind>
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute" command="blctl up" />
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute" command="blctl down" />
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute" command="screenshot" />
+    </keybind>
+    <keybind key="XF86PowerOff">
+      <action name="Execute" command="sh -c '$SESSION_MGR'" />
+    </keybind>
+    <repeatRate>50</repeatRate>
+    <repeatDelay>300</repeatDelay>
+  </keyboard>
+  <desktops number="6">
+  </desktops>
+  <theme>
+    <icon>Tela-manjaro-dark</icon>
+    <name>Celestial-Sea-Dark</name>
+    <dropShadows>yes</dropShadows>
+    <cornerRadius>0</cornerRadius>
+  </theme>
+  <libinput>
+    <device>
+      <middleEmulation>yes</middleEmulation>
+      <calibrationMatrix>1 0 0 0 1 0</calibrationMatrix>
+    </device>
+  </libinput>
+  <placement>
+    <policy>center</policy>
+  </placement>
+</labwc_config>

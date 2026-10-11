@@ -21,7 +21,6 @@ alias commit="git commit" # Commiting Git changes
 alias push="git push" # Push Git commits to upstream repository
 alias pull="git pull" # Sync local Git repository with upstream
 alias :x="exit" # Vim-like exit :P
-alias musicdl="yt-dlp -x -f bestaudio/best --extract-audio --audio-format opus --audio-quality 0"
 alias swallow="devour"
 
 if [ "$TERM" = "xterm-kitty" ]; then

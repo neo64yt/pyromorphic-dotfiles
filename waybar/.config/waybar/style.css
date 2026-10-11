@@ -39,43 +39,31 @@ window#waybar.hidden {
 #taskbar button {
     color: #cccccc;
     padding: 3px;
-    margin: 1px;
+    margin: 1px 3px;
 }
 
 #taskbar button.active {
-    background: #272A34;
-    color: #12846e;
-    margin: 1px 0;
+    background: #12846e;
     border-radius: 10px;
-    border: 1px solid #12846e;
 }
 
 #workspaces {
-    padding: 7px 1px;
-    margin: 0px;
+    margin: 7px 1px;
+    padding: 0px;
     background: transparent;
 }
 
 #workspaces button {
-    padding: 3px;
+    padding: 0px;
+    margin: 0px 3px;
     background: #272a34;
     color: #ffffff;
-    border-radius: 100px;
+    border-radius: 0.5rem;
 }
 
 #workspaces button.active {
     background: #12846e;
     color: #272a34;
-    padding: 3px 10px;
-}
-
-#workspaces button#niri-workspace-7, #workspaces button#niri-workspace-7 label {
-    background: none;
-    border: none;
-    font-size: 0;
-    padding: 0;
-    margin: 0;
-    min-width: 0;
 }
 
 #workspaces button.urgent {
@@ -118,7 +106,7 @@ window#waybar.hidden {
     border-right: 3px solid;
 }
 
-#clock {
+#clock, #mpris {
     padding: 1px 10px;
     margin: 5px;
     color: #ffffff;
@@ -127,6 +115,15 @@ window#waybar.hidden {
 
 #clock:hover {
     background: #12846E;
+}
+
+#mpris:hover {
+    background: #272a34;
+    color: #12846e;
+}
+
+#keyboard-state {
+    padding: 0 3px;
 }
 
 #battery {

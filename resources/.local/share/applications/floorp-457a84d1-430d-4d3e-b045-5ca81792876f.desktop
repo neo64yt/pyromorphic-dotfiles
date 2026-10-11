@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Proton Mail
+Comment=Proton Mail
+Exec=/usr/lib/floorp/floorp --name floorp-457a84d1-430d-4d3e-b045-5ca81792876f --profile /home/neo64yt/.floorp/cy38v3a4.default-nightly --start-ssb "{457a84d1-430d-4d3e-b045-5ca81792876f}"
+Icon=/home/neo64yt/.local/share/icons/hicolor/512x512/apps/floorp-457a84d1-430d-4d3e-b045-5ca81792876f.png
+Terminal=false
+Categories=Network;WebBrowser;
+StartupNotify=true
+StartupWMClass=floorp-457a84d1-430d-4d3e-b045-5ca81792876f
+X-MultipleArgs=false
+X-Floorp-StartUrl=https://mail.proton.me/
+X-Floorp-Id={457a84d1-430d-4d3e-b045-5ca81792876f}

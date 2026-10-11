@@ -92,16 +92,34 @@ add-zsh-hook precmd _fix_cursor
 add-zsh-hook precmd cwd_depth_prefix
 add-zsh-hook precmd rps1_override
 
-zstyle ':vcs_info:git:*' formats '%B%F{yellow} %b%f%%b %m%u%c'
-zstyle ':vcs_info:git:*' actionformats '%B%F{yellow} %b%f%%b %a %m%u%c'
+zstyle ':vcs_info:git:*' formats ' %B%F{green}%b%f%%b %m%u%c'
+zstyle ':vcs_info:git:*' actionformats ' %B%F{green}%b%f%%b (%a) %m%u%c'
 zstyle ':vcs_info:git:*' stagedstr '(%B%F{green}+%f%b)'
 zstyle ':vcs_info:git:*' unstagedstr '(%B%F{red}!%f%b)'
 zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git+set-message:*' hooks git-untracked
+zstyle ':vcs_info:git+post-backend:*' hooks git-unpushed
+
++vi-git-untracked() {
+    if [ -n "$(git status --porcelain 2>/dev/null | grep '??')" ]; then
+        hook_com[unstaged]+="(%B%F{yellow}?%f%b)"
+    fi
+}
+
++vi-git-unpushed() {
+    if git rev-parse --symbolic-full-name @{u} >/dev/null 2>&1; then
+        local ahead=$(git rev-list --count @{u}..HEAD 2>/dev/null)
+
+        if [[ -n "$ahead" && "$ahead" -gt 0 ]]; then
+            hook_com[misc]="(%F{green}↑ ${ahead}%f)"
+        fi 
+    fi
+}
 
 setopt PROMPT_SUBST
 setopt TRANSIENT_RPROMPT
 ZLE_RPROMPT_INDENT=0
-PROMPT=$'┌──[%B%F{cyan}%n%f%b]─[%B%F{magenta}%M%f%b]─[%F{blue}${CWD_PREFIX}%3~%f] ${vcs_info_msg_0_}\n└─[%F{%(?.green.red)}%{\e[5m%}$%{\e[0m%}%f] '
+PROMPT=$'┌─[%B%F{magenta}%M%f%b]─[%F{blue}${CWD_PREFIX}%3~%f]${vcs_info_msg_0_}\n└─[%F{%(?.green.red)}%{\e[5m%}$%{\e[0m%}%f] '
 
 
 

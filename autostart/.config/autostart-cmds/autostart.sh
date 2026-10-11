@@ -27,10 +27,11 @@ fi
 
 dunst &
 thunar --daemon &
-mpd &
-unclutter --start-hidden &
-copyq &
+mpd-startup &
 /usr/bin/kdeconnect-indicator &
+if pgrep netbird-ui > /dev/null; then 
+    killall netbird-ui
+fi
 netbird-ui &
 rbw-agent
 
